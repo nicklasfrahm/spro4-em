@@ -1,4 +1,4 @@
-# Initial test
+# Initial setup
 
 ## Getting started
 
@@ -57,8 +57,120 @@
 
 1. Cycle power once by turning the power switch _(SW8)_ from ON to OFF and then back ON.
 
-2. In the Terminal Window, a simple Linux image should boot with functionality that demonstrates the basic capabilities of
+2. In the terminal window, a simple Linux image should boot with functionality that demonstrates the basic capabilities of
    ZedBoard.
 
 3. When you are done using Linux, run the command poweroff and then switch off ZedBoard by positioning the power switch
    _(SW8)_ from ON to OFF.
+
+## Reading switches
+
+1. Start the ZedBoard as described above and open up a serial connection to it.
+
+2. Read the switch position by typing: `read_sw`
+
+3. The output should look something like this: `0x0F 15`
+
+4. Verify the value against the position of the switches, where down is off (0) and up is on (1), assuming that the switches are on the bottom of the ZedBoard. The switches should correspond to the 8bit binary number.
+
+## Write LEDs
+
+1. Start the ZedBoard as previously described and open up a serial connection to it.
+
+2. Write to the LEDs by typing: `write_led 255`
+
+3. All LEDs should turn on.
+
+4. Write to the LEDs again, by typing: `write_led 0`
+
+5. All LEDs should turn off.
+
+## Verify that display works
+
+1. Connect the VGA cable to the ZedBoard, while the ZedBoard is turned off.
+
+2. Start the ZedBoard as previously described.
+
+3. The display should show a rainbow and the Digilent symbol.
+
+## Connecting via SSH
+
+1. Set the ethernet interface on your computer to the static IP `192.168.1.1`. _(On Windows this can be done through the control panel via the adapter settings)_
+
+2. Start the ZedBoard as previously described.
+
+3. Connect to the SSH server at `192.168.1.10` with the user `root` and password `root`.
+
+   **Note:** If you have the Git Bash installed, you can use its SSH client by typing: `ssh root@192.168.1.10`
+
+4. Once connected, type: `write_led 255`
+
+5. All LEDs should light up.
+
+## Connecting via FTP
+
+1. Set the ethernet interface on your computer to the static IP `192.168.1.1`. _(On Windows this can be done through the control panel via the adapter settings)_
+
+2. Start the ZedBoard as previously described and open a serial connection to it.
+
+3. From the serial console navigate to the root directory: `cd /`
+
+4. Create a file with some text: `echo "Hello, World!" >> hello.txt`
+
+5. Connect to the FTP server at `192.168.1.10` with the user `root`.
+
+   **Note:** If you have the Git Bash installed, you can use its ftp client by typing: `ftp root@192.168.1.10`
+
+6. You should see something like this.
+
+   ```shell
+   ftp>
+   ```
+
+7. Navigate to the root directory: `cd /`
+
+8. List the files: `ls`
+
+9. Download the `hello.txt`: `get hello.txt`
+
+10. Open the folder from where you ran the ftp client. It should now have the file `hello.txt` with the following contents in it:
+
+    ```txt
+    Hello, World!
+    ```
+
+    **Note:** If you you are using the GitBash, it will most likely be located at `C:\Users\<your-username>\hello.txt`.
+
+## Mounting a USB-stick
+
+1. Short the jumpers _JP2_ and _JP3_ and connect a USB OTG cable to the USB OTG port right next to the jumpers.
+
+2. Start the ZedBoard as previously described and open a serial connection to it.
+
+3. Mount the USB: `mount /dev/sda1 /mnt`
+
+4. Create a file on the USB: `echo "hello" >> /mnt/hello`
+
+5. Unmount the USB: `umount /mnt`
+
+6. Plug in the USB to you computer and verify the contents of the text file:
+
+   ```txt
+   hello
+   ```
+
+## Mounting a SD-card
+
+1. Start the ZedBoard as previously described and open a serial connection to it.
+
+2. Mount the SD-card: `mount /dev/mmcblk0p1 /mnt`
+
+3. Create a file on the SD-card: `echo "hello" >> /mnt/hello`
+
+4. Unmount the SD-card: `umount /mnt`
+
+5. Plug in the SD-card to you computer and verify the contents of the text file:
+
+   ```txt
+   hello
+   ```
