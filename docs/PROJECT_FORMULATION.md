@@ -15,3 +15,4 @@
 * Neural network (digit recognition)
 * WPA cracking
 * Microcontroller (RISP)
+* Matrix manipulation
