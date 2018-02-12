@@ -11,3 +11,7 @@
 * Cryptocurrency mining
 * Echolocation
 * Sound generation
+* Sound sampling
+* Neural network (digit recognition)
+* WPA cracking
+* Microcontroller (RISP)
