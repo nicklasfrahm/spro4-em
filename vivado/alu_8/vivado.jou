@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Feb 13 11:18:58 2018
+# Process ID: 8428
+# Current directory: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11184 C:\Users\Nicklas Frahm\Desktop\GitLab\Uni\spro4-em\vivado\alu_8\alu_8.xpr
+# Log file: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/vivado.log
+# Journal file: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.xpr}
