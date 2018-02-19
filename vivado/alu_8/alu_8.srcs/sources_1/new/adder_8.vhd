@@ -22,15 +22,17 @@ entity adder_8 is
 end adder_8;
 
 architecture Behavioral of adder_8 is
+begin
 
-    begin process(a_in, b_in, carry_in)
+    process(a_in, b_in, carry_in)
 		
         variable vsum: std_logic_vector(7 downto 0);
         variable carry: std_logic;
 
         begin
         carry := carry_in;
-        for i in 0 to 7 loop
+        for i in 0 to 7
+        loop
             vsum(i) := (a_in(i) xor b_in(i)) xor carry;
             carry := ((a_in(i) xor b_in(i)) and carry) or (a_in(i) and b_in(i));
         end loop;

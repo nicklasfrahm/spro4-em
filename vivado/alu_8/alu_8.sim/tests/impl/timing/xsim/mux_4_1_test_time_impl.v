@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-// Date        : Wed Feb 14 10:07:51 2018
+// Date        : Mon Feb 19 13:23:02 2018
 // Host        : laptop-nicklas running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file {C:/Users/Nicklas
 //               Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.sim/tests/impl/timing/xsim/mux_4_1_test_time_impl.v}

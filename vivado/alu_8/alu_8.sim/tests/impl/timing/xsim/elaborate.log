@@ -1,22 +1,25 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/ProgramData/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 2474a42af75643a69d6cd389373321d7 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot mux_4_1_test_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.mux_4_1_test xil_defaultlib.glbl -log elaborate.log 
+Running: C:/ProgramData/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 2474a42af75643a69d6cd389373321d7 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot logic_8_test_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.logic_8_test xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
-INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "mux_4_1_test_time_impl.sdf", for root module "mux_4_1_test/uut".
-INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "mux_4_1_test_time_impl.sdf", for root module "mux_4_1_test/uut".
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "logic_8_test_time_impl.sdf", for root module "logic_8_test/uut".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "logic_8_test_time_impl.sdf", for root module "logic_8_test/uut".
 Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package vl.vl_types
 Compiling module xil_defaultlib.glbl
-Compiling module simprims_ver.OBUF
-Compiling module simprims_ver.LUT6
 Compiling module simprims_ver.IBUF
-Compiling module xil_defaultlib.mux_4_1
-Compiling architecture behavioral of entity xil_defaultlib.mux_4_1_test
-Built simulation snapshot mux_4_1_test_time_impl
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.logic_8
+Compiling architecture behavioral of entity xil_defaultlib.logic_8_test
+Built simulation snapshot logic_8_test_time_impl
