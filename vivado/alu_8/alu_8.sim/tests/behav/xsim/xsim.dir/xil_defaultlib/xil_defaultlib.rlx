@@ -2,7 +2,11 @@
 2017.4
 Jan 30 2018
 15:48:17
-C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.srcs/sources_1/new/adder_8.vhd,1518595378,vhdl,,,,adder_8,,,,,,,,
+C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.srcs/sources_1/new/adder_8.vhd,1519046909,vhdl,,,,adder_8,,,,,,,,
+C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.srcs/sources_1/new/alu_8.vhd,1519055138,vhdl,,,,alu_8,,,,,,,,
+C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.srcs/sources_1/new/logic_8.vhd,1519047064,vhdl,,,,logic_8,,,,,,,,
 C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.srcs/sources_1/new/mux_4_1.vhd,1518598602,vhdl,,,,mux_4_1,,,,,,,,
 C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.srcs/tests/new/adder_8_test.vhd,1518518855,vhdl,,,,adder_8_test,,,,,,,,
+C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.srcs/tests/new/alu_8_test.vhd,1519055602,vhdl,,,,alu_8_test,,,,,,,,
+C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.srcs/tests/new/logic_8_test.vhd,1519049855,vhdl,,,,logic_8_test,,,,,,,,
 C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.srcs/tests/new/mux_4_1_test.vhd,1518598410,vhdl,,,,mux_4_1_test,,,,,,,,

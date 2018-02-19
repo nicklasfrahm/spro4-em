@@ -2,10 +2,10 @@
 # Webtalk v2017.4.1 (64-bit)
 # SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
 # IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
-# Start of session at: Wed Feb 14 09:53:51 2018
-# Process ID: 10252
+# Start of session at: Mon Feb 19 17:00:56 2018
+# Process ID: 9448
 # Current directory: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.sim/tests/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.sim/tests/behav/xsim/xsim.dir/mux_4_1_test_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.sim/tests/behav/xsim/xsim.dir/logic_8_test_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.sim/tests/behav/xsim/webtalk.log
 # Journal file: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.sim/tests/behav/xsim\webtalk.jou
 #-----------------------------------------------------------

@@ -1,70 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1519049507">
-  <File Type="PWROPT-DCP" Name="logic_8_pwropt.dcp"/>
-  <File Type="ROUTE-PWR" Name="logic_8_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="logic_8.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="logic_8_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="logic_8_reports.tcl"/>
-  <File Type="BG-DRC" Name="logic_8.drc"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="logic_8_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="logic_8_timing_summary_init.rpt"/>
-  <File Type="OPT-HWDEF" Name="logic_8.hwdef"/>
-  <File Type="OPT-DCP" Name="logic_8_opt.dcp"/>
-  <File Type="OPT-DRC" Name="logic_8_drc_opted.rpt"/>
-  <File Type="OPT-TIMING" Name="logic_8_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="logic_8_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="logic_8_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="logic_8_placed.dcp"/>
-  <File Type="PLACE-IO" Name="logic_8_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="logic_8_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="logic_8_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="logic_8_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="logic_8_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="logic_8_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="logic_8_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="logic_8_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="logic_8_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="logic_8_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="logic_8_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="logic_8_drc_physopted.rpt"/>
-  <File Type="BG-BIT" Name="logic_8.bit"/>
-  <File Type="PHYSOPT-TIMING" Name="logic_8_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="logic_8_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="logic_8_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="logic_8_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="logic_8_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="logic_8_drc_routed.pb"/>
-  <File Type="BITSTR-MSK" Name="logic_8.msk"/>
-  <File Type="ROUTE-DRC-RPX" Name="logic_8_drc_routed.rpx"/>
-  <File Type="BG-BGN" Name="logic_8.bgn"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="logic_8_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-RBT" Name="logic_8.rbt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="logic_8_methodology_drc_routed.rpx"/>
-  <File Type="BG-BIN" Name="logic_8.bin"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="logic_8_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="logic_8_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="logic_8_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="logic_8_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="logic_8_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="logic_8_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="logic_8_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="logic_8_incremental_reuse_routed.rpt"/>
-  <File Type="RDI-RDI" Name="logic_8.vdi"/>
-  <File Type="ROUTE-CLK" Name="logic_8_clock_utilization_routed.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="logic_8_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="logic_8_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="logic_8_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="logic_8_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="logic_8_timing_summary_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="logic_8.nky"/>
-  <File Type="BITSTR-BMM" Name="logic_8_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="logic_8.mmi"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1519056029">
+  <File Type="PWROPT-DCP" Name="alu_8_pwropt.dcp"/>
+  <File Type="ROUTE-PWR" Name="alu_8_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="alu_8.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="alu_8_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="alu_8_reports.tcl"/>
+  <File Type="BG-DRC" Name="alu_8.drc"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="alu_8_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="alu_8_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="alu_8.hwdef"/>
+  <File Type="OPT-DCP" Name="alu_8_opt.dcp"/>
+  <File Type="OPT-DRC" Name="alu_8_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="alu_8_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="alu_8_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="alu_8_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="alu_8_placed.dcp"/>
+  <File Type="PLACE-IO" Name="alu_8_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="alu_8_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="alu_8_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="alu_8_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="alu_8_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="alu_8_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="alu_8_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="alu_8_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="alu_8_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="alu_8_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="alu_8_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="alu_8_drc_physopted.rpt"/>
+  <File Type="BG-BIT" Name="alu_8.bit"/>
+  <File Type="PHYSOPT-TIMING" Name="alu_8_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="alu_8_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="alu_8_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="alu_8_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="alu_8_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="alu_8_drc_routed.pb"/>
+  <File Type="BITSTR-MSK" Name="alu_8.msk"/>
+  <File Type="ROUTE-DRC-RPX" Name="alu_8_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="alu_8.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="alu_8_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="alu_8.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="alu_8_methodology_drc_routed.rpx"/>
+  <File Type="BG-BIN" Name="alu_8.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="alu_8_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="alu_8_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="alu_8_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="alu_8_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="alu_8_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="alu_8_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="alu_8_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="alu_8_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="alu_8.vdi"/>
+  <File Type="ROUTE-CLK" Name="alu_8_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="alu_8_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="alu_8_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="alu_8_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="alu_8_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="alu_8_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="alu_8.nky"/>
+  <File Type="BITSTR-BMM" Name="alu_8_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="alu_8.mmi"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="logic_8.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="logic_8.sysdef"/>
+  <File Type="BITSTR-LTX" Name="alu_8.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="alu_8.sysdef"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/adder_8.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/logic_8.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -73,21 +79,19 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/mux_4_1.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/adder_8.vhd">
+    <File Path="$PSRCDIR/sources_1/new/alu_8.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="logic_8"/>
+      <Option Name="TopModule" Val="alu_8"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

@@ -1,3 +1,3 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.sim/tests/impl/timing/xsim/logic_8_test_time_impl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module logic_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.sim/tests/impl/timing/xsim/alu_8_test_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_8
 INFO: [VRFC 10-311] analyzing module glbl

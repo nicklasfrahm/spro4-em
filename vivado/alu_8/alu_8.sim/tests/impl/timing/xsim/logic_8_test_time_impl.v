@@ -1,11 +1,11 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-// Date        : Mon Feb 19 15:13:48 2018
+// Date        : Mon Feb 19 16:59:15 2018
 // Host        : laptop-nicklas running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file {C:/Users/Nicklas
 //               Frahm/Desktop/GitLab/Uni/spro4-em/vivado/alu_8/alu_8.sim/tests/impl/timing/xsim/logic_8_test_time_impl.v}
-// Design      : logic_8
+// Design      : alu_8
 // Purpose     : This verilog netlist is a timing simulation representation of the design and should not be modified or
 //               synthesized. Please ensure that this netlist is used with the corresponding SDF file.
 // Device      : xc7z020clg484-1
@@ -13,30 +13,44 @@
 `timescale 1 ps / 1 ps
 `define XIL_TIMING
 
-(* ECO_CHECKSUM = "1fab83ef" *) 
+(* ECO_CHECKSUM = "8dc8e694" *) 
 (* NotValidForBitStream *)
-module logic_8
+module alu_8
    (a_in,
     b_in,
-    inv_out,
-    and_out,
-    or_out);
+    select_in,
+    alu_out,
+    carry_in,
+    carry_out);
   input [7:0]a_in;
   input [7:0]b_in;
-  output [7:0]inv_out;
-  output [7:0]and_out;
-  output [7:0]or_out;
+  input [1:0]select_in;
+  output [7:0]alu_out;
+  input carry_in;
+  output carry_out;
 
   wire [7:0]a_in;
   wire [7:0]a_in_IBUF;
-  wire [7:0]and_out;
-  wire [7:0]and_out_OBUF;
+  wire \adder_8_component/carry_out10__2 ;
+  wire \adder_8_component/carry_out12__2 ;
+  wire \adder_8_component/carry_out14__2 ;
+  wire \adder_8_component/carry_out2__2 ;
+  wire \adder_8_component/carry_out4__2 ;
+  wire \adder_8_component/carry_out6__2 ;
+  wire \adder_8_component/carry_out826_out ;
+  wire \adder_8_component/carry_out8__2 ;
+  wire [7:0]alu_out;
+  wire [7:0]alu_out_OBUF;
+  wire \alu_out_OBUF[7]_inst_i_3_n_0 ;
+  wire \alu_out_OBUF[7]_inst_i_4_n_0 ;
   wire [7:0]b_in;
   wire [7:0]b_in_IBUF;
-  wire [7:0]inv_out;
-  wire [7:0]inv_out_OBUF;
-  wire [7:0]or_out;
-  wire [7:0]or_out_OBUF;
+  wire carry_in;
+  wire carry_in_IBUF;
+  wire carry_out;
+  wire carry_out_OBUF;
+  wire [1:0]select_in;
+  wire [1:0]select_in_IBUF;
 
 initial begin
  $sdf_annotate("logic_8_test_time_impl.sdf",,,,"tool_control");
@@ -65,86 +79,190 @@ end
   IBUF \a_in_IBUF[7]_inst 
        (.I(a_in[7]),
         .O(a_in_IBUF[7]));
-  OBUF \and_out_OBUF[0]_inst 
-       (.I(and_out_OBUF[0]),
-        .O(and_out[0]));
+  OBUF \alu_out_OBUF[0]_inst 
+       (.I(alu_out_OBUF[0]),
+        .O(alu_out[0]));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT5 #(
+    .INIT(32'hF00FF096)) 
+    \alu_out_OBUF[0]_inst_i_1 
+       (.I0(carry_in_IBUF),
+        .I1(b_in_IBUF[0]),
+        .I2(a_in_IBUF[0]),
+        .I3(select_in_IBUF[1]),
+        .I4(select_in_IBUF[0]),
+        .O(alu_out_OBUF[0]));
+  OBUF \alu_out_OBUF[1]_inst 
+       (.I(alu_out_OBUF[1]),
+        .O(alu_out[1]));
+  LUT5 #(
+    .INIT(32'hF00FF096)) 
+    \alu_out_OBUF[1]_inst_i_1 
+       (.I0(\adder_8_component/carry_out14__2 ),
+        .I1(b_in_IBUF[1]),
+        .I2(a_in_IBUF[1]),
+        .I3(select_in_IBUF[1]),
+        .I4(select_in_IBUF[0]),
+        .O(alu_out_OBUF[1]));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \alu_out_OBUF[1]_inst_i_2 
+       (.I0(carry_in_IBUF),
+        .I1(b_in_IBUF[0]),
+        .I2(a_in_IBUF[0]),
+        .O(\adder_8_component/carry_out14__2 ));
+  OBUF \alu_out_OBUF[2]_inst 
+       (.I(alu_out_OBUF[2]),
+        .O(alu_out[2]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \and_out_OBUF[0]_inst_i_1 
-       (.I0(b_in_IBUF[0]),
-        .I1(a_in_IBUF[0]),
-        .O(and_out_OBUF[0]));
-  OBUF \and_out_OBUF[1]_inst 
-       (.I(and_out_OBUF[1]),
-        .O(and_out[1]));
+  LUT5 #(
+    .INIT(32'hF00FF096)) 
+    \alu_out_OBUF[2]_inst_i_1 
+       (.I0(\adder_8_component/carry_out12__2 ),
+        .I1(b_in_IBUF[2]),
+        .I2(a_in_IBUF[2]),
+        .I3(select_in_IBUF[1]),
+        .I4(select_in_IBUF[0]),
+        .O(alu_out_OBUF[2]));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    \alu_out_OBUF[2]_inst_i_2 
+       (.I0(carry_in_IBUF),
+        .I1(b_in_IBUF[0]),
+        .I2(a_in_IBUF[0]),
+        .I3(b_in_IBUF[1]),
+        .I4(a_in_IBUF[1]),
+        .O(\adder_8_component/carry_out12__2 ));
+  OBUF \alu_out_OBUF[3]_inst 
+       (.I(alu_out_OBUF[3]),
+        .O(alu_out[3]));
+  LUT5 #(
+    .INIT(32'hF00FF096)) 
+    \alu_out_OBUF[3]_inst_i_1 
+       (.I0(\adder_8_component/carry_out10__2 ),
+        .I1(b_in_IBUF[3]),
+        .I2(a_in_IBUF[3]),
+        .I3(select_in_IBUF[1]),
+        .I4(select_in_IBUF[0]),
+        .O(alu_out_OBUF[3]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \alu_out_OBUF[3]_inst_i_2 
+       (.I0(\adder_8_component/carry_out12__2 ),
+        .I1(b_in_IBUF[2]),
+        .I2(a_in_IBUF[2]),
+        .O(\adder_8_component/carry_out10__2 ));
+  OBUF \alu_out_OBUF[4]_inst 
+       (.I(alu_out_OBUF[4]),
+        .O(alu_out[4]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'hF00FF096)) 
+    \alu_out_OBUF[4]_inst_i_1 
+       (.I0(\adder_8_component/carry_out8__2 ),
+        .I1(b_in_IBUF[4]),
+        .I2(a_in_IBUF[4]),
+        .I3(select_in_IBUF[1]),
+        .I4(select_in_IBUF[0]),
+        .O(alu_out_OBUF[4]));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    \alu_out_OBUF[4]_inst_i_2 
+       (.I0(\adder_8_component/carry_out12__2 ),
+        .I1(b_in_IBUF[2]),
+        .I2(a_in_IBUF[2]),
+        .I3(b_in_IBUF[3]),
+        .I4(a_in_IBUF[3]),
+        .O(\adder_8_component/carry_out8__2 ));
+  OBUF \alu_out_OBUF[5]_inst 
+       (.I(alu_out_OBUF[5]),
+        .O(alu_out[5]));
+  LUT5 #(
+    .INIT(32'hF00FF096)) 
+    \alu_out_OBUF[5]_inst_i_1 
+       (.I0(\adder_8_component/carry_out6__2 ),
+        .I1(b_in_IBUF[5]),
+        .I2(a_in_IBUF[5]),
+        .I3(select_in_IBUF[1]),
+        .I4(select_in_IBUF[0]),
+        .O(alu_out_OBUF[5]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'hE8)) 
+    \alu_out_OBUF[5]_inst_i_2 
+       (.I0(\adder_8_component/carry_out8__2 ),
+        .I1(b_in_IBUF[4]),
+        .I2(a_in_IBUF[4]),
+        .O(\adder_8_component/carry_out6__2 ));
+  OBUF \alu_out_OBUF[6]_inst 
+       (.I(alu_out_OBUF[6]),
+        .O(alu_out[6]));
+  LUT5 #(
+    .INIT(32'hF00FF096)) 
+    \alu_out_OBUF[6]_inst_i_1 
+       (.I0(\adder_8_component/carry_out4__2 ),
+        .I1(b_in_IBUF[6]),
+        .I2(a_in_IBUF[6]),
+        .I3(select_in_IBUF[1]),
+        .I4(select_in_IBUF[0]),
+        .O(alu_out_OBUF[6]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    \alu_out_OBUF[6]_inst_i_2 
+       (.I0(\adder_8_component/carry_out8__2 ),
+        .I1(b_in_IBUF[4]),
+        .I2(a_in_IBUF[4]),
+        .I3(b_in_IBUF[5]),
+        .I4(a_in_IBUF[5]),
+        .O(\adder_8_component/carry_out4__2 ));
+  OBUF \alu_out_OBUF[7]_inst 
+       (.I(alu_out_OBUF[7]),
+        .O(alu_out[7]));
+  LUT5 #(
+    .INIT(32'hF00FF096)) 
+    \alu_out_OBUF[7]_inst_i_1 
+       (.I0(\adder_8_component/carry_out2__2 ),
+        .I1(b_in_IBUF[7]),
+        .I2(a_in_IBUF[7]),
+        .I3(select_in_IBUF[1]),
+        .I4(select_in_IBUF[0]),
+        .O(alu_out_OBUF[7]));
+  LUT6 #(
+    .INIT(64'hFFFFFEE0FEE00000)) 
+    \alu_out_OBUF[7]_inst_i_2 
+       (.I0(\alu_out_OBUF[7]_inst_i_3_n_0 ),
+        .I1(\alu_out_OBUF[7]_inst_i_4_n_0 ),
+        .I2(b_in_IBUF[5]),
+        .I3(a_in_IBUF[5]),
+        .I4(b_in_IBUF[6]),
+        .I5(a_in_IBUF[6]),
+        .O(\adder_8_component/carry_out2__2 ));
+  LUT6 #(
+    .INIT(64'hA8A8A880A8808080)) 
+    \alu_out_OBUF[7]_inst_i_3 
+       (.I0(\adder_8_component/carry_out826_out ),
+        .I1(a_in_IBUF[3]),
+        .I2(b_in_IBUF[3]),
+        .I3(a_in_IBUF[2]),
+        .I4(b_in_IBUF[2]),
+        .I5(\adder_8_component/carry_out12__2 ),
+        .O(\alu_out_OBUF[7]_inst_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
-    \and_out_OBUF[1]_inst_i_1 
-       (.I0(b_in_IBUF[1]),
-        .I1(a_in_IBUF[1]),
-        .O(and_out_OBUF[1]));
-  OBUF \and_out_OBUF[2]_inst 
-       (.I(and_out_OBUF[2]),
-        .O(and_out[2]));
+    \alu_out_OBUF[7]_inst_i_4 
+       (.I0(a_in_IBUF[4]),
+        .I1(b_in_IBUF[4]),
+        .O(\alu_out_OBUF[7]_inst_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
-    .INIT(4'h8)) 
-    \and_out_OBUF[2]_inst_i_1 
-       (.I0(b_in_IBUF[2]),
-        .I1(a_in_IBUF[2]),
-        .O(and_out_OBUF[2]));
-  OBUF \and_out_OBUF[3]_inst 
-       (.I(and_out_OBUF[3]),
-        .O(and_out[3]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \and_out_OBUF[3]_inst_i_1 
-       (.I0(b_in_IBUF[3]),
-        .I1(a_in_IBUF[3]),
-        .O(and_out_OBUF[3]));
-  OBUF \and_out_OBUF[4]_inst 
-       (.I(and_out_OBUF[4]),
-        .O(and_out[4]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \and_out_OBUF[4]_inst_i_1 
-       (.I0(b_in_IBUF[4]),
-        .I1(a_in_IBUF[4]),
-        .O(and_out_OBUF[4]));
-  OBUF \and_out_OBUF[5]_inst 
-       (.I(and_out_OBUF[5]),
-        .O(and_out[5]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \and_out_OBUF[5]_inst_i_1 
-       (.I0(b_in_IBUF[5]),
-        .I1(a_in_IBUF[5]),
-        .O(and_out_OBUF[5]));
-  OBUF \and_out_OBUF[6]_inst 
-       (.I(and_out_OBUF[6]),
-        .O(and_out[6]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \and_out_OBUF[6]_inst_i_1 
-       (.I0(b_in_IBUF[6]),
-        .I1(a_in_IBUF[6]),
-        .O(and_out_OBUF[6]));
-  OBUF \and_out_OBUF[7]_inst 
-       (.I(and_out_OBUF[7]),
-        .O(and_out[7]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \and_out_OBUF[7]_inst_i_1 
-       (.I0(b_in_IBUF[7]),
-        .I1(a_in_IBUF[7]),
-        .O(and_out_OBUF[7]));
+    .INIT(4'h6)) 
+    \alu_out_OBUF[7]_inst_i_5 
+       (.I0(a_in_IBUF[4]),
+        .I1(b_in_IBUF[4]),
+        .O(\adder_8_component/carry_out826_out ));
   IBUF \b_in_IBUF[0]_inst 
        (.I(b_in[0]),
         .O(b_in_IBUF[0]));
@@ -169,150 +287,27 @@ end
   IBUF \b_in_IBUF[7]_inst 
        (.I(b_in[7]),
         .O(b_in_IBUF[7]));
-  OBUF \inv_out_OBUF[0]_inst 
-       (.I(inv_out_OBUF[0]),
-        .O(inv_out[0]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \inv_out_OBUF[0]_inst_i_1 
-       (.I0(a_in_IBUF[0]),
-        .O(inv_out_OBUF[0]));
-  OBUF \inv_out_OBUF[1]_inst 
-       (.I(inv_out_OBUF[1]),
-        .O(inv_out[1]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \inv_out_OBUF[1]_inst_i_1 
-       (.I0(a_in_IBUF[1]),
-        .O(inv_out_OBUF[1]));
-  OBUF \inv_out_OBUF[2]_inst 
-       (.I(inv_out_OBUF[2]),
-        .O(inv_out[2]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \inv_out_OBUF[2]_inst_i_1 
-       (.I0(a_in_IBUF[2]),
-        .O(inv_out_OBUF[2]));
-  OBUF \inv_out_OBUF[3]_inst 
-       (.I(inv_out_OBUF[3]),
-        .O(inv_out[3]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \inv_out_OBUF[3]_inst_i_1 
-       (.I0(a_in_IBUF[3]),
-        .O(inv_out_OBUF[3]));
-  OBUF \inv_out_OBUF[4]_inst 
-       (.I(inv_out_OBUF[4]),
-        .O(inv_out[4]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \inv_out_OBUF[4]_inst_i_1 
-       (.I0(a_in_IBUF[4]),
-        .O(inv_out_OBUF[4]));
-  OBUF \inv_out_OBUF[5]_inst 
-       (.I(inv_out_OBUF[5]),
-        .O(inv_out[5]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \inv_out_OBUF[5]_inst_i_1 
-       (.I0(a_in_IBUF[5]),
-        .O(inv_out_OBUF[5]));
-  OBUF \inv_out_OBUF[6]_inst 
-       (.I(inv_out_OBUF[6]),
-        .O(inv_out[6]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \inv_out_OBUF[6]_inst_i_1 
-       (.I0(a_in_IBUF[6]),
-        .O(inv_out_OBUF[6]));
-  OBUF \inv_out_OBUF[7]_inst 
-       (.I(inv_out_OBUF[7]),
-        .O(inv_out[7]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \inv_out_OBUF[7]_inst_i_1 
-       (.I0(a_in_IBUF[7]),
-        .O(inv_out_OBUF[7]));
-  OBUF \or_out_OBUF[0]_inst 
-       (.I(or_out_OBUF[0]),
-        .O(or_out[0]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \or_out_OBUF[0]_inst_i_1 
-       (.I0(b_in_IBUF[0]),
-        .I1(a_in_IBUF[0]),
-        .O(or_out_OBUF[0]));
-  OBUF \or_out_OBUF[1]_inst 
-       (.I(or_out_OBUF[1]),
-        .O(or_out[1]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \or_out_OBUF[1]_inst_i_1 
-       (.I0(b_in_IBUF[1]),
-        .I1(a_in_IBUF[1]),
-        .O(or_out_OBUF[1]));
-  OBUF \or_out_OBUF[2]_inst 
-       (.I(or_out_OBUF[2]),
-        .O(or_out[2]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \or_out_OBUF[2]_inst_i_1 
-       (.I0(b_in_IBUF[2]),
-        .I1(a_in_IBUF[2]),
-        .O(or_out_OBUF[2]));
-  OBUF \or_out_OBUF[3]_inst 
-       (.I(or_out_OBUF[3]),
-        .O(or_out[3]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \or_out_OBUF[3]_inst_i_1 
-       (.I0(b_in_IBUF[3]),
-        .I1(a_in_IBUF[3]),
-        .O(or_out_OBUF[3]));
-  OBUF \or_out_OBUF[4]_inst 
-       (.I(or_out_OBUF[4]),
-        .O(or_out[4]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \or_out_OBUF[4]_inst_i_1 
-       (.I0(b_in_IBUF[4]),
-        .I1(a_in_IBUF[4]),
-        .O(or_out_OBUF[4]));
-  OBUF \or_out_OBUF[5]_inst 
-       (.I(or_out_OBUF[5]),
-        .O(or_out[5]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \or_out_OBUF[5]_inst_i_1 
-       (.I0(b_in_IBUF[5]),
-        .I1(a_in_IBUF[5]),
-        .O(or_out_OBUF[5]));
-  OBUF \or_out_OBUF[6]_inst 
-       (.I(or_out_OBUF[6]),
-        .O(or_out[6]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \or_out_OBUF[6]_inst_i_1 
-       (.I0(b_in_IBUF[6]),
-        .I1(a_in_IBUF[6]),
-        .O(or_out_OBUF[6]));
-  OBUF \or_out_OBUF[7]_inst 
-       (.I(or_out_OBUF[7]),
-        .O(or_out[7]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \or_out_OBUF[7]_inst_i_1 
-       (.I0(b_in_IBUF[7]),
-        .I1(a_in_IBUF[7]),
-        .O(or_out_OBUF[7]));
+  IBUF carry_in_IBUF_inst
+       (.I(carry_in),
+        .O(carry_in_IBUF));
+  OBUF carry_out_OBUF_inst
+       (.I(carry_out_OBUF),
+        .O(carry_out));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    carry_out_OBUF_inst_i_1
+       (.I0(\adder_8_component/carry_out4__2 ),
+        .I1(b_in_IBUF[6]),
+        .I2(a_in_IBUF[6]),
+        .I3(b_in_IBUF[7]),
+        .I4(a_in_IBUF[7]),
+        .O(carry_out_OBUF));
+  IBUF \select_in_IBUF[0]_inst 
+       (.I(select_in[0]),
+        .O(select_in_IBUF[0]));
+  IBUF \select_in_IBUF[1]_inst 
+       (.I(select_in[1]),
+        .O(select_in_IBUF[1]));
 endmodule
 `ifndef GLBL
 `define GLBL
