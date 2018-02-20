@@ -76,21 +76,29 @@ BEGIN
 		b_in <= "01010101";
 		carry_in <= '0';
 		WAIT FOR 100 ns;
+		-- expect: sum_out = 0b01100100 = 0x64
+		-- expect: carry_out = 0
 
 		a_in <= "00000000";
 		b_in <= "01010101";
 		carry_in <= '0';
 		WAIT FOR 100 ns;
+		-- expect: sum_out = 0b01010101 = 0x55
+		-- expect: carry_out = 0
 
 		a_in <= "11110000";
 		b_in <= "01010101";
 		carry_in <= '0';
 		WAIT FOR 100 ns;
+		-- expect: sum_out = 0b01000101 = 0x45
+		-- expect: carry_out = 1
 
 		a_in <= "00001111";
 		b_in <= "01010101";
 		carry_in <= '1';
 		WAIT FOR 100 ns;
+		-- expect: sum_out = 0b01100101 = 0x65
+		-- expect: carry_out = 0
 
 		-- wait forever
 		WAIT;

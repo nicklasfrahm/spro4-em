@@ -1,13 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: SDU
--- Engineer: Nicklas Frahm
--- 
--- Design Name: adder_8
--- Module Name: adder_8 - Behavioral
--- Project Name: alu_8
--- Target Devices: ZedBoard Zynq
-----------------------------------------------------------------------------------
-
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
