@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1519056029">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1519123728">
   <File Type="PWROPT-DCP" Name="alu_8_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="alu_8_power_routed.rpt"/>
   <File Type="PA-TCL" Name="alu_8.tcl"/>
