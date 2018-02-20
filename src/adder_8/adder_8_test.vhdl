@@ -41,7 +41,7 @@ SIGNAL sum_out : std_logic_vector(7 DOWNTO 0);
 
 BEGIN
   -- create an instance of the UUT and connect it to the defined input and output signals
-  uut: adder_8 PORT MAP(
+  uut : adder_8 PORT MAP(
     a_in => a_in,
     b_in => b_in,
     carry_in => carry_in,
@@ -52,7 +52,7 @@ BEGIN
   -- clock process definitions
   -- uncomment these process statements if you need a clock generation process and give clock the right name
   -- this process will run in parallel with the stimulus process
-  -- _process :process
+  -- _process : process
   --begin
   -- <= '0';
   --wait for _period/2;
@@ -62,7 +62,7 @@ BEGIN
 
   -- stimulus process, this is where you define a sequence of input signals for the simulation.
   -- all signals must be defined.
-  stimulus_process: PROCESS
+  stimulus_process : PROCESS
   BEGIN
     -- hold reset state for 100 ns
     WAIT FOR 100 ns;
