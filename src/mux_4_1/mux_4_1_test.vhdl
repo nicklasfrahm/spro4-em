@@ -80,27 +80,33 @@ BEGIN
     or_in <= "00001100";
     and_in <= "00000011";
     WAIT FOR 100 ns;
+    -- expect: alu_out = 0b11000000 = 0xC0
 
     -- select sum
     select_in <= "00";
     WAIT FOR 100 ns;
+    -- expect: alu_out = 0b11000000 = 0xC0
     
     -- select inversion
     select_in <= "01";
     WAIT FOR 100 ns;
+    -- expect: alu_out = 0b00110000 = 0x30
 
     -- select or
     select_in <= "10";
     WAIT FOR 100 ns;
+    -- expect: alu_out = 0b00001100 = 0x0C
 
     -- select and
     select_in <= "11";
     WAIT FOR 100 ns;
+    -- expect: alu_out = 0b00000011 = 0x03
 
     -- select sum
     sum_in <= "00111111";
     select_in <= "00";
     WAIT FOR 100 ns;
+    -- expect: alu_out = 0b11000000 = 0xC0
 
     -- wait forever
     WAIT;
