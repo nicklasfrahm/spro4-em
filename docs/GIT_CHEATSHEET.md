@@ -19,5 +19,5 @@
 |**git reset HEAD^** *hashnumber*|jump back to a certain commit||
 |**git checkout** *nameofbranch*|switch to another branch|-b |create new branch while switching
 |**git remote add** *link*|link a precreated repository to your folder||
-|**git push -u origin master**|||
+|**git push -u origin ** *nameofbranch*|||
 
