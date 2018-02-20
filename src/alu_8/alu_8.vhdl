@@ -51,7 +51,6 @@ SIGNAL inv_conn : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL and_conn : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 BEGIN
-  
   -- wire up the adder
   adder_8_component : adder_8 PORT MAP (
     a_in => a_in,
@@ -79,5 +78,4 @@ BEGIN
     select_in => select_in,
     alu_out => alu_out  
   );
-
 END Structural;

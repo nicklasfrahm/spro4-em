@@ -16,8 +16,7 @@ BEGIN
   PROCESS(a_in, b_in)
   BEGIN
     inv_out <= NOT a_in;
-	and_out <= a_in AND b_in;
-	or_out <= a_in OR b_in;    
+	  and_out <= a_in AND b_in;
+	  or_out <= a_in OR b_in;    
   END PROCESS;
-
 END Behavioral;
