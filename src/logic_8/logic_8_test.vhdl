@@ -75,17 +75,24 @@ BEGIN
     b_in <= "00000000";
     WAIT FOR 100 ns;
     -- expect: inv_out = 0b00001111 = 0x0F
+    -- expect: or_out = 0b11110000 = 0xF0
+    -- expect: and_out = 0b00000000 = 0x00
   
     -- test and
     a_in <= "11110000";
     b_in <= "11111111";
     WAIT FOR 100 ns;
+    -- expect: inv_out = 0b00001111 = 0x0F
+    -- expect: or_out = 0b11111111 = 0xFF
     -- expect: and_out = 0b11110000 = 0xF0
     
     -- test or
     a_in <= "11110000";
     b_in <= "00110011";
-    -- expect: or_test = 0b11110011 = 0xF3
+    WAIT FOR 100 ns;
+    -- expect: inv_out = 0b00001111 = 0x0F
+    -- expect: or_out = 0b11110011 = 0xF3
+    -- expect: and_out = 0b00110000 = 0x30
   
     -- wait forever
     WAIT;
