@@ -3,12 +3,12 @@ LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
 -- empty entity
--- there is no interface to the surroundings because the unit under test (uut)
+-- there is no interface to the surroundings because the unit under test (UUT)
 -- and the tester are all integrated into the same module
 ENTITY adder_8_test IS
 END adder_8_test;
 
--- component declaration for the unit under test (UUT) - the lower level entity (the entity of the uut)
+-- component declaration for the UUT - the lower level entity (the entity of the uut)
 ARCHITECTURE Behavioral OF adder_8_test IS
 
 COMPONENT adder_8
@@ -41,7 +41,7 @@ SIGNAL sum_out : std_logic_vector(7 DOWNTO 0);
 
 BEGIN
   -- create an instance of the UUT and connect it to the defined input and output signals
-  uut : adder_8 PORT MAP(
+  uut: adder_8 PORT MAP(
     a_in => a_in,
     b_in => b_in,
     carry_in => carry_in,
@@ -62,7 +62,7 @@ BEGIN
 
   -- stimulus process, this is where you define a sequence of input signals for the simulation.
   -- all signals must be defined.
-  stimulus_process : PROCESS
+  stimulus_process: PROCESS
   BEGIN
     -- hold reset state for 100 ns
     WAIT FOR 100 ns;
