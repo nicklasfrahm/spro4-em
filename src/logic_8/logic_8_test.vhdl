@@ -50,7 +50,9 @@ BEGIN
     inv_out => inv_out
   );
 
-  -- clock process definitions, uncomment these process statements if you need a clock generation process and give clock the right name. This process will run in parallel with the stimulus process.
+  -- clock process definitions
+  -- uncomment these process statements if you need a clock generation process and give clock the right name
+  -- this process will run in parallel with the stimulus process
   -- <clock>_process :process
   --begin
     --<clock> <= '0';
