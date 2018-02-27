@@ -82,7 +82,7 @@ BEGIN
     -- expect: q_out = 0
     
     -- test preset
-    d_in <= '0'
+    d_in <= '0';
     reset <= '0';
     preset <= '1';
     WAIT FOR clk_period * 10;
@@ -110,4 +110,4 @@ BEGIN
     -- wait forever
     WAIT;
   END PROCESS;
-END;
+END Behavioral;
