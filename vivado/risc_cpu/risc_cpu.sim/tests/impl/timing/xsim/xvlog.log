@@ -1,0 +1,3 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc_cpu/risc_cpu.sim/tests/impl/timing/xsim/d_flip_flop_test_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module d_flip_flop
+INFO: [VRFC 10-311] analyzing module glbl
