@@ -126,4 +126,4 @@ BEGIN
     -- wait forever
     WAIT;
   END PROCESS;
-END;
+END Structural;

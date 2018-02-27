@@ -35,7 +35,7 @@ SIGNAL and_in : STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');
 SIGNAL select_in : STD_LOGIC_VECTOR(1 DOWNTO 0) := (OTHERS => '0');
 
 -- outputs
-SIGNAL alu_out : std_logic_vector(7 DOWNTO 0);
+SIGNAL alu_out : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 -- if you need a clock input signal, the clock period can be declared this way
 -- (delete the -- and use the right name for clock)
@@ -111,4 +111,4 @@ BEGIN
     -- wait forever
     WAIT;
   END PROCESS;
-END;
+END Behavioral;

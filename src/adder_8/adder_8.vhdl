@@ -15,8 +15,8 @@ ARCHITECTURE Behavioral OF adder_8 IS
 BEGIN
   PROCESS (a_in, b_in, carry_in)
 
-  VARIABLE vsum : std_logic_vector (7 DOWNTO 0);
-  VARIABLE carry : std_logic;
+  VARIABLE vsum : STD_LOGIC_VECTOR (7 DOWNTO 0);
+  VARIABLE carry : STD_LOGIC;
 
   BEGIN
     carry := carry_in;

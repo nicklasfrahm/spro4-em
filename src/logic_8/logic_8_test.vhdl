@@ -31,9 +31,9 @@ SIGNAL a_in : STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');
 SIGNAL b_in : STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');
 
 -- outputs
-SIGNAL inv_out : std_logic_vector(7 DOWNTO 0);
-SIGNAL and_out : std_logic_vector(7 DOWNTO 0);
-SIGNAL or_out : std_logic_vector(7 DOWNTO 0);
+SIGNAL inv_out : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL and_out : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL or_out : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 -- if you need a clock input signal, the clock period can be declared this way
 -- (delete the -- and use the right name for clock)
@@ -42,7 +42,7 @@ SIGNAL or_out : std_logic_vector(7 DOWNTO 0);
 
 BEGIN
   -- create an instance of the UUT and connect it to the defined input and output signals
-  uut: logic_8 port map (
+  uut: logic_8 PORT MAP (
     a_in => a_in,
     b_in => b_in,
     or_out => or_out,
@@ -99,4 +99,4 @@ BEGIN
     -- wait forever
     WAIT;
   END PROCESS;
-END;
+END Behavioral;
