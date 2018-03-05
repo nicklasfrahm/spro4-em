@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-// Date        : Tue Feb 27 11:51:57 2018
+// Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+// Date        : Mon Mar  5 16:46:29 2018
 // Host        : laptop-nicklas running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file {C:/Users/Nicklas
 //               Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc_cpu/risc_cpu.sim/tests/impl/timing/xsim/d_flip_flop_test_time_impl.v}

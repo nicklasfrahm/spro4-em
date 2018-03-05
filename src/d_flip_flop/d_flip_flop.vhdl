@@ -15,7 +15,7 @@ ARCHITECTURE Behavioral OF d_flip_flop IS
 BEGIN
   PROCESS (clk)
   BEGIN
-    IF (rising_edge(clk))
+    IF (RISING_EDGE(clk))
     THEN
       IF (reset = '1')
       THEN

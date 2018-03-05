@@ -41,7 +41,7 @@ CONSTANT clk_period : time := 10 ns;
 
 BEGIN
   -- create an instance of the UUT and connect it to the defined input and output signals
-  uut: d_flip_flop PORT MAP (
+  uut : d_flip_flop PORT MAP (
     d_in => d_in,
     reset => reset,
     preset => preset,
@@ -52,7 +52,7 @@ BEGIN
   -- clock process definitions
   -- uncomment these process statements if you need a clock generation process and give clock the right name
   -- this process will run in parallel with the stimulus process
-  clk_process: PROCESS
+  clk_process : PROCESS
   BEGIN
     clk <= '0';
     WAIT FOR clk_period / 2;
@@ -62,7 +62,7 @@ BEGIN
  
   -- stimulus process, this is where you define a sequence of input signals for the simulation.
   -- all signals must be defined.
-  stimulus_process: PROCESS
+  stimulus_process : PROCESS
   BEGIN
     -- hold reset state for 100 ns
     WAIT FOR clk_period * 10;

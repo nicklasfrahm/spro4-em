@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=C:/ProgramData/Xilinx/SDK/2017.4/bin;C:/ProgramData/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;C:/ProgramData/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:C:/ProgramData/Xilinx/Vivado/2017.4/bin
+  PATH=D:/Programme/Xilinx/SDK/2017.4/bin;D:/Programme/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;D:/Programme/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:D:/Programme/Xilinx/Vivado/2017.4/bin
 else
-  PATH=C:/ProgramData/Xilinx/SDK/2017.4/bin;C:/ProgramData/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;C:/ProgramData/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:C:/ProgramData/Xilinx/Vivado/2017.4/bin:$PATH
+  PATH=D:/Programme/Xilinx/SDK/2017.4/bin;D:/Programme/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;D:/Programme/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:D:/Programme/Xilinx/Vivado/2017.4/bin:$PATH
 fi
 export PATH
 
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log d_flip_flop.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source d_flip_flop.tcl
+EAStep vivado -log counter_8.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source counter_8.tcl

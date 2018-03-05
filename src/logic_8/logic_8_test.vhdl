@@ -42,7 +42,7 @@ SIGNAL or_out : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 BEGIN
   -- create an instance of the UUT and connect it to the defined input and output signals
-  uut: logic_8 PORT MAP (
+  uut : logic_8 PORT MAP (
     a_in => a_in,
     b_in => b_in,
     or_out => or_out,
@@ -63,7 +63,7 @@ BEGIN
  
   -- stimulus process, this is where you define a sequence of input signals for the simulation.
   -- all signals must be defined.
-  stimulus_process: PROCESS
+  stimulus_process : PROCESS
   BEGIN
     -- hold reset state for 100 ns
     WAIT FOR 100 ns;
