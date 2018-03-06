@@ -28,14 +28,14 @@ END COMPONENT;
 
 -- inputs
 -- initiated to zero - but this will not be the case in a real world application
-SIGNAL a_in : std_logic_vector(7 DOWNTO 0) := (OTHERS => '0');
-SIGNAL b_in : std_logic_vector(7 DOWNTO 0) := (OTHERS => '0');
-SIGNAL select_in : std_logic_vector(1 DOWNTO 0) := (OTHERS => '0');
-SIGNAL carry_in : std_logic := '0';
+SIGNAL a_in : STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');
+SIGNAL b_in : STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0');
+SIGNAL select_in : STD_LOGIC_VECTOR(1 DOWNTO 0) := (OTHERS => '0');
+SIGNAL carry_in : STD_LOGIC := '0';
 
 -- outputs
-SIGNAL carry_out : std_logic;
-SIGNAL alu_out : std_logic_vector(7 DOWNTO 0);
+SIGNAL carry_out : STD_LOGIC;
+SIGNAL alu_out : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 -- if you need a clock input signal, the clock period can be declared this way
 -- (delete the -- and use the right name for clock)
