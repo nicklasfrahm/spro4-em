@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4.1 (64-bit)
+# SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
+# IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
+# Start of session at: Tue Mar  6 10:40:11 2018
+# Process ID: 2680
+# Current directory: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.runs/synth_1
+# Command line: vivado.exe -log mux_4_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mux_4_1.tcl
+# Log file: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.runs/synth_1/mux_4_1.vds
+# Journal file: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source mux_4_1.tcl -notrace
