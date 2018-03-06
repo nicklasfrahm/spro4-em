@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../../risc_cpu.srcs/tests/new/counter_8_test.vhd" \
-
-# Do not sort compile order
-nosort
