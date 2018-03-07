@@ -1,0 +1,7 @@
+Running: xsim.dir/datapath_8_test_time_impl/xsimk.exe -simmode gui -wdb datapath_8_test_time_impl.wdb -simrunnum 0 -socket 58695
+Design successfully loaded
+Design Loading Memory Usage: 7220 KB (Peak: 7220 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 7880 KB (Peak: 7880 KB)
+Simulation CPU Usage: 15 ms

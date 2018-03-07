@@ -1,3 +1,3 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.sim/tests/impl/timing/xsim/mux_4_1_test_time_impl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.sim/tests/impl/timing/xsim/datapath_8_test_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2_1
 INFO: [VRFC 10-311] analyzing module glbl

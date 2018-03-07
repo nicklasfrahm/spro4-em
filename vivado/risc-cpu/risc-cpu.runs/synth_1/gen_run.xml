@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1520329209">
-  <File Type="PA-TCL" Name="mux_4_1.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="mux_4_1_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="mux_4_1_reports.tcl"/>
-  <File Type="RDS-RDS" Name="mux_4_1.vds"/>
-  <File Type="RDS-UTIL" Name="mux_4_1_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="mux_4_1_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="mux_4_1.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="mux_4_1_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="mux_4_1_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1520419031">
+  <File Type="PA-TCL" Name="mux_2_1.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="mux_2_1_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="mux_2_1_reports.tcl"/>
+  <File Type="RDS-RDS" Name="mux_2_1.vds"/>
+  <File Type="RDS-UTIL" Name="mux_2_1_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="mux_2_1_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="mux_2_1.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="mux_2_1_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="mux_2_1_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/mux_2_1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/mux_4_1.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -24,9 +31,44 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/memory_8_4.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/logic_8.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/adder_8.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/alu_8.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/datapath_8.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="mux_4_1"/>
+      <Option Name="TopModule" Val="mux_2_1"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -36,9 +78,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
