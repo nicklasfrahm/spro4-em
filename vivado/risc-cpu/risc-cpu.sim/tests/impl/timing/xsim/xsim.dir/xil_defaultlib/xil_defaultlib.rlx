@@ -2,8 +2,8 @@
 2017.4
 Jan 30 2018
 15:48:17
-C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.sim/tests/impl/timing/xsim/datapath_8_test_time_impl.v,1520419393,verilog,,,,glbl;mux_2_1,,,,,,,,
-C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.srcs/tests/new/datapath_8_test.vhd,1520419013,vhdl,,,,datapath_8_test,,,,,,,,
+C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.sim/tests/impl/timing/xsim/datapath_8_test_time_impl.v,1520869498,verilog,,,,datapath_8;glbl;memory_8_4;register_8;register_8_0;register_8_1;register_8_2,,,,,,,,
+C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.srcs/tests/new/datapath_8_test.vhd,1520869489,vhdl,,,,datapath_8_test,,,,,,,,
 C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.srcs/tests/new/memory_8_4_test.vhd,1520411780,vhdl,,,,memory_8_4_test,,,,,,,,
 C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.srcs/tests/new/mux_2_1_test.vhd,1520413695,vhdl,,,,mux_2_1_test,,,,,,,,
 C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.srcs/tests/new/mux_4_1_test.vhd,1520329185,vhdl,,,,mux_4_1_test,,,,,,,,

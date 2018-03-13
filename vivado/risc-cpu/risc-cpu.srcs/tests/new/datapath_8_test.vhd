@@ -56,7 +56,7 @@ END COMPONENT;
 
 -- if you need a clock input signal, the clock period can be declared this way
 -- (delete the -- and use the right name for clock)
-constant clk_period : time := 20 ns;
+constant clk_period : time := 50 ns;
 
 BEGIN
   -- create an instance of the UUT and connect it to the defined input and output signals
@@ -80,31 +80,81 @@ BEGIN
   -- clock process definitions
   -- uncomment these process statements if you need a clock generation process and give clock the right name
   -- this process will run in parallel with the stimulus process.
-   clk_process :process
-  begin
-    clk <= '0';
-    wait for clk_period/2;
+   clk_process : PROCESS
+  BEGIN
     clk <= '1';
-    wait for clk_period/2;
-  end process;
+    WAIT FOR clk_period / 2;
+    clk <= '0';
+    WAIT FOR clk_period / 2;
+  END PROCESS;
  
   -- stimulus process, this is where you define a sequence of input signals for the simulation
   -- all signals must be defined
   stimulus_process : PROCESS
   BEGIN
     -- hold reset state for 100 ns
-    WAIT FOR 100 ns;
+    WAIT FOR clk_period * 10 + clk_period / 2;
   
     -- uncomment the following (and give the clock the right name)
     -- if you want the circuit to "settle" before you assign values to the inputs
     --wait for <clock>_period*10;
   
-    -- test cases
+    -- test data passthrough --
+    -- load data and select proper memory
     data_in <= "00101010";
     b_enable <= '1';
     data_a_sel <= "01";
-    WAIT FOR 100 ns;
+    WAIT FOR clk_period * 10;
     -- expect: data_out = 0b00101010 = 0x2A
+  
+    -- test addition: a = a + b --
+    -- load first number
+    data_in <= "00000001";
+    b_enable <= '0';
+    a_enable <= '1';
+    data_a_sel <= "00";
+    WAIT FOR clk_period;
+    -- load second number
+    data_in <= "00000011";
+    b_enable <= '1';
+    a_enable <= '0';
+    data_a_sel <= "00";
+    data_b_sel <= "01";
+    alu_sel <= "00";
+    WAIT FOR clk_period;
+    -- enable memory and calculate result
+    data_in_sel <= '1';
+    a_enable <= '1';
+    b_enable <= '0';
+    WAIT FOR clk_period;
+    -- show result on output
+    data_in_sel <= '0';
+    a_enable <= '0';
+    WAIT FOR clk_period;
+    -- expect: data_out = 0b00000100 = 0x04
+  
+    -- test subtraction: a = a - b --
+    -- load number to subtract
+    data_in <= "00000001";
+    b_enable <= '1';
+    data_a_sel <= "01";
+    alu_sel <= "01"; -- invesion: NOT a
+    WAIT FOR clk_period;
+    -- enable memory and calculate result
+    data_in_sel <= '1';
+    WAIT FOR clk_period;
+    -- disable sampling of b, prepare sum and enable sampling of a
+    b_enable <= '0';
+    carry_in <= '1';
+    alu_sel <= "00";
+    data_a_sel <= "00";
+    data_b_sel <= "01";
+    a_enable <= '1';
+    WAIT FOR clk_period;
+    -- disable sampling of a
+    a_enable <= '0';
+    WAIT FOR clk_period;
+    -- expect: data_out = 0b00000011 = 0x03
     
     -- wait forever
     WAIT;
