@@ -106,6 +106,6 @@ BEGIN
     reset <= '1';
     WAIT FOR clk_period * 2;
     reset <= '0';
-
+    WAIT;
   END PROCESS;
 END Structural;

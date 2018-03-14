@@ -2,74 +2,19 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Mar 14 09:15:57 2018
-# Process ID: 2320
+# Start of session at: Wed Mar 14 22:55:58 2018
+# Process ID: 10648
 # Current directory: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11072 C:\Users\Nicklas Frahm\Desktop\GitLab\Uni\spro4-em\vivado\risc-cpu\risc-cpu.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10680 C:\Users\Nicklas Frahm\Desktop\GitLab\Uni\spro4-em\vivado\risc-cpu\risc-cpu.xpr
 # Log file: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/vivado.log
 # Journal file: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.xpr}
 update_compile_order -fileset sources_1
-close [ open {C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.srcs/sources_1/new/risc_controller_8.vhd} w ]
-add_files {{C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.srcs/sources_1/new/risc_controller_8.vhd}}
-update_compile_order -fileset sources_1
-set_property SOURCE_SET sources_1 [get_filesets tests]
-close [ open {C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.srcs/tests/new/risc_controller_8_test.vhd} w ]
-add_files -fileset tests {{C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.srcs/tests/new/risc_controller_8_test.vhd}}
-update_compile_order -fileset tests
-update_compile_order -fileset tests
-update_compile_order -fileset tests
-launch_simulation -simset tests -mode post-implementation -type timing
-source datapath_8_test.tcl
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top risc_controller_8 [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top risc_controller_8_test [get_filesets tests]
-set_property top_lib xil_defaultlib [get_filesets tests]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset tests
-reset_run synth_1
-launch_runs impl_1 -jobs 8
-wait_on_run impl_1
-refresh_design
-reset_run synth_1
-launch_runs impl_1 -jobs 8
-wait_on_run impl_1
-refresh_design
 launch_simulation -simset tests -mode post-implementation -type timing
 source risc_controller_8_test.tcl
 close_sim
 launch_simulation -simset tests -mode post-implementation -type timing
 source risc_controller_8_test.tcl
-launch_simulation -simset tests
-source risc_controller_8_test.tcl
-reset_run synth_1
-launch_runs impl_1 -jobs 8
-wait_on_run impl_1
-reset_run impl_1
-launch_runs impl_1 -jobs 8
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -jobs 8
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -jobs 8
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -jobs 8
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -jobs 8
-wait_on_run impl_1
-close_sim
-current_sim simulation_3
-close_sim
 close_sim
