@@ -1,10 +1,10 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.sim/tests/impl/timing/xsim/datapath_8_test_time_impl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module datapath_8
-INFO: [VRFC 10-311] analyzing module memory_8_4
-INFO: [VRFC 10-311] analyzing module register_8
-INFO: [VRFC 10-311] analyzing module register_8_0
-INFO: [VRFC 10-311] analyzing module register_8_1
-INFO: [VRFC 10-311] analyzing module register_8_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.sim/tests/impl/timing/xsim/risc_controller_8_test_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LDCP_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module LDCP_HD10
+INFO: [VRFC 10-311] analyzing module LDCP_HD11
+INFO: [VRFC 10-311] analyzing module LDCP_HD12
+INFO: [VRFC 10-311] analyzing module LDCP_HD7
+INFO: [VRFC 10-311] analyzing module LDCP_HD8
+INFO: [VRFC 10-311] analyzing module LDCP_HD9
+INFO: [VRFC 10-311] analyzing module risc_controller_8
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.srcs/tests/new/datapath_8_test.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity datapath_8_test

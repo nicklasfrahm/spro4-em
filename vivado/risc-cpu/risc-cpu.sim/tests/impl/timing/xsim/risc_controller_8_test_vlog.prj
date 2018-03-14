@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"risc_controller_8_test_time_impl.v" \
+
+# Do not sort compile order
+nosort

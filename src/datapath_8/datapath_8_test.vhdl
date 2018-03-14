@@ -80,7 +80,7 @@ BEGIN
   -- clock process definitions
   -- uncomment these process statements if you need a clock generation process and give clock the right name
   -- this process will run in parallel with the stimulus process.
-   clk_process : PROCESS
+  clk_process : PROCESS
   BEGIN
     clk <= '1';
     WAIT FOR clk_period / 2;

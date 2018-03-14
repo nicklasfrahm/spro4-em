@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=C:/ProgramData/Xilinx/SDK/2017.4/bin;C:/ProgramData/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;C:/ProgramData/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:C:/ProgramData/Xilinx/Vivado/2017.4/bin
+  PATH=D:/Programme/Xilinx/SDK/2017.4/bin;D:/Programme/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;D:/Programme/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:D:/Programme/Xilinx/Vivado/2017.4/bin
 else
-  PATH=C:/ProgramData/Xilinx/SDK/2017.4/bin;C:/ProgramData/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;C:/ProgramData/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:C:/ProgramData/Xilinx/Vivado/2017.4/bin:$PATH
+  PATH=D:/Programme/Xilinx/SDK/2017.4/bin;D:/Programme/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;D:/Programme/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:D:/Programme/Xilinx/Vivado/2017.4/bin:$PATH
 fi
 export PATH
 
@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log datapath_8.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source datapath_8.tcl -notrace
+EAStep vivado -log risc_controller_8.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source risc_controller_8.tcl -notrace
 
 
