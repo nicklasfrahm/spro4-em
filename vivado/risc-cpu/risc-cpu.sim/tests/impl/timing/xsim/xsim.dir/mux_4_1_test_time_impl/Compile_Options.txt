@@ -1,1 +1,0 @@
--wto "fc347f81de364ed0b69ea5d2ad6c5d61" --incr --debug "typical" --relax --mt "2" --maxdelay -L "xil_defaultlib" -L "simprims_ver" -L "secureip" --snapshot "mux_4_1_test_time_impl" -transport_int_delays -pulse_r "0" -pulse_int_r "0" -pulse_e "0" -pulse_int_e "0" "xil_defaultlib.mux_4_1_test" "xil_defaultlib.glbl" -log "elaborate.log" 

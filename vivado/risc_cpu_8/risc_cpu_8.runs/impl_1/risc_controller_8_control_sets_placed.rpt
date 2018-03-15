@@ -1,0 +1,78 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Fri Mar 16 00:10:35 2018
+| Host         : laptop-nicklas running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file risc_controller_8_control_sets_placed.rpt
+| Design       : risc_controller_8
+| Device       : xc7z020
+----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    14 |
+| Unused register locations in slices containing registers |    76 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              15 |           11 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               9 |            3 |
+| Yes          | No                    | No                     |               4 |            1 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               8 |            2 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------+--------------------+-------------------------+------------------+----------------+
+|         Clock Signal        |    Enable Signal   |     Set/Reset Signal    | Slice Load Count | Bel Load Count |
++-----------------------------+--------------------+-------------------------+------------------+----------------+
+|  a_enable_reg/G0            |                    |                         |                1 |              1 |
+|  data_a_sel_reg[0]_i_2_n_0  |                    | carry_in_reg_i_2_n_0    |                1 |              1 |
+|  carry_in_reg/G0            |                    |                         |                1 |              1 |
+|  operation_debug_reg[3]/G0  |                    |                         |                1 |              1 |
+|  operation_debug_reg[1]/G0  |                    |                         |                1 |              1 |
+|  operation_debug_reg[0]/G0  |                    |                         |                1 |              1 |
+|  operation_debug_reg[2]/G0  |                    |                         |                1 |              1 |
+|  pc_increment_reg/G0        |                    |                         |                1 |              1 |
+|  data_b_sel_reg[1]_i_2_n_0  |                    |                         |                1 |              2 |
+|  state_debug_reg[2]_i_1_n_0 |                    |                         |                1 |              3 |
+|  clk_IBUF_BUFG              |                    |                         |                2 |              3 |
+| ~clk_IBUF_BUFG              | opcode[3]_i_1_n_0  |                         |                1 |              4 |
+|  carry_in_reg_i_1_n_0       |                    | data_in_sel_reg_i_2_n_0 |                2 |              8 |
+| ~clk_IBUF_BUFG              | pc_increment_reg/Q | pc0                     |                2 |              8 |
++-----------------------------+--------------------+-------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     8 |
+| 2      |                     1 |
+| 3      |                     2 |
+| 4      |                     1 |
+| 8      |                     2 |
++--------+-----------------------+
+
+
