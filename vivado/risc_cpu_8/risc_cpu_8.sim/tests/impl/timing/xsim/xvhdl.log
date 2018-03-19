@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.srcs/tests/new/risc_controller_8_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc_cpu_8/risc_cpu_8.srcs/tests/new/risc_controller_8_test.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity risc_controller_8_test

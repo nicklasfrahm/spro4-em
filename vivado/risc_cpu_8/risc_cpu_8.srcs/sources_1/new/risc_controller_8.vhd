@@ -71,7 +71,7 @@ BEGIN
       alu_sel <= "00";
       carry_in <= '0';
       pc_increment <= '0';
-      pc_reset <= '0';
+      pc_reset <= '1';
       state_debug <= "000";
     END IF;
     -- decode the instruction
@@ -187,7 +187,7 @@ BEGIN
           data_b_sel <= "00";
           alu_sel <= "01";
           carry_in <= '0';
-          pc_increment <= '1';
+          pc_increment <= '0';
           pc_reset <= '0';
           operation_debug <= "0111";
         -- SUB ABC
@@ -201,7 +201,7 @@ BEGIN
           data_b_sel <= "00";
           alu_sel <= "01";
           carry_in <= '0';
-          pc_increment <= '1';
+          pc_increment <= '0';
           pc_reset <= '0';
           operation_debug <= "1000";
         -- AND CCD
@@ -257,7 +257,7 @@ BEGIN
           data_b_sel <= "00";
           alu_sel <= "01";
           carry_in <= '0';
-          pc_increment <= '0';
+          pc_increment <= '1';
           pc_reset <= '0';
           operation_debug <= "1100";
         -- WAIT
@@ -329,7 +329,7 @@ BEGIN
       -- SUB AAB
       IF (opcode = "0111")
       THEN
-        data_in_sel <= '0';
+        data_in_sel <= '1';
         a_enable <= '1';
         b_enable <= '0';
         c_enable <= '0';
@@ -345,7 +345,7 @@ BEGIN
       -- SUB ABC
       IF (opcode = "1000")
       THEN
-        data_in_sel <= '0';
+        data_in_sel <= '1';
         a_enable <= '1';
         b_enable <= '0';
         c_enable <= '0';
@@ -407,8 +407,8 @@ BEGIN
   program_memory : PROCESS (clk)
   TYPE ROM_TYPE IS ARRAY (0 TO 15) OF STD_LOGIC_VECTOR(3 DOWNTO 0);                 
   VARIABLE rom : ROM_TYPE := (
-    X"F", X"1", X"2", X"6", X"D", X"E", X"0", X"0",
-    X"0", X"0", X"0", X"0", X"0", X"0", X"0", X"0"
+    X"F", X"0", X"1", X"2", X"3", X"4", X"5", X"6",
+    X"7", X"8", X"9", X"A", X"B", X"C", X"D", X"E"
   );
   BEGIN
     IF (FALLING_EDGE(clk))

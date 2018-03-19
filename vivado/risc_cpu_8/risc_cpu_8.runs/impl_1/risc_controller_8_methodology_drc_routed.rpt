@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-| Date         : Fri Mar 16 00:11:05 2018
+| Date         : Mon Mar 19 15:11:30 2018
 | Host         : laptop-nicklas running 64-bit major release  (build 9200)
 | Command      : report_methodology -file risc_controller_8_methodology_drc_routed.rpt -pb risc_controller_8_methodology_drc_routed.pb -rpx risc_controller_8_methodology_drc_routed.rpx
 | Design       : risc_controller_8
@@ -165,7 +165,7 @@ Related violations: <none>
 
 TIMING-20#12 Warning
 Non-clocked latch  
-The latch data_in_sel_reg cannot be properly analyzed as its control pin data_in_sel_reg/G is not reached by a timing clock
+The latch data_in_sel_reg/L7 (in data_in_sel_reg macro) cannot be properly analyzed as its control pin data_in_sel_reg/L7/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#13 Warning

@@ -1,10 +1,11 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc-cpu/risc-cpu.sim/tests/impl/timing/xsim/risc_controller_8_test_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc_cpu_8/risc_cpu_8.sim/tests/impl/timing/xsim/risc_controller_8_test_time_impl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module LDCP_UNIQ_BASE_
-INFO: [VRFC 10-311] analyzing module LDCP_HD1
-INFO: [VRFC 10-311] analyzing module LDCP_HD2
-INFO: [VRFC 10-311] analyzing module LDCP_HD3
-INFO: [VRFC 10-311] analyzing module LDCP_HD4
-INFO: [VRFC 10-311] analyzing module LDCP_HD5
-INFO: [VRFC 10-311] analyzing module LDCP_HD6
+INFO: [VRFC 10-311] analyzing module LDCP_HD46
+INFO: [VRFC 10-311] analyzing module LDCP_HD47
+INFO: [VRFC 10-311] analyzing module LDCP_HD48
+INFO: [VRFC 10-311] analyzing module LDCP_HD49
+INFO: [VRFC 10-311] analyzing module LDCP_HD50
+INFO: [VRFC 10-311] analyzing module LDCP_HD51
+INFO: [VRFC 10-311] analyzing module LDCP_HD52
 INFO: [VRFC 10-311] analyzing module risc_controller_8
 INFO: [VRFC 10-311] analyzing module glbl

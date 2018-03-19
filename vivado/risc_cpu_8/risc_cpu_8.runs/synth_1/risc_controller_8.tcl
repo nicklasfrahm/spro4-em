@@ -26,6 +26,7 @@ set_property parent.project_path {C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
+set_property ip_output_repo {c:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc_cpu_8/risc_cpu_8.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {{C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc_cpu_8/risc_cpu_8.srcs/sources_1/new/risc_controller_8.vhd}}
 # Mark all dcp files as not used in implementation to prevent them from being

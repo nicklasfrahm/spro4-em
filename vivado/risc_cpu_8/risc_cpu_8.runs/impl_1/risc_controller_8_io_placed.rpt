@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-| Date                      : Fri Mar 16 00:10:35 2018
+| Date                      : Mon Mar 19 15:10:57 2018
 | Host                      : laptop-nicklas running 64-bit major release  (build 9200)
 | Command                   : report_io -file risc_controller_8_io_placed.rpt
 | Design                    : risc_controller_8
