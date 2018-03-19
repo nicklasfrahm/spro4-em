@@ -104,7 +104,7 @@ BEGIN
     -- hold reset state
     WAIT FOR clk_period * 2;
     reset <= '1';
-    WAIT FOR clk_period * 2 - clk_period / 2;
+    WAIT FOR clk_period * 2 - clk_period / 2 - clk_period / 4;
     reset <= '0';
     WAIT;
   END PROCESS;

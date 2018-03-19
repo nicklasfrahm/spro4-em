@@ -1,0 +1,119 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Mon Mar 19 17:50:08 2018
+| Host         : laptop-nicklas running 64-bit major release  (build 9200)
+| Command      : report_drc -file risc_cpu_8_drc_routed.rpt -pb risc_cpu_8_drc_routed.pb -rpx risc_cpu_8_drc_routed.rpx
+| Design       : risc_cpu_8
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 16
++----------+------------------+----------------------------+------------+
+| Rule     | Severity         | Description                | Violations |
++----------+------------------+----------------------------+------------+
+| NSTD-1   | Critical Warning | Unspecified I/O Standard   | 1          |
+| UCIO-1   | Critical Warning | Unconstrained Logical Port | 1          |
+| PDRC-153 | Warning          | Gated clock check          | 13         |
+| ZPS7-1   | Warning          | PS7 block required         | 1          |
++----------+------------------+----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+NSTD-1#1 Critical Warning
+Unspecified I/O Standard  
+33 out of 33 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: data_in[7:0], data_out[7:0], opcode_debug[3:0], operation_debug[3:0], pc_debug[3:0], state_debug[2:0], clk, reset.
+Related violations: <none>
+
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+33 out of 33 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: data_in[7:0], data_out[7:0], opcode_debug[3:0], operation_debug[3:0], pc_debug[3:0], state_debug[2:0], clk, reset.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net risc_controller_8_component//i_/i___0_n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component//i_/i___0/O, cell risc_controller_8_component//i_/i___0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net risc_controller_8_component//i_/i__n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component//i_/i_/O, cell risc_controller_8_component//i_/i_. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net risc_controller_8_component/a_enable_reg/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/a_enable_reg/L3_2/O, cell risc_controller_8_component/a_enable_reg/L3_2 (in risc_controller_8_component/a_enable_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net risc_controller_8_component/carry_in_reg/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/carry_in_reg/L3_2/O, cell risc_controller_8_component/carry_in_reg/L3_2 (in risc_controller_8_component/carry_in_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net risc_controller_8_component/data_a_sel_reg[0]_i_2_n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component/data_a_sel_reg[0]_i_2/O, cell risc_controller_8_component/data_a_sel_reg[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net risc_controller_8_component/data_a_sel_reg[1]_i_2_n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component/data_a_sel_reg[1]_i_2/O, cell risc_controller_8_component/data_a_sel_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net risc_controller_8_component/data_in_sel_reg/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/data_in_sel_reg/L3_2/O, cell risc_controller_8_component/data_in_sel_reg/L3_2 (in risc_controller_8_component/data_in_sel_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net risc_controller_8_component/i___0_i_1_n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component/i___0_i_1/O, cell risc_controller_8_component/i___0_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net risc_controller_8_component/operation_debug_reg[0]/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/operation_debug_reg[0]/L3_2/O, cell risc_controller_8_component/operation_debug_reg[0]/L3_2 (in risc_controller_8_component/operation_debug_reg[0] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net risc_controller_8_component/operation_debug_reg[1]/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/operation_debug_reg[1]/L3_2/O, cell risc_controller_8_component/operation_debug_reg[1]/L3_2 (in risc_controller_8_component/operation_debug_reg[1] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net risc_controller_8_component/operation_debug_reg[2]/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/operation_debug_reg[2]/L3_2/O, cell risc_controller_8_component/operation_debug_reg[2]/L3_2 (in risc_controller_8_component/operation_debug_reg[2] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net risc_controller_8_component/operation_debug_reg[3]/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/operation_debug_reg[3]/L3_2/O, cell risc_controller_8_component/operation_debug_reg[3]/L3_2 (in risc_controller_8_component/operation_debug_reg[3] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Gated clock check  
+Net risc_controller_8_component/pc_increment_reg/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/pc_increment_reg/L3_2/O, cell risc_controller_8_component/pc_increment_reg/L3_2 (in risc_controller_8_component/pc_increment_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

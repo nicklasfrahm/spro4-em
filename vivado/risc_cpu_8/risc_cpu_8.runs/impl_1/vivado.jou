@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2017.4.1 (64-bit)
-# SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
-# IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
-# Start of session at: Mon Mar 19 15:10:24 2018
-# Process ID: 352
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Mar 19 17:48:50 2018
+# Process ID: 15948
 # Current directory: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc_cpu_8/risc_cpu_8.runs/impl_1
-# Command line: vivado.exe -log risc_controller_8.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source risc_controller_8.tcl -notrace
-# Log file: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc_cpu_8/risc_cpu_8.runs/impl_1/risc_controller_8.vdi
+# Command line: vivado.exe -log risc_cpu_8.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source risc_cpu_8.tcl -notrace
+# Log file: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc_cpu_8/risc_cpu_8.runs/impl_1/risc_cpu_8.vdi
 # Journal file: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc_cpu_8/risc_cpu_8.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source risc_controller_8.tcl -notrace
+source risc_cpu_8.tcl -notrace

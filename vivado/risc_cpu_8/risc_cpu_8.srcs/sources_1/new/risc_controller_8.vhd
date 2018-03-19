@@ -45,7 +45,7 @@ BEGIN
 
   synchronization_process : PROCESS (clk)
   BEGIN
-    IF (RISING_EDGE(clk))
+    IF (FALLING_EDGE(clk))
     THEN
       IF (reset = '1') 
       THEN
@@ -407,15 +407,19 @@ BEGIN
   program_memory : PROCESS (clk)
   TYPE ROM_TYPE IS ARRAY (0 TO 15) OF STD_LOGIC_VECTOR(3 DOWNTO 0);                 
   VARIABLE rom : ROM_TYPE := (
-    X"F", X"0", X"1", X"2", X"3", X"4", X"5", X"6",
-    X"7", X"8", X"9", X"A", X"B", X"C", X"D", X"E"
+    X"0", X"1", X"2", X"3", X"4", X"5", X"6", X"7",
+    X"8", X"9", X"A", X"B", X"C", X"D", X"E", X"F"
   );
   BEGIN
-    IF (FALLING_EDGE(clk))
+    IF (RISING_EDGE(clk))
     THEN
       IF (state_current = st_reset OR pc_reset = '1')
       THEN
         pc <= "0000";
+        IF (pc_reset = '1')
+        THEN
+          opcode <= rom(0);
+        END IF;
       ELSE
         opcode <= rom(CONV_INTEGER(pc));
         IF (pc_increment = '1')

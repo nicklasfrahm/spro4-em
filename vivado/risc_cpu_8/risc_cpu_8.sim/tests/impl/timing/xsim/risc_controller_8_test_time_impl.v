@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-// Date        : Mon Mar 19 15:12:09 2018
+// Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+// Date        : Mon Mar 19 15:43:17 2018
 // Host        : laptop-nicklas running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file {C:/Users/Nicklas
 //               Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc_cpu_8/risc_cpu_8.sim/tests/impl/timing/xsim/risc_controller_8_test_time_impl.v}
@@ -63,7 +63,7 @@ module LDCP_UNIQ_BASE_
        (.P(VCC_1));
 endmodule
 
-module LDCP_HD46
+module LDCP_HD1
    (Q,
     CLR,
     D,
@@ -113,7 +113,7 @@ module LDCP_HD46
        (.P(VCC_1));
 endmodule
 
-module LDCP_HD47
+module LDCP_HD2
    (Q,
     CLR,
     D,
@@ -163,7 +163,7 @@ module LDCP_HD47
        (.P(VCC_1));
 endmodule
 
-module LDCP_HD48
+module LDCP_HD3
    (Q,
     CLR,
     D,
@@ -213,7 +213,7 @@ module LDCP_HD48
        (.P(VCC_1));
 endmodule
 
-module LDCP_HD49
+module LDCP_HD4
    (Q,
     CLR,
     D,
@@ -263,7 +263,7 @@ module LDCP_HD49
        (.P(VCC_1));
 endmodule
 
-module LDCP_HD50
+module LDCP_HD5
    (Q,
     CLR,
     D,
@@ -313,7 +313,7 @@ module LDCP_HD50
        (.P(VCC_1));
 endmodule
 
-module LDCP_HD51
+module LDCP_HD6
    (Q,
     CLR,
     D,
@@ -363,7 +363,7 @@ module LDCP_HD51
        (.P(VCC_1));
 endmodule
 
-module LDCP_HD52
+module LDCP_HD7
    (Q,
     CLR,
     D,
@@ -534,7 +534,6 @@ end
        (.I(a_enable_OBUF),
         .O(a_enable));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
   LDCP_UNIQ_BASE_ a_enable_reg
        (.CLR(carry_in_reg_i_2_n_0),
         .D(a_enable_reg_i_1_n_0),
@@ -660,8 +659,7 @@ end
        (.I(carry_in_OBUF),
         .O(carry_in));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
-  LDCP_HD46 carry_in_reg
+  LDCP_HD1 carry_in_reg
        (.CLR(carry_in_reg_i_2_n_0),
         .D(1'b0),
         .G(carry_in_reg_i_1_n_0),
@@ -837,8 +835,7 @@ end
        (.I(data_in_sel_OBUF),
         .O(data_in_sel));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
-  LDCP_HD47 data_in_sel_reg
+  LDCP_HD2 data_in_sel_reg
        (.CLR(carry_in_reg_i_2_n_0),
         .D(data_in_sel_reg_i_1_n_0),
         .G(carry_in_reg_i_1_n_0),
@@ -953,24 +950,21 @@ end
        (.I(operation_debug_OBUF[3]),
         .O(operation_debug[3]));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
-  LDCP_HD48 \operation_debug_reg[0] 
+  LDCP_HD3 \operation_debug_reg[0] 
        (.CLR(\operation_debug_reg[3]_i_3_n_0 ),
         .D(opcode_debug_OBUF[0]),
         .G(\operation_debug_reg[3]_i_1_n_0 ),
         .PRE(\operation_debug_reg[2]_i_1_n_0 ),
         .Q(operation_debug_OBUF[0]));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
-  LDCP_HD49 \operation_debug_reg[1] 
+  LDCP_HD4 \operation_debug_reg[1] 
        (.CLR(\operation_debug_reg[3]_i_3_n_0 ),
         .D(opcode_debug_OBUF[1]),
         .G(\operation_debug_reg[3]_i_1_n_0 ),
         .PRE(\operation_debug_reg[2]_i_1_n_0 ),
         .Q(operation_debug_OBUF[1]));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
-  LDCP_HD50 \operation_debug_reg[2] 
+  LDCP_HD5 \operation_debug_reg[2] 
        (.CLR(\operation_debug_reg[3]_i_3_n_0 ),
         .D(opcode_debug_OBUF[2]),
         .G(\operation_debug_reg[3]_i_1_n_0 ),
@@ -987,8 +981,7 @@ end
         .I5(state_current[2]),
         .O(\operation_debug_reg[2]_i_1_n_0 ));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
-  LDCP_HD51 \operation_debug_reg[3] 
+  LDCP_HD6 \operation_debug_reg[3] 
        (.CLR(\operation_debug_reg[3]_i_2_n_0 ),
         .D(opcode_debug_OBUF[3]),
         .G(\operation_debug_reg[3]_i_1_n_0 ),
@@ -1034,8 +1027,7 @@ end
        (.I(pc_debug_OBUF[3]),
         .O(pc_debug[3]));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
-  LDCP_HD52 pc_increment_reg
+  LDCP_HD7 pc_increment_reg
        (.CLR(carry_in_reg_i_2_n_0),
         .D(pc_increment_reg_i_1_n_0),
         .G(carry_in_reg_i_1_n_0),
