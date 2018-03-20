@@ -56,7 +56,7 @@ BEGIN
     END IF;
   END PROCESS;
 
-  output_decode : PROCESS (state_current, opcode)
+  output_decode_process : PROCESS (state_current, opcode)
   BEGIN
     -- reset all control signals
     IF (state_current = st_reset)
@@ -379,7 +379,7 @@ BEGIN
     END IF; 
   END PROCESS;
 
-  state_next_decode : PROCESS (state_current, opcode)
+  state_next_decode_process : PROCESS (state_current, opcode)
   BEGIN
     state_next <= state_current;  
     
@@ -404,7 +404,7 @@ BEGIN
     END CASE;
   END PROCESS;
    
-  program_memory : PROCESS (clk)
+  program_memory_process : PROCESS (clk)
   TYPE ROM_TYPE IS ARRAY (0 TO 15) OF STD_LOGIC_VECTOR(3 DOWNTO 0);                 
   VARIABLE rom : ROM_TYPE := (
     X"0", X"1", X"2", X"3", X"4", X"5", X"6", X"7",
