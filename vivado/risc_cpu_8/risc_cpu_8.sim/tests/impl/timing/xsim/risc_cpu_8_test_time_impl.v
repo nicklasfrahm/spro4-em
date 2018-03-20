@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Mon Mar 19 17:50:44 2018
+// Tool Version: Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+// Date        : Tue Mar 20 09:24:25 2018
 // Host        : laptop-nicklas running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file {C:/Users/Nicklas
 //               Frahm/Desktop/GitLab/Uni/spro4-em/vivado/risc_cpu_8/risc_cpu_8.sim/tests/impl/timing/xsim/risc_cpu_8_test_time_impl.v}
@@ -63,7 +63,7 @@ module LDCP_UNIQ_BASE_
        (.P(VCC_1));
 endmodule
 
-module LDCP_HD43
+module LDCP_HD1
    (Q,
     CLR,
     D,
@@ -113,7 +113,7 @@ module LDCP_HD43
        (.P(VCC_1));
 endmodule
 
-module LDCP_HD44
+module LDCP_HD2
    (Q,
     CLR,
     D,
@@ -163,7 +163,7 @@ module LDCP_HD44
        (.P(VCC_1));
 endmodule
 
-module LDCP_HD45
+module LDCP_HD3
    (Q,
     CLR,
     D,
@@ -213,7 +213,7 @@ module LDCP_HD45
        (.P(VCC_1));
 endmodule
 
-module LDCP_HD46
+module LDCP_HD4
    (Q,
     CLR,
     D,
@@ -263,7 +263,7 @@ module LDCP_HD46
        (.P(VCC_1));
 endmodule
 
-module LDCP_HD47
+module LDCP_HD5
    (Q,
     CLR,
     D,
@@ -313,7 +313,7 @@ module LDCP_HD47
        (.P(VCC_1));
 endmodule
 
-module LDCP_HD48
+module LDCP_HD6
    (Q,
     CLR,
     D,
@@ -363,7 +363,7 @@ module LDCP_HD48
        (.P(VCC_1));
 endmodule
 
-module LDCP_HD49
+module LDCP_HD7
    (Q,
     CLR,
     D,
@@ -426,15 +426,15 @@ module datapath_8
     D,
     data_in_sel_conn,
     data_in_IBUF,
-    \FSM_onehot_state_current_reg[4] ,
+    \opcode_reg[3] ,
     carry_in_conn,
-    \FSM_onehot_state_current_reg[3] ,
-    SR,
+    \opcode_reg[2] ,
+    reset_IBUF,
     E,
     CLK,
-    \FSM_onehot_state_current_reg[4]_0 ,
-    \FSM_onehot_state_current_reg[4]_1 ,
-    \FSM_onehot_state_current_reg[2] );
+    \opcode_reg[3]_0 ,
+    \opcode_reg[1] ,
+    \opcode_reg[0] );
   output carry_out235_out;
   output [7:0]data_out_OBUF;
   output [3:0]\reg_out_reg[7] ;
@@ -447,26 +447,20 @@ module datapath_8
   input [3:0]D;
   input data_in_sel_conn;
   input [3:0]data_in_IBUF;
-  input [1:0]\FSM_onehot_state_current_reg[4] ;
+  input [1:0]\opcode_reg[3] ;
   input carry_in_conn;
-  input [1:0]\FSM_onehot_state_current_reg[3] ;
-  input [0:0]SR;
+  input [1:0]\opcode_reg[2] ;
+  input reset_IBUF;
   input [0:0]E;
   input CLK;
-  input [0:0]\FSM_onehot_state_current_reg[4]_0 ;
-  input [0:0]\FSM_onehot_state_current_reg[4]_1 ;
-  input [0:0]\FSM_onehot_state_current_reg[2] ;
+  input [0:0]\opcode_reg[3]_0 ;
+  input [0:0]\opcode_reg[1] ;
+  input [0:0]\opcode_reg[0] ;
 
   wire CLK;
   wire [3:0]D;
   wire [0:0]E;
-  wire [0:0]\FSM_onehot_state_current_reg[2] ;
-  wire [1:0]\FSM_onehot_state_current_reg[3] ;
-  wire [1:0]\FSM_onehot_state_current_reg[4] ;
-  wire [0:0]\FSM_onehot_state_current_reg[4]_0 ;
-  wire [0:0]\FSM_onehot_state_current_reg[4]_1 ;
   wire [1:0]Q;
-  wire [0:0]SR;
   wire carry_in_conn;
   wire carry_out235_out;
   wire carry_out2__1;
@@ -477,19 +471,19 @@ module datapath_8
   wire [3:0]data_in_IBUF;
   wire data_in_sel_conn;
   wire [7:0]data_out_OBUF;
+  wire [0:0]\opcode_reg[0] ;
+  wire [0:0]\opcode_reg[1] ;
+  wire [1:0]\opcode_reg[2] ;
+  wire [1:0]\opcode_reg[3] ;
+  wire [0:0]\opcode_reg[3]_0 ;
   wire [3:0]\reg_out_reg[7] ;
+  wire reset_IBUF;
 
   memory_8_4 memory_8_4_component
        (.CLK(CLK),
         .D(D),
         .E(E),
-        .\FSM_onehot_state_current_reg[2] (\FSM_onehot_state_current_reg[2] ),
-        .\FSM_onehot_state_current_reg[3] (\FSM_onehot_state_current_reg[3] ),
-        .\FSM_onehot_state_current_reg[4] (\FSM_onehot_state_current_reg[4] ),
-        .\FSM_onehot_state_current_reg[4]_0 (\FSM_onehot_state_current_reg[4]_0 ),
-        .\FSM_onehot_state_current_reg[4]_1 (\FSM_onehot_state_current_reg[4]_1 ),
         .Q(Q),
-        .SR(SR),
         .carry_in_conn(carry_in_conn),
         .carry_out235_out(carry_out235_out),
         .carry_out2__1(carry_out2__1),
@@ -500,7 +494,13 @@ module datapath_8
         .data_in_IBUF(data_in_IBUF),
         .data_in_sel_conn(data_in_sel_conn),
         .data_out_OBUF(data_out_OBUF),
-        .\reg_out_reg[7] (\reg_out_reg[7] ));
+        .\opcode_reg[0] (\opcode_reg[0] ),
+        .\opcode_reg[1] (\opcode_reg[1] ),
+        .\opcode_reg[2] (\opcode_reg[2] ),
+        .\opcode_reg[3] (\opcode_reg[3] ),
+        .\opcode_reg[3]_0 (\opcode_reg[3]_0 ),
+        .\reg_out_reg[7] (\reg_out_reg[7] ),
+        .reset_IBUF(reset_IBUF));
 endmodule
 
 module memory_8_4
@@ -515,16 +515,16 @@ module memory_8_4
     Q,
     data_in_sel_conn,
     data_in_IBUF,
-    \FSM_onehot_state_current_reg[4] ,
+    \opcode_reg[3] ,
     carry_in_conn,
-    \FSM_onehot_state_current_reg[3] ,
-    SR,
+    \opcode_reg[2] ,
+    reset_IBUF,
     E,
     D,
     CLK,
-    \FSM_onehot_state_current_reg[4]_0 ,
-    \FSM_onehot_state_current_reg[4]_1 ,
-    \FSM_onehot_state_current_reg[2] );
+    \opcode_reg[3]_0 ,
+    \opcode_reg[1] ,
+    \opcode_reg[0] );
   output carry_out235_out;
   output [7:0]data_out_OBUF;
   output [3:0]\reg_out_reg[7] ;
@@ -536,27 +536,21 @@ module memory_8_4
   input [1:0]Q;
   input data_in_sel_conn;
   input [3:0]data_in_IBUF;
-  input [1:0]\FSM_onehot_state_current_reg[4] ;
+  input [1:0]\opcode_reg[3] ;
   input carry_in_conn;
-  input [1:0]\FSM_onehot_state_current_reg[3] ;
-  input [0:0]SR;
+  input [1:0]\opcode_reg[2] ;
+  input reset_IBUF;
   input [0:0]E;
   input [3:0]D;
   input CLK;
-  input [0:0]\FSM_onehot_state_current_reg[4]_0 ;
-  input [0:0]\FSM_onehot_state_current_reg[4]_1 ;
-  input [0:0]\FSM_onehot_state_current_reg[2] ;
+  input [0:0]\opcode_reg[3]_0 ;
+  input [0:0]\opcode_reg[1] ;
+  input [0:0]\opcode_reg[0] ;
 
   wire CLK;
   wire [3:0]D;
   wire [0:0]E;
-  wire [0:0]\FSM_onehot_state_current_reg[2] ;
-  wire [1:0]\FSM_onehot_state_current_reg[3] ;
-  wire [1:0]\FSM_onehot_state_current_reg[4] ;
-  wire [0:0]\FSM_onehot_state_current_reg[4]_0 ;
-  wire [0:0]\FSM_onehot_state_current_reg[4]_1 ;
   wire [1:0]Q;
-  wire [0:0]SR;
   wire carry_in_conn;
   wire carry_out235_out;
   wire carry_out2__1;
@@ -568,6 +562,11 @@ module memory_8_4
   wire data_in_sel_conn;
   wire [7:0]data_out_OBUF;
   wire [4:1]mux_out;
+  wire [0:0]\opcode_reg[0] ;
+  wire [0:0]\opcode_reg[1] ;
+  wire [1:0]\opcode_reg[2] ;
+  wire [1:0]\opcode_reg[3] ;
+  wire [0:0]\opcode_reg[3]_0 ;
   wire [7:0]reg_out;
   wire [3:0]\reg_out_reg[7] ;
   wire register_8_b_n_0;
@@ -586,29 +585,24 @@ module memory_8_4
   wire register_8_d_n_5;
   wire register_8_d_n_6;
   wire register_8_d_n_7;
+  wire reset_IBUF;
 
   register_8 register_8_a
        (.CLK(CLK),
         .D({D[3:1],mux_out,D[0]}),
-        .\FSM_onehot_state_current_reg[2] (\FSM_onehot_state_current_reg[2] ),
         .Q(reg_out),
-        .SR(SR));
+        .\opcode_reg[0] (\opcode_reg[0] ),
+        .reset_IBUF(reset_IBUF));
   register_8_0 register_8_b
        (.CLK(CLK),
         .D({D[3:1],mux_out,D[0]}),
-        .\FSM_onehot_state_current_reg[4] (\FSM_onehot_state_current_reg[4]_1 ),
         .Q({register_8_b_n_0,register_8_b_n_1,register_8_b_n_2,register_8_b_n_3,register_8_b_n_4,register_8_b_n_5,register_8_b_n_6,register_8_b_n_7}),
-        .SR(SR));
+        .\opcode_reg[1] (\opcode_reg[1] ),
+        .reset_IBUF(reset_IBUF));
   register_8_1 register_8_c
        (.CLK(CLK),
         .D(mux_out),
-        .\FSM_onehot_state_current_reg[2] (D),
-        .\FSM_onehot_state_current_reg[3] (Q),
-        .\FSM_onehot_state_current_reg[3]_0 (\FSM_onehot_state_current_reg[3] ),
-        .\FSM_onehot_state_current_reg[4] (\FSM_onehot_state_current_reg[4] ),
-        .\FSM_onehot_state_current_reg[4]_0 (\FSM_onehot_state_current_reg[4]_0 ),
         .Q({register_8_d_n_0,register_8_d_n_1,register_8_d_n_2,register_8_d_n_3,register_8_d_n_4,register_8_d_n_5,register_8_d_n_6,register_8_d_n_7}),
-        .SR(SR),
         .carry_in_conn(carry_in_conn),
         .carry_out235_out(carry_out235_out),
         .carry_out2__1(carry_out2__1),
@@ -619,184 +613,190 @@ module memory_8_4
         .data_in_IBUF(data_in_IBUF),
         .data_in_sel_conn(data_in_sel_conn),
         .data_out_OBUF(data_out_OBUF),
+        .\opcode_reg[2] (Q),
+        .\opcode_reg[2]_0 (\opcode_reg[2] ),
+        .\opcode_reg[3] (\opcode_reg[3] ),
+        .\opcode_reg[3]_0 (\opcode_reg[3]_0 ),
         .\reg_out_reg[7]_0 (\reg_out_reg[7] ),
         .\reg_out_reg[7]_1 (reg_out),
-        .\reg_out_reg[7]_2 ({register_8_b_n_0,register_8_b_n_1,register_8_b_n_2,register_8_b_n_3,register_8_b_n_4,register_8_b_n_5,register_8_b_n_6,register_8_b_n_7}));
+        .\reg_out_reg[7]_2 ({register_8_b_n_0,register_8_b_n_1,register_8_b_n_2,register_8_b_n_3,register_8_b_n_4,register_8_b_n_5,register_8_b_n_6,register_8_b_n_7}),
+        .\reg_out_reg[7]_3 (D),
+        .reset_IBUF(reset_IBUF));
   register_8_2 register_8_d
        (.CLK(CLK),
         .D({D[3:1],mux_out,D[0]}),
         .E(E),
         .Q({register_8_d_n_0,register_8_d_n_1,register_8_d_n_2,register_8_d_n_3,register_8_d_n_4,register_8_d_n_5,register_8_d_n_6,register_8_d_n_7}),
-        .SR(SR));
+        .reset_IBUF(reset_IBUF));
 endmodule
 
 module register_8
    (Q,
-    SR,
-    \FSM_onehot_state_current_reg[2] ,
+    reset_IBUF,
+    \opcode_reg[0] ,
     D,
     CLK);
   output [7:0]Q;
-  input [0:0]SR;
-  input [0:0]\FSM_onehot_state_current_reg[2] ;
+  input reset_IBUF;
+  input [0:0]\opcode_reg[0] ;
   input [7:0]D;
   input CLK;
 
   wire CLK;
   wire [7:0]D;
-  wire [0:0]\FSM_onehot_state_current_reg[2] ;
   wire [7:0]Q;
-  wire [0:0]SR;
+  wire [0:0]\opcode_reg[0] ;
+  wire reset_IBUF;
 
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[0] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[2] ),
+        .CE(\opcode_reg[0] ),
         .D(D[0]),
         .Q(Q[0]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[1] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[2] ),
+        .CE(\opcode_reg[0] ),
         .D(D[1]),
         .Q(Q[1]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[2] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[2] ),
+        .CE(\opcode_reg[0] ),
         .D(D[2]),
         .Q(Q[2]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[3] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[2] ),
+        .CE(\opcode_reg[0] ),
         .D(D[3]),
         .Q(Q[3]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[4] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[2] ),
+        .CE(\opcode_reg[0] ),
         .D(D[4]),
         .Q(Q[4]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[5] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[2] ),
+        .CE(\opcode_reg[0] ),
         .D(D[5]),
         .Q(Q[5]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[6] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[2] ),
+        .CE(\opcode_reg[0] ),
         .D(D[6]),
         .Q(Q[6]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[7] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[2] ),
+        .CE(\opcode_reg[0] ),
         .D(D[7]),
         .Q(Q[7]),
-        .R(SR));
+        .R(reset_IBUF));
 endmodule
 
 (* ORIG_REF_NAME = "register_8" *) 
 module register_8_0
    (Q,
-    SR,
-    \FSM_onehot_state_current_reg[4] ,
+    reset_IBUF,
+    \opcode_reg[1] ,
     D,
     CLK);
   output [7:0]Q;
-  input [0:0]SR;
-  input [0:0]\FSM_onehot_state_current_reg[4] ;
+  input reset_IBUF;
+  input [0:0]\opcode_reg[1] ;
   input [7:0]D;
   input CLK;
 
   wire CLK;
   wire [7:0]D;
-  wire [0:0]\FSM_onehot_state_current_reg[4] ;
   wire [7:0]Q;
-  wire [0:0]SR;
+  wire [0:0]\opcode_reg[1] ;
+  wire reset_IBUF;
 
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[0] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4] ),
+        .CE(\opcode_reg[1] ),
         .D(D[0]),
         .Q(Q[0]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[1] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4] ),
+        .CE(\opcode_reg[1] ),
         .D(D[1]),
         .Q(Q[1]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[2] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4] ),
+        .CE(\opcode_reg[1] ),
         .D(D[2]),
         .Q(Q[2]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[3] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4] ),
+        .CE(\opcode_reg[1] ),
         .D(D[3]),
         .Q(Q[3]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[4] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4] ),
+        .CE(\opcode_reg[1] ),
         .D(D[4]),
         .Q(Q[4]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[5] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4] ),
+        .CE(\opcode_reg[1] ),
         .D(D[5]),
         .Q(Q[5]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[6] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4] ),
+        .CE(\opcode_reg[1] ),
         .D(D[6]),
         .Q(Q[6]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[7] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4] ),
+        .CE(\opcode_reg[1] ),
         .D(D[7]),
         .Q(Q[7]),
-        .R(SR));
+        .R(reset_IBUF));
 endmodule
 
 (* ORIG_REF_NAME = "register_8" *) 
@@ -812,16 +812,16 @@ module register_8_1
     carry_out432_out,
     Q,
     \reg_out_reg[7]_1 ,
-    \FSM_onehot_state_current_reg[3] ,
+    \opcode_reg[2] ,
     \reg_out_reg[7]_2 ,
     data_in_sel_conn,
     data_in_IBUF,
-    \FSM_onehot_state_current_reg[4] ,
+    \opcode_reg[3] ,
     carry_in_conn,
-    \FSM_onehot_state_current_reg[3]_0 ,
-    SR,
-    \FSM_onehot_state_current_reg[4]_0 ,
-    \FSM_onehot_state_current_reg[2] ,
+    \opcode_reg[2]_0 ,
+    reset_IBUF,
+    \opcode_reg[3]_0 ,
+    \reg_out_reg[7]_3 ,
     CLK);
   output carry_out235_out;
   output [7:0]data_out_OBUF;
@@ -834,27 +834,21 @@ module register_8_1
   output carry_out432_out;
   input [7:0]Q;
   input [7:0]\reg_out_reg[7]_1 ;
-  input [1:0]\FSM_onehot_state_current_reg[3] ;
+  input [1:0]\opcode_reg[2] ;
   input [7:0]\reg_out_reg[7]_2 ;
   input data_in_sel_conn;
   input [3:0]data_in_IBUF;
-  input [1:0]\FSM_onehot_state_current_reg[4] ;
+  input [1:0]\opcode_reg[3] ;
   input carry_in_conn;
-  input [1:0]\FSM_onehot_state_current_reg[3]_0 ;
-  input [0:0]SR;
-  input [0:0]\FSM_onehot_state_current_reg[4]_0 ;
-  input [3:0]\FSM_onehot_state_current_reg[2] ;
+  input [1:0]\opcode_reg[2]_0 ;
+  input reset_IBUF;
+  input [0:0]\opcode_reg[3]_0 ;
+  input [3:0]\reg_out_reg[7]_3 ;
   input CLK;
 
   wire CLK;
   wire [3:0]D;
-  wire [3:0]\FSM_onehot_state_current_reg[2] ;
-  wire [1:0]\FSM_onehot_state_current_reg[3] ;
-  wire [1:0]\FSM_onehot_state_current_reg[3]_0 ;
-  wire [1:0]\FSM_onehot_state_current_reg[4] ;
-  wire [0:0]\FSM_onehot_state_current_reg[4]_0 ;
   wire [7:0]Q;
-  wire [0:0]SR;
   wire \alu_component/adder_8_component/carry_out10__1 ;
   wire \alu_component/adder_8_component/carry_out12__1 ;
   wire \alu_component/adder_8_component/carry_out14__1 ;
@@ -871,6 +865,10 @@ module register_8_1
   wire [3:0]data_in_IBUF;
   wire data_in_sel_conn;
   wire [7:0]data_out_OBUF;
+  wire [1:0]\opcode_reg[2] ;
+  wire [1:0]\opcode_reg[2]_0 ;
+  wire [1:0]\opcode_reg[3] ;
+  wire [0:0]\opcode_reg[3]_0 ;
   wire \reg_out[1]_i_2_n_0 ;
   wire \reg_out[2]_i_2_n_0 ;
   wire \reg_out[3]_i_2_n_0 ;
@@ -880,6 +878,7 @@ module register_8_1
   wire [3:0]\reg_out_reg[7]_0 ;
   wire [7:0]\reg_out_reg[7]_1 ;
   wire [7:0]\reg_out_reg[7]_2 ;
+  wire [3:0]\reg_out_reg[7]_3 ;
   wire \reg_out_reg_n_0_[0] ;
   wire \reg_out_reg_n_0_[1] ;
   wire \reg_out_reg_n_0_[2] ;
@@ -888,6 +887,7 @@ module register_8_1
   wire \reg_out_reg_n_0_[5] ;
   wire \reg_out_reg_n_0_[6] ;
   wire \reg_out_reg_n_0_[7] ;
+  wire reset_IBUF;
 
   LUT6 #(
     .INIT(64'hCCFFAAF0CC00AAF0)) 
@@ -895,8 +895,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[0] ),
         .I1(Q[0]),
         .I2(\reg_out_reg[7]_1 [0]),
-        .I3(\FSM_onehot_state_current_reg[3] [1]),
-        .I4(\FSM_onehot_state_current_reg[3] [0]),
+        .I3(\opcode_reg[2] [1]),
+        .I4(\opcode_reg[2] [0]),
         .I5(\reg_out_reg[7]_2 [0]),
         .O(data_out_OBUF[0]));
   LUT6 #(
@@ -905,8 +905,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[1] ),
         .I1(Q[1]),
         .I2(\reg_out_reg[7]_1 [1]),
-        .I3(\FSM_onehot_state_current_reg[3] [1]),
-        .I4(\FSM_onehot_state_current_reg[3] [0]),
+        .I3(\opcode_reg[2] [1]),
+        .I4(\opcode_reg[2] [0]),
         .I5(\reg_out_reg[7]_2 [1]),
         .O(data_out_OBUF[1]));
   LUT6 #(
@@ -915,8 +915,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[2] ),
         .I1(Q[2]),
         .I2(\reg_out_reg[7]_1 [2]),
-        .I3(\FSM_onehot_state_current_reg[3] [1]),
-        .I4(\FSM_onehot_state_current_reg[3] [0]),
+        .I3(\opcode_reg[2] [1]),
+        .I4(\opcode_reg[2] [0]),
         .I5(\reg_out_reg[7]_2 [2]),
         .O(data_out_OBUF[2]));
   LUT6 #(
@@ -925,8 +925,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[3] ),
         .I1(Q[3]),
         .I2(\reg_out_reg[7]_1 [3]),
-        .I3(\FSM_onehot_state_current_reg[3] [1]),
-        .I4(\FSM_onehot_state_current_reg[3] [0]),
+        .I3(\opcode_reg[2] [1]),
+        .I4(\opcode_reg[2] [0]),
         .I5(\reg_out_reg[7]_2 [3]),
         .O(data_out_OBUF[3]));
   LUT6 #(
@@ -935,8 +935,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[4] ),
         .I1(Q[4]),
         .I2(\reg_out_reg[7]_1 [4]),
-        .I3(\FSM_onehot_state_current_reg[3] [1]),
-        .I4(\FSM_onehot_state_current_reg[3] [0]),
+        .I3(\opcode_reg[2] [1]),
+        .I4(\opcode_reg[2] [0]),
         .I5(\reg_out_reg[7]_2 [4]),
         .O(data_out_OBUF[4]));
   LUT6 #(
@@ -945,8 +945,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[5] ),
         .I1(Q[5]),
         .I2(\reg_out_reg[7]_1 [5]),
-        .I3(\FSM_onehot_state_current_reg[3] [1]),
-        .I4(\FSM_onehot_state_current_reg[3] [0]),
+        .I3(\opcode_reg[2] [1]),
+        .I4(\opcode_reg[2] [0]),
         .I5(\reg_out_reg[7]_2 [5]),
         .O(data_out_OBUF[5]));
   LUT6 #(
@@ -955,8 +955,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[6] ),
         .I1(Q[6]),
         .I2(\reg_out_reg[7]_1 [6]),
-        .I3(\FSM_onehot_state_current_reg[3] [1]),
-        .I4(\FSM_onehot_state_current_reg[3] [0]),
+        .I3(\opcode_reg[2] [1]),
+        .I4(\opcode_reg[2] [0]),
         .I5(\reg_out_reg[7]_2 [6]),
         .O(data_out_OBUF[6]));
   LUT6 #(
@@ -965,8 +965,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[7] ),
         .I1(Q[7]),
         .I2(\reg_out_reg[7]_1 [7]),
-        .I3(\FSM_onehot_state_current_reg[3] [1]),
-        .I4(\FSM_onehot_state_current_reg[3] [0]),
+        .I3(\opcode_reg[2] [1]),
+        .I4(\opcode_reg[2] [0]),
         .I5(\reg_out_reg[7]_2 [7]),
         .O(data_out_OBUF[7]));
   LUT6 #(
@@ -975,8 +975,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[0] ),
         .I1(Q[0]),
         .I2(\reg_out_reg[7]_1 [0]),
-        .I3(\FSM_onehot_state_current_reg[3]_0 [1]),
-        .I4(\FSM_onehot_state_current_reg[3]_0 [0]),
+        .I3(\opcode_reg[2]_0 [1]),
+        .I4(\opcode_reg[2]_0 [0]),
         .I5(\reg_out_reg[7]_2 [0]),
         .O(\reg_out_reg[7]_0 [0]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
@@ -990,8 +990,8 @@ module register_8_1
   LUT5 #(
     .INIT(32'hD643C752)) 
     \reg_out[1]_i_2 
-       (.I0(\FSM_onehot_state_current_reg[4] [0]),
-        .I1(\FSM_onehot_state_current_reg[4] [1]),
+       (.I0(\opcode_reg[3] [0]),
+        .I1(\opcode_reg[3] [1]),
         .I2(data_out_OBUF[1]),
         .I3(data_b_conn[1]),
         .I4(\alu_component/adder_8_component/carry_out14__1 ),
@@ -1002,8 +1002,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[1] ),
         .I1(Q[1]),
         .I2(\reg_out_reg[7]_1 [1]),
-        .I3(\FSM_onehot_state_current_reg[3]_0 [1]),
-        .I4(\FSM_onehot_state_current_reg[3]_0 [0]),
+        .I3(\opcode_reg[2]_0 [1]),
+        .I4(\opcode_reg[2]_0 [0]),
         .I5(\reg_out_reg[7]_2 [1]),
         .O(data_b_conn[1]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
@@ -1025,8 +1025,8 @@ module register_8_1
   LUT5 #(
     .INIT(32'hD643C752)) 
     \reg_out[2]_i_2 
-       (.I0(\FSM_onehot_state_current_reg[4] [0]),
-        .I1(\FSM_onehot_state_current_reg[4] [1]),
+       (.I0(\opcode_reg[3] [0]),
+        .I1(\opcode_reg[3] [1]),
         .I2(data_out_OBUF[2]),
         .I3(data_b_conn[2]),
         .I4(\alu_component/adder_8_component/carry_out12__1 ),
@@ -1037,8 +1037,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[2] ),
         .I1(Q[2]),
         .I2(\reg_out_reg[7]_1 [2]),
-        .I3(\FSM_onehot_state_current_reg[3]_0 [1]),
-        .I4(\FSM_onehot_state_current_reg[3]_0 [0]),
+        .I3(\opcode_reg[2]_0 [1]),
+        .I4(\opcode_reg[2]_0 [0]),
         .I5(\reg_out_reg[7]_2 [2]),
         .O(data_b_conn[2]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
@@ -1062,8 +1062,8 @@ module register_8_1
   LUT5 #(
     .INIT(32'hD643C752)) 
     \reg_out[3]_i_2 
-       (.I0(\FSM_onehot_state_current_reg[4] [0]),
-        .I1(\FSM_onehot_state_current_reg[4] [1]),
+       (.I0(\opcode_reg[3] [0]),
+        .I1(\opcode_reg[3] [1]),
         .I2(data_out_OBUF[3]),
         .I3(data_b_conn[3]),
         .I4(\alu_component/adder_8_component/carry_out10__1 ),
@@ -1074,8 +1074,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[3] ),
         .I1(Q[3]),
         .I2(\reg_out_reg[7]_1 [3]),
-        .I3(\FSM_onehot_state_current_reg[3]_0 [1]),
-        .I4(\FSM_onehot_state_current_reg[3]_0 [0]),
+        .I3(\opcode_reg[2]_0 [1]),
+        .I4(\opcode_reg[2]_0 [0]),
         .I5(\reg_out_reg[7]_2 [3]),
         .O(data_b_conn[3]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
@@ -1098,8 +1098,8 @@ module register_8_1
   LUT5 #(
     .INIT(32'hD643C752)) 
     \reg_out[4]_i_2 
-       (.I0(\FSM_onehot_state_current_reg[4] [0]),
-        .I1(\FSM_onehot_state_current_reg[4] [1]),
+       (.I0(\opcode_reg[3] [0]),
+        .I1(\opcode_reg[3] [1]),
         .I2(data_out_OBUF[4]),
         .I3(data_b_conn[4]),
         .I4(\alu_component/adder_8_component/carry_out8__1 ),
@@ -1150,8 +1150,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[4] ),
         .I1(Q[4]),
         .I2(\reg_out_reg[7]_1 [4]),
-        .I3(\FSM_onehot_state_current_reg[3]_0 [1]),
-        .I4(\FSM_onehot_state_current_reg[3]_0 [0]),
+        .I3(\opcode_reg[2]_0 [1]),
+        .I4(\opcode_reg[2]_0 [0]),
         .I5(\reg_out_reg[7]_2 [4]),
         .O(data_b_conn[4]));
   LUT6 #(
@@ -1160,8 +1160,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[6] ),
         .I1(Q[6]),
         .I2(\reg_out_reg[7]_1 [6]),
-        .I3(\FSM_onehot_state_current_reg[3]_0 [1]),
-        .I4(\FSM_onehot_state_current_reg[3]_0 [0]),
+        .I3(\opcode_reg[2]_0 [1]),
+        .I4(\opcode_reg[2]_0 [0]),
         .I5(\reg_out_reg[7]_2 [6]),
         .O(\reg_out_reg[7]_0 [2]));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
@@ -1193,8 +1193,8 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[7] ),
         .I1(Q[7]),
         .I2(\reg_out_reg[7]_1 [7]),
-        .I3(\FSM_onehot_state_current_reg[3]_0 [1]),
-        .I4(\FSM_onehot_state_current_reg[3]_0 [0]),
+        .I3(\opcode_reg[2]_0 [1]),
+        .I4(\opcode_reg[2]_0 [0]),
         .I5(\reg_out_reg[7]_2 [7]),
         .O(\reg_out_reg[7]_0 [3]));
   LUT2 #(
@@ -1219,85 +1219,85 @@ module register_8_1
        (.I0(\reg_out_reg_n_0_[5] ),
         .I1(Q[5]),
         .I2(\reg_out_reg[7]_1 [5]),
-        .I3(\FSM_onehot_state_current_reg[3]_0 [1]),
-        .I4(\FSM_onehot_state_current_reg[3]_0 [0]),
+        .I3(\opcode_reg[2]_0 [1]),
+        .I4(\opcode_reg[2]_0 [0]),
         .I5(\reg_out_reg[7]_2 [5]),
         .O(\reg_out_reg[7]_0 [1]));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[0] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4]_0 ),
-        .D(\FSM_onehot_state_current_reg[2] [0]),
+        .CE(\opcode_reg[3]_0 ),
+        .D(\reg_out_reg[7]_3 [0]),
         .Q(\reg_out_reg_n_0_[0] ),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[1] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4]_0 ),
+        .CE(\opcode_reg[3]_0 ),
         .D(D[0]),
         .Q(\reg_out_reg_n_0_[1] ),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[2] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4]_0 ),
+        .CE(\opcode_reg[3]_0 ),
         .D(D[1]),
         .Q(\reg_out_reg_n_0_[2] ),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[3] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4]_0 ),
+        .CE(\opcode_reg[3]_0 ),
         .D(D[2]),
         .Q(\reg_out_reg_n_0_[3] ),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[4] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4]_0 ),
+        .CE(\opcode_reg[3]_0 ),
         .D(D[3]),
         .Q(\reg_out_reg_n_0_[4] ),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[5] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4]_0 ),
-        .D(\FSM_onehot_state_current_reg[2] [1]),
+        .CE(\opcode_reg[3]_0 ),
+        .D(\reg_out_reg[7]_3 [1]),
         .Q(\reg_out_reg_n_0_[5] ),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[6] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4]_0 ),
-        .D(\FSM_onehot_state_current_reg[2] [2]),
+        .CE(\opcode_reg[3]_0 ),
+        .D(\reg_out_reg[7]_3 [2]),
         .Q(\reg_out_reg_n_0_[6] ),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[7] 
        (.C(CLK),
-        .CE(\FSM_onehot_state_current_reg[4]_0 ),
-        .D(\FSM_onehot_state_current_reg[2] [3]),
+        .CE(\opcode_reg[3]_0 ),
+        .D(\reg_out_reg[7]_3 [3]),
         .Q(\reg_out_reg_n_0_[7] ),
-        .R(SR));
+        .R(reset_IBUF));
 endmodule
 
 (* ORIG_REF_NAME = "register_8" *) 
 module register_8_2
    (Q,
-    SR,
+    reset_IBUF,
     E,
     D,
     CLK);
   output [7:0]Q;
-  input [0:0]SR;
+  input reset_IBUF;
   input [0:0]E;
   input [7:0]D;
   input CLK;
@@ -1306,7 +1306,7 @@ module register_8_2
   wire [7:0]D;
   wire [0:0]E;
   wire [7:0]Q;
-  wire [0:0]SR;
+  wire reset_IBUF;
 
   FDRE #(
     .INIT(1'b0)) 
@@ -1315,7 +1315,7 @@ module register_8_2
         .CE(E),
         .D(D[0]),
         .Q(Q[0]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[1] 
@@ -1323,7 +1323,7 @@ module register_8_2
         .CE(E),
         .D(D[1]),
         .Q(Q[1]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[2] 
@@ -1331,7 +1331,7 @@ module register_8_2
         .CE(E),
         .D(D[2]),
         .Q(Q[2]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[3] 
@@ -1339,7 +1339,7 @@ module register_8_2
         .CE(E),
         .D(D[3]),
         .Q(Q[3]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[4] 
@@ -1347,7 +1347,7 @@ module register_8_2
         .CE(E),
         .D(D[4]),
         .Q(Q[4]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[5] 
@@ -1355,7 +1355,7 @@ module register_8_2
         .CE(E),
         .D(D[5]),
         .Q(Q[5]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[6] 
@@ -1363,7 +1363,7 @@ module register_8_2
         .CE(E),
         .D(D[6]),
         .Q(Q[6]),
-        .R(SR));
+        .R(reset_IBUF));
   FDRE #(
     .INIT(1'b0)) 
     \reg_out_reg[7] 
@@ -1371,7 +1371,7 @@ module register_8_2
         .CE(E),
         .D(D[7]),
         .Q(Q[7]),
-        .R(SR));
+        .R(reset_IBUF));
 endmodule
 
 module risc_controller_8
@@ -1383,7 +1383,7 @@ module risc_controller_8
     E,
     D,
     Q,
-    \FSM_onehot_state_current_reg[2]_0 ,
+    \state_current_reg[2]_0 ,
     \reg_out_reg[7]_2 ,
     \reg_out_reg[7]_3 ,
     \state_debug[2] ,
@@ -1398,8 +1398,8 @@ module risc_controller_8
     carry_out6__1,
     carry_out432_out,
     carry_out4__1,
-    CLK,
-    in1);
+    reset_IBUF,
+    CLK);
   output carry_in_conn;
   output data_in_sel_conn;
   output [0:0]\reg_out_reg[7] ;
@@ -1408,7 +1408,7 @@ module risc_controller_8
   output [0:0]E;
   output [3:0]D;
   output [1:0]Q;
-  output [3:0]\FSM_onehot_state_current_reg[2]_0 ;
+  output [3:0]\state_current_reg[2]_0 ;
   output [1:0]\reg_out_reg[7]_2 ;
   output [1:0]\reg_out_reg[7]_3 ;
   output [2:0]\state_debug[2] ;
@@ -1423,69 +1423,59 @@ module risc_controller_8
   input carry_out6__1;
   input carry_out432_out;
   input carry_out4__1;
+  input reset_IBUF;
   input CLK;
-  input in1;
 
-  wire \/FSM_onehot_state_current[1]_i_1_n_0 ;
-  wire \/FSM_onehot_state_current[2]_i_1_n_0 ;
-  wire \/FSM_onehot_state_current[3]_i_1_n_0 ;
-  wire \/FSM_onehot_state_current[4]_i_1_n_0 ;
-  wire \/i_/i___0_n_0 ;
-  wire \/i_/i__n_0 ;
-  wire \/i___0_n_0 ;
-  wire \/i___1_n_0 ;
-  wire \/i___2_n_0 ;
-  wire \/i___3_n_0 ;
-  wire \/i___4_n_0 ;
-  wire \/i___5_n_0 ;
-  wire \/i__n_0 ;
   wire CLK;
   wire [3:0]D;
   wire [0:0]E;
-  wire \FSM_onehot_state_current[4]_i_2_n_0 ;
-  wire [3:0]\FSM_onehot_state_current_reg[2]_0 ;
-  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_current_reg_n_0_[0] ;
-  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_current_reg_n_0_[1] ;
-  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_current_reg_n_0_[2] ;
-  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_current_reg_n_0_[3] ;
-  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_current_reg_n_0_[4] ;
   wire [1:0]Q;
+  wire a_enable_reg_i_1_n_0;
   wire \alu_sel_reg[0]_i_1_n_0 ;
   wire \alu_sel_reg[1]_i_1_n_0 ;
   wire \alu_sel_reg[1]_i_2_n_0 ;
+  wire b_enable_reg_i_1_n_0;
+  wire c_enable_reg_i_1_n_0;
   wire carry_in_conn;
   wire carry_in_reg_i_1_n_0;
+  wire carry_in_reg_i_2_n_0;
+  wire carry_in_reg_i_3_n_0;
+  wire carry_in_reg_i_4_n_0;
   wire carry_out235_out;
   wire carry_out2__1;
   wire carry_out432_out;
   wire carry_out4__1;
   wire carry_out629_out;
   wire carry_out6__1;
+  wire d_enable_reg_i_1_n_0;
   wire \data_a_sel_reg[0]_i_1_n_0 ;
   wire \data_a_sel_reg[0]_i_2_n_0 ;
   wire \data_a_sel_reg[0]_i_3_n_0 ;
   wire \data_a_sel_reg[1]_i_1_n_0 ;
   wire \data_a_sel_reg[1]_i_2_n_0 ;
-  wire \data_a_sel_reg[1]_i_3_n_0 ;
   wire \data_b_sel_reg[0]_i_1_n_0 ;
   wire \data_b_sel_reg[0]_i_2_n_0 ;
   wire \data_b_sel_reg[1]_i_1_n_0 ;
   wire \data_b_sel_reg[1]_i_2_n_0 ;
   wire [3:0]data_in_IBUF;
   wire data_in_sel_conn;
+  wire data_in_sel_reg_i_1_n_0;
   wire [3:0]data_out_OBUF;
-  wire eqOp0_in;
-  wire eqOp__1;
-  wire i___0_i_1_n_0;
-  wire in1;
+  wire \opcode[3]_i_1_n_0 ;
   wire [3:0]\operation_debug[3] ;
   wire \operation_debug_reg[2]_i_1_n_0 ;
+  wire \operation_debug_reg[2]_i_2_n_0 ;
   wire \operation_debug_reg[3]_i_1_n_0 ;
   wire \operation_debug_reg[3]_i_2_n_0 ;
-  wire p_0_in;
-  wire pc0;
+  wire \operation_debug_reg[3]_i_3_n_0 ;
   wire [3:0]pc_debug;
   wire pc_increment;
+  wire pc_increment_reg_i_1_n_0;
+  wire \pc_reg_rep_n_0_[0] ;
+  wire \pc_reg_rep_n_0_[1] ;
+  wire \pc_reg_rep_n_0_[2] ;
+  wire \pc_reg_rep_n_0_[3] ;
+  wire \pc_rep[3]_i_1_n_0 ;
   wire pc_reset;
   wire pc_reset_reg_i_1_n_0;
   wire [3:0]plusOp;
@@ -1500,225 +1490,51 @@ module risc_controller_8
   wire [1:0]\reg_out_reg[7]_2 ;
   wire [1:0]\reg_out_reg[7]_3 ;
   wire [3:0]\reg_out_reg[7]_4 ;
+  wire reset_IBUF;
+  wire [2:0]state_current;
+  wire \state_current[0]_i_1_n_0 ;
+  wire \state_current[1]_i_1_n_0 ;
+  wire \state_current[1]_i_2_n_0 ;
+  wire \state_current[2]_i_1_n_0 ;
+  wire [3:0]\state_current_reg[2]_0 ;
   wire [2:0]\state_debug[2] ;
-  wire \state_debug_reg[0]_i_1_n_0 ;
-  wire \state_debug_reg[1]_i_1_n_0 ;
+  wire \state_debug_reg[2]_i_1_n_0 ;
 
-  LUT3 #(
-    .INIT(8'hBA)) 
-    \/FSM_onehot_state_current[1]_i_1 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[0] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .O(\/FSM_onehot_state_current[1]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0400001000000000)) 
-    \/FSM_onehot_state_current[2]_i_1 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[0] ),
-        .I1(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I5(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .O(\/FSM_onehot_state_current[2]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000002)) 
-    \/FSM_onehot_state_current[3]_i_1 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[0] ),
-        .I2(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I3(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I4(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .O(\/FSM_onehot_state_current[3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00045504)) 
-    \/FSM_onehot_state_current[4]_i_1 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[0] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I2(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I3(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I4(\FSM_onehot_state_current[4]_i_2_n_0 ),
-        .O(\/FSM_onehot_state_current[4]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAEAAAABAAAAAAAAA)) 
-    \/i_ 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .I1(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I5(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .O(\/i__n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \/i_/i_ 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .I2(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I3(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I4(\FSM_onehot_state_current_reg_n_0_[0] ),
-        .O(\/i_/i__n_0 ));
-  LUT5 #(
-    .INIT(32'hFEFEFEAE)) 
-    \/i_/i___0 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .I1(i___0_i_1_n_0),
-        .I2(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I3(eqOp0_in),
-        .I4(eqOp__1),
-        .O(\/i_/i___0_n_0 ));
-  LUT4 #(
-    .INIT(16'h0440)) 
-    \/i___0 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .O(\/i___0_n_0 ));
-  LUT6 #(
-    .INIT(64'h0004400004040004)) 
-    \/i___1 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I5(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .O(\/i___1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0400000000000400)) 
-    \/i___2 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I5(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .O(\/i___2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000040004040400)) 
-    \/i___3 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I5(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .O(\/i___3_n_0 ));
-  LUT6 #(
-    .INIT(64'h0004000000004000)) 
-    \/i___4 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I5(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .O(\/i___4_n_0 ));
-  LUT6 #(
-    .INIT(64'h0404044444444044)) 
-    \/i___5 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I5(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .O(\/i___5_n_0 ));
-  LUT4 #(
-    .INIT(16'h2004)) 
-    \FSM_onehot_state_current[4]_i_2 
-       (.I0(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I1(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .O(\FSM_onehot_state_current[4]_i_2_n_0 ));
-  (* FSM_ENCODED_STATES = "st_reset:00001,st_decode_and_execute:00010,st_wait_for_decode_and_execute:10000,st_execute:01000,st_wait_for_execute:00100" *) 
-  (* KEEP = "yes" *) 
-  (* XILINX_LEGACY_PRIM = "FDS_1" *) 
-  FDSE #(
-    .INIT(1'b1),
-    .IS_C_INVERTED(1'b1)) 
-    \FSM_onehot_state_current_reg[0] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(1'b0),
-        .Q(\FSM_onehot_state_current_reg_n_0_[0] ),
-        .S(in1));
-  (* FSM_ENCODED_STATES = "st_reset:00001,st_decode_and_execute:00010,st_wait_for_decode_and_execute:10000,st_execute:01000,st_wait_for_execute:00100" *) 
-  (* KEEP = "yes" *) 
-  (* XILINX_LEGACY_PRIM = "FDR_1" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \FSM_onehot_state_current_reg[1] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\/FSM_onehot_state_current[1]_i_1_n_0 ),
-        .Q(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .R(in1));
-  (* FSM_ENCODED_STATES = "st_reset:00001,st_decode_and_execute:00010,st_wait_for_decode_and_execute:10000,st_execute:01000,st_wait_for_execute:00100" *) 
-  (* KEEP = "yes" *) 
-  (* XILINX_LEGACY_PRIM = "FDR_1" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \FSM_onehot_state_current_reg[2] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\/FSM_onehot_state_current[2]_i_1_n_0 ),
-        .Q(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .R(in1));
-  (* FSM_ENCODED_STATES = "st_reset:00001,st_decode_and_execute:00010,st_wait_for_decode_and_execute:10000,st_execute:01000,st_wait_for_execute:00100" *) 
-  (* KEEP = "yes" *) 
-  (* XILINX_LEGACY_PRIM = "FDR_1" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \FSM_onehot_state_current_reg[3] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\/FSM_onehot_state_current[3]_i_1_n_0 ),
-        .Q(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .R(in1));
-  (* FSM_ENCODED_STATES = "st_reset:00001,st_decode_and_execute:00010,st_wait_for_decode_and_execute:10000,st_execute:01000,st_wait_for_execute:00100" *) 
-  (* KEEP = "yes" *) 
-  (* XILINX_LEGACY_PRIM = "FDR_1" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \FSM_onehot_state_current_reg[4] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\/FSM_onehot_state_current[4]_i_1_n_0 ),
-        .Q(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .R(in1));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
   LDCP_UNIQ_BASE_ a_enable_reg
-       (.CLR(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .D(\/i___1_n_0 ),
-        .G(i___0_i_1_n_0),
-        .PRE(carry_in_reg_i_1_n_0),
+       (.CLR(carry_in_reg_i_2_n_0),
+        .D(a_enable_reg_i_1_n_0),
+        .G(carry_in_reg_i_1_n_0),
+        .PRE(carry_in_reg_i_3_n_0),
         .Q(\reg_out_reg[7] ));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT5 #(
+    .INIT(32'h08007100)) 
+    a_enable_reg_i_1
+       (.I0(\state_current_reg[2]_0 [0]),
+        .I1(\state_current_reg[2]_0 [1]),
+        .I2(\state_current_reg[2]_0 [2]),
+        .I3(\operation_debug_reg[3]_i_1_n_0 ),
+        .I4(\state_current_reg[2]_0 [3]),
+        .O(a_enable_reg_i_1_n_0));
   (* XILINX_LEGACY_PRIM = "LDC" *) 
   LDCE #(
     .INIT(1'b0)) 
     \alu_sel_reg[0] 
        (.CLR(\alu_sel_reg[1]_i_2_n_0 ),
         .D(\alu_sel_reg[0]_i_1_n_0 ),
-        .G(i___0_i_1_n_0),
+        .G(carry_in_reg_i_1_n_0),
         .GE(1'b1),
         .Q(Q[0]));
-  LUT6 #(
-    .INIT(64'h0400004040400040)) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT5 #(
+    .INIT(32'h1D008000)) 
     \alu_sel_reg[0]_i_1 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I5(\FSM_onehot_state_current_reg[2]_0 [2]),
+       (.I0(\state_current_reg[2]_0 [1]),
+        .I1(\state_current_reg[2]_0 [0]),
+        .I2(\state_current_reg[2]_0 [2]),
+        .I3(\operation_debug_reg[3]_i_1_n_0 ),
+        .I4(\state_current_reg[2]_0 [3]),
         .O(\alu_sel_reg[0]_i_1_n_0 ));
   (* XILINX_LEGACY_PRIM = "LDC" *) 
   LDCE #(
@@ -1726,171 +1542,212 @@ module risc_controller_8
     \alu_sel_reg[1] 
        (.CLR(\alu_sel_reg[1]_i_2_n_0 ),
         .D(\alu_sel_reg[1]_i_1_n_0 ),
-        .G(i___0_i_1_n_0),
+        .G(carry_in_reg_i_1_n_0),
         .GE(1'b1),
         .Q(Q[1]));
-  LUT6 #(
-    .INIT(64'h0004040000000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT5 #(
+    .INIT(32'h00080800)) 
     \alu_sel_reg[1]_i_1 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I5(\FSM_onehot_state_current_reg[2]_0 [3]),
+       (.I0(\state_current_reg[2]_0 [3]),
+        .I1(\operation_debug_reg[3]_i_1_n_0 ),
+        .I2(\state_current_reg[2]_0 [2]),
+        .I3(\state_current_reg[2]_0 [1]),
+        .I4(\state_current_reg[2]_0 [0]),
         .O(\alu_sel_reg[1]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAABEAAAAAAAAAAA)) 
+  LUT4 #(
+    .INIT(16'hABAA)) 
     \alu_sel_reg[1]_i_2 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .I1(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I5(\FSM_onehot_state_current_reg_n_0_[3] ),
+       (.I0(carry_in_reg_i_3_n_0),
+        .I1(state_current[0]),
+        .I2(state_current[1]),
+        .I3(state_current[2]),
         .O(\alu_sel_reg[1]_i_2_n_0 ));
   (* XILINX_LEGACY_PRIM = "LDC" *) 
   LDCE #(
     .INIT(1'b0)) 
     b_enable_reg
        (.CLR(\alu_sel_reg[1]_i_2_n_0 ),
-        .D(\/i___2_n_0 ),
-        .G(i___0_i_1_n_0),
+        .D(b_enable_reg_i_1_n_0),
+        .G(carry_in_reg_i_1_n_0),
         .GE(1'b1),
         .Q(\reg_out_reg[7]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT5 #(
+    .INIT(32'h00900000)) 
+    b_enable_reg_i_1
+       (.I0(\state_current_reg[2]_0 [1]),
+        .I1(\state_current_reg[2]_0 [2]),
+        .I2(\state_current_reg[2]_0 [0]),
+        .I3(\state_current_reg[2]_0 [3]),
+        .I4(\operation_debug_reg[3]_i_1_n_0 ),
+        .O(b_enable_reg_i_1_n_0));
   (* XILINX_LEGACY_PRIM = "LDC" *) 
   LDCE #(
     .INIT(1'b0)) 
     c_enable_reg
        (.CLR(\alu_sel_reg[1]_i_2_n_0 ),
-        .D(\/i___3_n_0 ),
-        .G(i___0_i_1_n_0),
+        .D(c_enable_reg_i_1_n_0),
+        .G(carry_in_reg_i_1_n_0),
         .GE(1'b1),
         .Q(\reg_out_reg[7]_1 ));
-  (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
-  LDCP_HD43 carry_in_reg
-       (.CLR(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .D(1'b0),
-        .G(i___0_i_1_n_0),
-        .PRE(carry_in_reg_i_1_n_0),
-        .Q(carry_in_conn));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT5 #(
-    .INIT(32'h20000008)) 
+    .INIT(32'h002E0000)) 
+    c_enable_reg_i_1
+       (.I0(\state_current_reg[2]_0 [3]),
+        .I1(\state_current_reg[2]_0 [1]),
+        .I2(\state_current_reg[2]_0 [0]),
+        .I3(\state_current_reg[2]_0 [2]),
+        .I4(\operation_debug_reg[3]_i_1_n_0 ),
+        .O(c_enable_reg_i_1_n_0));
+  (* INIT = "1'b0" *) 
+  LDCP_HD1 carry_in_reg
+       (.CLR(carry_in_reg_i_2_n_0),
+        .D(1'b0),
+        .G(carry_in_reg_i_1_n_0),
+        .PRE(carry_in_reg_i_3_n_0),
+        .Q(carry_in_conn));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT3 #(
+    .INIT(8'h15)) 
     carry_in_reg_i_1
-       (.I0(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I1(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [0]),
+       (.I0(state_current[2]),
+        .I1(state_current[0]),
+        .I2(state_current[1]),
         .O(carry_in_reg_i_1_n_0));
+  LUT3 #(
+    .INIT(8'h02)) 
+    carry_in_reg_i_2
+       (.I0(state_current[2]),
+        .I1(state_current[1]),
+        .I2(state_current[0]),
+        .O(carry_in_reg_i_2_n_0));
+  LUT5 #(
+    .INIT(32'h00800200)) 
+    carry_in_reg_i_3
+       (.I0(carry_in_reg_i_4_n_0),
+        .I1(\state_current_reg[2]_0 [1]),
+        .I2(\state_current_reg[2]_0 [0]),
+        .I3(\state_current_reg[2]_0 [3]),
+        .I4(\state_current_reg[2]_0 [2]),
+        .O(carry_in_reg_i_3_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    carry_in_reg_i_4
+       (.I0(state_current[2]),
+        .I1(state_current[0]),
+        .I2(state_current[1]),
+        .O(carry_in_reg_i_4_n_0));
   (* XILINX_LEGACY_PRIM = "LDC" *) 
   LDCE #(
     .INIT(1'b0)) 
     d_enable_reg
        (.CLR(\alu_sel_reg[1]_i_2_n_0 ),
-        .D(\/i___4_n_0 ),
-        .G(i___0_i_1_n_0),
+        .D(d_enable_reg_i_1_n_0),
+        .G(carry_in_reg_i_1_n_0),
         .GE(1'b1),
         .Q(E));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT5 #(
+    .INIT(32'h00082000)) 
+    d_enable_reg_i_1
+       (.I0(\operation_debug_reg[3]_i_1_n_0 ),
+        .I1(\state_current_reg[2]_0 [2]),
+        .I2(\state_current_reg[2]_0 [1]),
+        .I3(\state_current_reg[2]_0 [0]),
+        .I4(\state_current_reg[2]_0 [3]),
+        .O(d_enable_reg_i_1_n_0));
   (* XILINX_LEGACY_PRIM = "LDC" *) 
   LDCE #(
     .INIT(1'b0)) 
     \data_a_sel_reg[0] 
-       (.CLR(\FSM_onehot_state_current_reg_n_0_[2] ),
+       (.CLR(carry_in_reg_i_2_n_0),
         .D(\data_a_sel_reg[0]_i_1_n_0 ),
         .G(\data_a_sel_reg[0]_i_2_n_0 ),
         .GE(1'b1),
         .Q(\reg_out_reg[7]_2 [0]));
   LUT6 #(
-    .INIT(64'h0010FFFF00100000)) 
+    .INIT(64'h0F0A05E000000040)) 
     \data_a_sel_reg[0]_i_1 
-       (.I0(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I1(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I4(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I5(\data_a_sel_reg[0]_i_3_n_0 ),
+       (.I0(\state_current_reg[2]_0 [2]),
+        .I1(carry_in_reg_i_4_n_0),
+        .I2(\state_current_reg[2]_0 [3]),
+        .I3(\state_current_reg[2]_0 [0]),
+        .I4(\state_current_reg[2]_0 [1]),
+        .I5(\operation_debug_reg[3]_i_1_n_0 ),
         .O(\data_a_sel_reg[0]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAFFAAFC)) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT4 #(
+    .INIT(16'h2333)) 
     \data_a_sel_reg[0]_i_2 
-       (.I0(\FSM_onehot_state_current[4]_i_2_n_0 ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg_n_0_[0] ),
-        .I3(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I4(\FSM_onehot_state_current_reg_n_0_[4] ),
+       (.I0(\data_a_sel_reg[0]_i_3_n_0 ),
+        .I1(state_current[2]),
+        .I2(state_current[0]),
+        .I3(state_current[1]),
         .O(\data_a_sel_reg[0]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0044004004000040)) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT4 #(
+    .INIT(16'h2004)) 
     \data_a_sel_reg[0]_i_3 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I5(\FSM_onehot_state_current_reg[2]_0 [1]),
+       (.I0(\state_current_reg[2]_0 [2]),
+        .I1(\state_current_reg[2]_0 [3]),
+        .I2(\state_current_reg[2]_0 [0]),
+        .I3(\state_current_reg[2]_0 [1]),
         .O(\data_a_sel_reg[0]_i_3_n_0 ));
   (* XILINX_LEGACY_PRIM = "LDC" *) 
   LDCE #(
     .INIT(1'b0)) 
     \data_a_sel_reg[1] 
-       (.CLR(\/i__n_0 ),
+       (.CLR(\alu_sel_reg[1]_i_2_n_0 ),
         .D(\data_a_sel_reg[1]_i_1_n_0 ),
         .G(\data_a_sel_reg[1]_i_2_n_0 ),
         .GE(1'b1),
         .Q(\reg_out_reg[7]_2 [1]));
-  LUT3 #(
-    .INIT(8'h01)) 
-    \data_a_sel_reg[1]_i_1 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I2(\data_a_sel_reg[1]_i_3_n_0 ),
-        .O(\data_a_sel_reg[1]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h5554)) 
-    \data_a_sel_reg[1]_i_2 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I2(\FSM_onehot_state_current_reg_n_0_[0] ),
-        .I3(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .O(\data_a_sel_reg[1]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT5 #(
-    .INIT(32'hEB8BFFFF)) 
-    \data_a_sel_reg[1]_i_3 
-       (.I0(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I1(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I4(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .O(\data_a_sel_reg[1]_i_3_n_0 ));
+    .INIT(32'h022A2200)) 
+    \data_a_sel_reg[1]_i_1 
+       (.I0(\operation_debug_reg[3]_i_1_n_0 ),
+        .I1(\state_current_reg[2]_0 [2]),
+        .I2(\state_current_reg[2]_0 [0]),
+        .I3(\state_current_reg[2]_0 [1]),
+        .I4(\state_current_reg[2]_0 [3]),
+        .O(\data_a_sel_reg[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT3 #(
+    .INIT(8'h07)) 
+    \data_a_sel_reg[1]_i_2 
+       (.I0(state_current[1]),
+        .I1(state_current[0]),
+        .I2(state_current[2]),
+        .O(\data_a_sel_reg[1]_i_2_n_0 ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \data_b_sel_reg[0] 
        (.CLR(1'b0),
         .D(\data_b_sel_reg[0]_i_1_n_0 ),
-        .G(\/i_/i___0_n_0 ),
+        .G(\data_b_sel_reg[1]_i_2_n_0 ),
         .GE(1'b1),
         .Q(\reg_out_reg[7]_3 [0]));
-  LUT5 #(
-    .INIT(32'h00002E22)) 
-    \data_b_sel_reg[0]_i_1 
-       (.I0(\data_b_sel_reg[0]_i_2_n_0 ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I2(eqOp__1),
-        .I3(eqOp0_in),
-        .I4(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .O(\data_b_sel_reg[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000044000400000)) 
+    .INIT(64'h4000000010280000)) 
+    \data_b_sel_reg[0]_i_1 
+       (.I0(\state_current_reg[2]_0 [3]),
+        .I1(\state_current_reg[2]_0 [1]),
+        .I2(\state_current_reg[2]_0 [0]),
+        .I3(\state_current_reg[2]_0 [2]),
+        .I4(\data_b_sel_reg[0]_i_2_n_0 ),
+        .I5(state_current[1]),
+        .O(\data_b_sel_reg[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
     \data_b_sel_reg[0]_i_2 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I5(\FSM_onehot_state_current_reg[2]_0 [0]),
+       (.I0(state_current[0]),
+        .I1(state_current[2]),
         .O(\data_b_sel_reg[0]_i_2_n_0 ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
@@ -1898,200 +1755,172 @@ module risc_controller_8
     \data_b_sel_reg[1] 
        (.CLR(1'b0),
         .D(\data_b_sel_reg[1]_i_1_n_0 ),
-        .G(\/i_/i___0_n_0 ),
+        .G(\data_b_sel_reg[1]_i_2_n_0 ),
         .GE(1'b1),
         .Q(\reg_out_reg[7]_3 [1]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
-    \data_b_sel_reg[1]_i_1 
-       (.I0(\data_b_sel_reg[1]_i_2_n_0 ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I2(eqOp__1),
-        .I3(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .O(\data_b_sel_reg[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000040000404000)) 
+    .INIT(64'h005A504000000040)) 
+    \data_b_sel_reg[1]_i_1 
+       (.I0(\state_current_reg[2]_0 [2]),
+        .I1(carry_in_reg_i_4_n_0),
+        .I2(\state_current_reg[2]_0 [3]),
+        .I3(\state_current_reg[2]_0 [0]),
+        .I4(\state_current_reg[2]_0 [1]),
+        .I5(\operation_debug_reg[3]_i_1_n_0 ),
+        .O(\data_b_sel_reg[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT4 #(
+    .INIT(16'h233F)) 
     \data_b_sel_reg[1]_i_2 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I5(\FSM_onehot_state_current_reg[2]_0 [2]),
+       (.I0(\data_a_sel_reg[0]_i_3_n_0 ),
+        .I1(state_current[2]),
+        .I2(state_current[0]),
+        .I3(state_current[1]),
         .O(\data_b_sel_reg[1]_i_2_n_0 ));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
-  LDCP_HD44 data_in_sel_reg
-       (.CLR(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .D(\/i___0_n_0 ),
-        .G(i___0_i_1_n_0),
-        .PRE(carry_in_reg_i_1_n_0),
+  LDCP_HD2 data_in_sel_reg
+       (.CLR(carry_in_reg_i_2_n_0),
+        .D(data_in_sel_reg_i_1_n_0),
+        .G(carry_in_reg_i_1_n_0),
+        .PRE(carry_in_reg_i_3_n_0),
         .Q(data_in_sel_conn));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT4 #(
-    .INIT(16'h4000)) 
-    eqOp
-       (.I0(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I1(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .O(eqOp0_in));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT4 #(
-    .INIT(16'h0010)) 
-    eqOp__0
-       (.I0(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I1(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .O(eqOp__1));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT5 #(
+    .INIT(32'h5700AA00)) 
+    data_in_sel_reg_i_1
+       (.I0(\state_current_reg[2]_0 [3]),
+        .I1(\state_current_reg[2]_0 [0]),
+        .I2(\state_current_reg[2]_0 [1]),
+        .I3(\operation_debug_reg[3]_i_1_n_0 ),
+        .I4(\state_current_reg[2]_0 [2]),
+        .O(data_in_sel_reg_i_1_n_0));
   LUT3 #(
     .INIT(8'hFE)) 
-    i___0_i_1
-       (.I0(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg_n_0_[0] ),
-        .O(i___0_i_1_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
     \opcode[3]_i_1 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[0] ),
-        .O(p_0_in));
+       (.I0(state_current[1]),
+        .I1(state_current[0]),
+        .I2(state_current[2]),
+        .O(\opcode[3]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \opcode_reg[0] 
        (.C(CLK),
-        .CE(p_0_in),
-        .D(pc_debug[0]),
-        .Q(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .R(pc_reset));
+        .CE(\opcode[3]_i_1_n_0 ),
+        .D(\pc_reg_rep_n_0_[0] ),
+        .Q(\state_current_reg[2]_0 [0]),
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \opcode_reg[1] 
        (.C(CLK),
-        .CE(p_0_in),
-        .D(pc_debug[1]),
-        .Q(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .R(pc_reset));
+        .CE(\opcode[3]_i_1_n_0 ),
+        .D(\pc_reg_rep_n_0_[1] ),
+        .Q(\state_current_reg[2]_0 [1]),
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \opcode_reg[2] 
        (.C(CLK),
-        .CE(p_0_in),
-        .D(pc_debug[2]),
-        .Q(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .R(pc_reset));
+        .CE(\opcode[3]_i_1_n_0 ),
+        .D(\pc_reg_rep_n_0_[2] ),
+        .Q(\state_current_reg[2]_0 [2]),
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \opcode_reg[3] 
        (.C(CLK),
-        .CE(p_0_in),
-        .D(pc_debug[3]),
-        .Q(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .R(pc_reset));
+        .CE(\opcode[3]_i_1_n_0 ),
+        .D(\pc_reg_rep_n_0_[3] ),
+        .Q(\state_current_reg[2]_0 [3]),
+        .R(1'b0));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
-  LDCP_HD45 \operation_debug_reg[0] 
-       (.CLR(\operation_debug_reg[3]_i_2_n_0 ),
-        .D(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .G(\FSM_onehot_state_current_reg_n_0_[1] ),
+  LDCP_HD3 \operation_debug_reg[0] 
+       (.CLR(\operation_debug_reg[3]_i_3_n_0 ),
+        .D(\state_current_reg[2]_0 [0]),
+        .G(\operation_debug_reg[3]_i_1_n_0 ),
         .PRE(\operation_debug_reg[2]_i_1_n_0 ),
         .Q(\operation_debug[3] [0]));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
-  LDCP_HD46 \operation_debug_reg[1] 
-       (.CLR(\operation_debug_reg[3]_i_2_n_0 ),
-        .D(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .G(\FSM_onehot_state_current_reg_n_0_[1] ),
+  LDCP_HD4 \operation_debug_reg[1] 
+       (.CLR(\operation_debug_reg[3]_i_3_n_0 ),
+        .D(\state_current_reg[2]_0 [1]),
+        .G(\operation_debug_reg[3]_i_1_n_0 ),
         .PRE(\operation_debug_reg[2]_i_1_n_0 ),
         .Q(\operation_debug[3] [1]));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
-  LDCP_HD47 \operation_debug_reg[2] 
-       (.CLR(\operation_debug_reg[3]_i_2_n_0 ),
-        .D(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .G(\FSM_onehot_state_current_reg_n_0_[1] ),
+  LDCP_HD5 \operation_debug_reg[2] 
+       (.CLR(\operation_debug_reg[3]_i_3_n_0 ),
+        .D(\state_current_reg[2]_0 [2]),
+        .G(\operation_debug_reg[3]_i_1_n_0 ),
         .PRE(\operation_debug_reg[2]_i_1_n_0 ),
         .Q(\operation_debug[3] [2]));
-  LUT5 #(
-    .INIT(32'h00008000)) 
+  LUT6 #(
+    .INIT(64'h0000000020000000)) 
     \operation_debug_reg[2]_i_1 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I1(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [3]),
+       (.I0(\state_current_reg[2]_0 [2]),
+        .I1(state_current[2]),
+        .I2(state_current[0]),
+        .I3(state_current[1]),
+        .I4(\operation_debug_reg[2]_i_2_n_0 ),
+        .I5(\state_current_reg[2]_0 [3]),
         .O(\operation_debug_reg[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \operation_debug_reg[2]_i_2 
+       (.I0(\state_current_reg[2]_0 [0]),
+        .I1(\state_current_reg[2]_0 [1]),
+        .O(\operation_debug_reg[2]_i_2_n_0 ));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
-  LDCP_HD48 \operation_debug_reg[3] 
-       (.CLR(\operation_debug_reg[3]_i_1_n_0 ),
-        .D(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .G(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .PRE(\operation_debug_reg[3]_i_2_n_0 ),
+  LDCP_HD6 \operation_debug_reg[3] 
+       (.CLR(\operation_debug_reg[3]_i_2_n_0 ),
+        .D(\state_current_reg[2]_0 [3]),
+        .G(\operation_debug_reg[3]_i_1_n_0 ),
+        .PRE(\operation_debug_reg[3]_i_3_n_0 ),
         .Q(\operation_debug[3] [3]));
-  LUT5 #(
-    .INIT(32'h08000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
     \operation_debug_reg[3]_i_1 
-       (.I0(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I1(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I4(\FSM_onehot_state_current_reg_n_0_[3] ),
+       (.I0(state_current[2]),
+        .I1(state_current[0]),
+        .I2(state_current[1]),
         .O(\operation_debug_reg[3]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h00000020)) 
+    .INIT(32'h08000000)) 
     \operation_debug_reg[3]_i_2 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I1(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [2]),
+       (.I0(\state_current_reg[2]_0 [1]),
+        .I1(\state_current_reg[2]_0 [0]),
+        .I2(\state_current_reg[2]_0 [3]),
+        .I3(carry_in_reg_i_4_n_0),
+        .I4(\state_current_reg[2]_0 [2]),
         .O(\operation_debug_reg[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT1 #(
-    .INIT(2'h1)) 
-    \pc[0]_i_1 
-       (.I0(pc_debug[0]),
-        .O(plusOp[0]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \pc[1]_i_1 
-       (.I0(pc_debug[0]),
-        .I1(pc_debug[1]),
-        .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT3 #(
-    .INIT(8'h78)) 
-    \pc[2]_i_1 
-       (.I0(pc_debug[0]),
-        .I1(pc_debug[1]),
-        .I2(pc_debug[2]),
-        .O(plusOp[2]));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \pc[3]_i_1 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[0] ),
-        .I1(pc_reset),
-        .O(pc0));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT4 #(
-    .INIT(16'h7F80)) 
-    \pc[3]_i_2 
-       (.I0(pc_debug[1]),
-        .I1(pc_debug[0]),
-        .I2(pc_debug[2]),
-        .I3(pc_debug[3]),
-        .O(plusOp[3]));
+  LUT5 #(
+    .INIT(32'h00000040)) 
+    \operation_debug_reg[3]_i_3 
+       (.I0(\state_current_reg[2]_0 [2]),
+        .I1(carry_in_reg_i_4_n_0),
+        .I2(\state_current_reg[2]_0 [3]),
+        .I3(\state_current_reg[2]_0 [0]),
+        .I4(\state_current_reg[2]_0 [1]),
+        .O(\operation_debug_reg[3]_i_3_n_0 ));
   (* INIT = "1'b0" *) 
-  (* XILINX_REPORT_XFORM = "LDCP" *) 
-  LDCP_HD49 pc_increment_reg
-       (.CLR(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .D(\/i___5_n_0 ),
-        .G(i___0_i_1_n_0),
-        .PRE(carry_in_reg_i_1_n_0),
+  LDCP_HD7 pc_increment_reg
+       (.CLR(carry_in_reg_i_2_n_0),
+        .D(pc_increment_reg_i_1_n_0),
+        .G(carry_in_reg_i_1_n_0),
+        .PRE(carry_in_reg_i_3_n_0),
         .Q(pc_increment));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT5 #(
+    .INIT(32'h1FFD0000)) 
+    pc_increment_reg_i_1
+       (.I0(\state_current_reg[2]_0 [3]),
+        .I1(\state_current_reg[2]_0 [0]),
+        .I2(\state_current_reg[2]_0 [1]),
+        .I3(\state_current_reg[2]_0 [2]),
+        .I4(\operation_debug_reg[3]_i_1_n_0 ),
+        .O(pc_increment_reg_i_1_n_0));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg[0] 
@@ -2099,7 +1928,7 @@ module risc_controller_8
         .CE(pc_increment),
         .D(plusOp[0]),
         .Q(pc_debug[0]),
-        .R(pc0));
+        .R(\pc_rep[3]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg[1] 
@@ -2107,7 +1936,7 @@ module risc_controller_8
         .CE(pc_increment),
         .D(plusOp[1]),
         .Q(pc_debug[1]),
-        .R(pc0));
+        .R(\pc_rep[3]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg[2] 
@@ -2115,7 +1944,7 @@ module risc_controller_8
         .CE(pc_increment),
         .D(plusOp[2]),
         .Q(pc_debug[2]),
-        .R(pc0));
+        .R(\pc_rep[3]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pc_reg[3] 
@@ -2123,25 +1952,100 @@ module risc_controller_8
         .CE(pc_increment),
         .D(plusOp[3]),
         .Q(pc_debug[3]),
-        .R(pc0));
+        .R(\pc_rep[3]_i_1_n_0 ));
+  (* equivalent_register_removal = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \pc_reg_rep[0] 
+       (.C(CLK),
+        .CE(pc_increment),
+        .D(plusOp[0]),
+        .Q(\pc_reg_rep_n_0_[0] ),
+        .R(\pc_rep[3]_i_1_n_0 ));
+  (* equivalent_register_removal = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \pc_reg_rep[1] 
+       (.C(CLK),
+        .CE(pc_increment),
+        .D(plusOp[1]),
+        .Q(\pc_reg_rep_n_0_[1] ),
+        .R(\pc_rep[3]_i_1_n_0 ));
+  (* equivalent_register_removal = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \pc_reg_rep[2] 
+       (.C(CLK),
+        .CE(pc_increment),
+        .D(plusOp[2]),
+        .Q(\pc_reg_rep_n_0_[2] ),
+        .R(\pc_rep[3]_i_1_n_0 ));
+  (* equivalent_register_removal = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \pc_reg_rep[3] 
+       (.C(CLK),
+        .CE(pc_increment),
+        .D(plusOp[3]),
+        .Q(\pc_reg_rep_n_0_[3] ),
+        .R(\pc_rep[3]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT1 #(
+    .INIT(2'h1)) 
+    \pc_rep[0]_i_1 
+       (.I0(pc_debug[0]),
+        .O(plusOp[0]));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pc_rep[1]_i_1 
+       (.I0(pc_debug[0]),
+        .I1(pc_debug[1]),
+        .O(plusOp[1]));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  LUT3 #(
+    .INIT(8'h78)) 
+    \pc_rep[2]_i_1 
+       (.I0(pc_debug[1]),
+        .I1(pc_debug[0]),
+        .I2(pc_debug[2]),
+        .O(plusOp[2]));
+  LUT5 #(
+    .INIT(32'h4444444F)) 
+    \pc_rep[3]_i_1 
+       (.I0(pc_increment),
+        .I1(pc_reset),
+        .I2(state_current[2]),
+        .I3(state_current[0]),
+        .I4(state_current[1]),
+        .O(\pc_rep[3]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  LUT4 #(
+    .INIT(16'h7F80)) 
+    \pc_rep[3]_i_2 
+       (.I0(pc_debug[0]),
+        .I1(pc_debug[1]),
+        .I2(pc_debug[2]),
+        .I3(pc_debug[3]),
+        .O(plusOp[3]));
   (* XILINX_LEGACY_PRIM = "LDC" *) 
   LDCE #(
     .INIT(1'b0)) 
     pc_reset_reg
        (.CLR(\alu_sel_reg[1]_i_2_n_0 ),
         .D(pc_reset_reg_i_1_n_0),
-        .G(i___0_i_1_n_0),
+        .G(carry_in_reg_i_1_n_0),
         .GE(1'b1),
         .Q(pc_reset));
-  LUT6 #(
-    .INIT(64'h4000000055555555)) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT5 #(
+    .INIT(32'h80000000)) 
     pc_reset_reg_i_1
-       (.I0(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .I1(\FSM_onehot_state_current_reg[2]_0 [3]),
-        .I2(\FSM_onehot_state_current_reg[2]_0 [2]),
-        .I3(\FSM_onehot_state_current_reg[2]_0 [0]),
-        .I4(\FSM_onehot_state_current_reg[2]_0 [1]),
-        .I5(\FSM_onehot_state_current_reg_n_0_[1] ),
+       (.I0(\state_current_reg[2]_0 [3]),
+        .I1(\state_current_reg[2]_0 [0]),
+        .I2(\state_current_reg[2]_0 [1]),
+        .I3(\state_current_reg[2]_0 [2]),
+        .I4(\operation_debug_reg[3]_i_1_n_0 ),
         .O(pc_reset_reg_i_1_n_0));
   LUT3 #(
     .INIT(8'hB8)) 
@@ -2221,51 +2125,110 @@ module risc_controller_8
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\reg_out[7]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT4 #(
+    .INIT(16'h0015)) 
+    \state_current[0]_i_1 
+       (.I0(state_current[0]),
+        .I1(state_current[1]),
+        .I2(state_current[2]),
+        .I3(reset_IBUF),
+        .O(\state_current[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT5 #(
+    .INIT(32'h0000FF42)) 
+    \state_current[1]_i_1 
+       (.I0(state_current[2]),
+        .I1(state_current[0]),
+        .I2(state_current[1]),
+        .I3(\state_current[1]_i_2_n_0 ),
+        .I4(reset_IBUF),
+        .O(\state_current[1]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h00F7000000EF0000)) 
+    \state_current[1]_i_2 
+       (.I0(\state_current_reg[2]_0 [1]),
+        .I1(\state_current_reg[2]_0 [0]),
+        .I2(\state_current_reg[2]_0 [3]),
+        .I3(state_current[2]),
+        .I4(state_current[0]),
+        .I5(\state_current_reg[2]_0 [2]),
+        .O(\state_current[1]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000020040000)) 
+    \state_current[2]_i_1 
+       (.I0(\state_current_reg[2]_0 [2]),
+        .I1(\state_current_reg[2]_0 [3]),
+        .I2(\state_current_reg[2]_0 [0]),
+        .I3(\state_current_reg[2]_0 [1]),
+        .I4(\operation_debug_reg[3]_i_1_n_0 ),
+        .I5(reset_IBUF),
+        .O(\state_current[2]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \state_current_reg[0] 
+       (.C(CLK),
+        .CE(1'b1),
+        .D(\state_current[0]_i_1_n_0 ),
+        .Q(state_current[0]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \state_current_reg[1] 
+       (.C(CLK),
+        .CE(1'b1),
+        .D(\state_current[1]_i_1_n_0 ),
+        .Q(state_current[1]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \state_current_reg[2] 
+       (.C(CLK),
+        .CE(1'b1),
+        .D(\state_current[2]_i_1_n_0 ),
+        .Q(state_current[2]),
+        .R(1'b0));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \state_debug_reg[0] 
        (.CLR(1'b0),
-        .D(\state_debug_reg[0]_i_1_n_0 ),
-        .G(\/i_/i__n_0 ),
+        .D(state_current[0]),
+        .G(\state_debug_reg[2]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\state_debug[2] [0]));
-  LUT4 #(
-    .INIT(16'h5054)) 
-    \state_debug_reg[0]_i_1 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[1] ),
-        .I2(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I3(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .O(\state_debug_reg[0]_i_1_n_0 ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \state_debug_reg[1] 
        (.CLR(1'b0),
-        .D(\state_debug_reg[1]_i_1_n_0 ),
-        .G(\/i_/i__n_0 ),
+        .D(state_current[1]),
+        .G(\state_debug_reg[2]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\state_debug[2] [1]));
-  LUT3 #(
-    .INIT(8'h54)) 
-    \state_debug_reg[1]_i_1 
-       (.I0(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .I1(\FSM_onehot_state_current_reg_n_0_[3] ),
-        .I2(\FSM_onehot_state_current_reg_n_0_[4] ),
-        .O(\state_debug_reg[1]_i_1_n_0 ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \state_debug_reg[2] 
        (.CLR(1'b0),
-        .D(\FSM_onehot_state_current_reg_n_0_[2] ),
-        .G(\/i_/i__n_0 ),
+        .D(state_current[2]),
+        .G(\state_debug_reg[2]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\state_debug[2] [2]));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT3 #(
+    .INIT(8'h57)) 
+    \state_debug_reg[2]_i_1 
+       (.I0(state_current[2]),
+        .I1(state_current[0]),
+        .I2(state_current[1]),
+        .O(\state_debug_reg[2]_i_1_n_0 ));
 endmodule
 
-(* ECO_CHECKSUM = "4135d6c2" *) 
+(* ECO_CHECKSUM = "46fddc23" *) 
 (* NotValidForBitStream *)
 module risc_cpu_8
    (clk,
@@ -2381,13 +2344,7 @@ end
        (.CLK(clk_IBUF_BUFG),
         .D({mux_out[7:5],mux_out[0]}),
         .E(d_enable_conn),
-        .\FSM_onehot_state_current_reg[2] (a_enable_conn),
-        .\FSM_onehot_state_current_reg[3] (data_b_sel_conn),
-        .\FSM_onehot_state_current_reg[4] (alu_sel_conn),
-        .\FSM_onehot_state_current_reg[4]_0 (c_enable_conn),
-        .\FSM_onehot_state_current_reg[4]_1 (b_enable_conn),
         .Q(data_a_sel_conn),
-        .SR(reset_IBUF),
         .carry_in_conn(carry_in_conn),
         .carry_out235_out(\alu_component/adder_8_component/carry_out235_out ),
         .carry_out2__1(\alu_component/adder_8_component/carry_out2__1 ),
@@ -2398,7 +2355,13 @@ end
         .data_in_IBUF(data_in_IBUF[4:1]),
         .data_in_sel_conn(data_in_sel_conn),
         .data_out_OBUF(data_out_OBUF),
-        .\reg_out_reg[7] ({data_b_conn[7:5],data_b_conn[0]}));
+        .\opcode_reg[0] (a_enable_conn),
+        .\opcode_reg[1] (b_enable_conn),
+        .\opcode_reg[2] (data_b_sel_conn),
+        .\opcode_reg[3] (alu_sel_conn),
+        .\opcode_reg[3]_0 (c_enable_conn),
+        .\reg_out_reg[7] ({data_b_conn[7:5],data_b_conn[0]}),
+        .reset_IBUF(reset_IBUF));
   OBUF \opcode_debug_OBUF[0]_inst 
        (.I(opcode_debug_OBUF[0]),
         .O(opcode_debug[0]));
@@ -2442,7 +2405,6 @@ end
        (.CLK(clk_IBUF_BUFG),
         .D({mux_out[7:5],mux_out[0]}),
         .E(d_enable_conn),
-        .\FSM_onehot_state_current_reg[2]_0 (opcode_debug_OBUF),
         .Q(alu_sel_conn),
         .carry_in_conn(carry_in_conn),
         .carry_out235_out(\alu_component/adder_8_component/carry_out235_out ),
@@ -2454,7 +2416,6 @@ end
         .data_in_IBUF({data_in_IBUF[7:5],data_in_IBUF[0]}),
         .data_in_sel_conn(data_in_sel_conn),
         .data_out_OBUF({data_out_OBUF[7:5],data_out_OBUF[0]}),
-        .in1(reset_IBUF),
         .\operation_debug[3] (operation_debug_OBUF),
         .pc_debug(pc_debug_OBUF),
         .\reg_out_reg[7] (a_enable_conn),
@@ -2463,6 +2424,8 @@ end
         .\reg_out_reg[7]_2 (data_a_sel_conn),
         .\reg_out_reg[7]_3 (data_b_sel_conn),
         .\reg_out_reg[7]_4 ({data_b_conn[7:5],data_b_conn[0]}),
+        .reset_IBUF(reset_IBUF),
+        .\state_current_reg[2]_0 (opcode_debug_OBUF),
         .\state_debug[2] (state_debug_OBUF));
   OBUF \state_debug_OBUF[0]_inst 
        (.I(state_debug_OBUF[0]),

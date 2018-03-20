@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Mon Mar 19 17:50:08 2018
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Tue Mar 20 09:23:21 2018
 | Host         : laptop-nicklas running 64-bit major release  (build 9200)
 | Command      : report_drc -file risc_cpu_8_drc_routed.rpt -pb risc_cpu_8_drc_routed.pb -rpx risc_cpu_8_drc_routed.rpx
 | Design       : risc_cpu_8
@@ -48,32 +48,32 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net risc_controller_8_component//i_/i___0_n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component//i_/i___0/O, cell risc_controller_8_component//i_/i___0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net risc_controller_8_component/a_enable_reg/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/a_enable_reg/L3_2/O, cell risc_controller_8_component/a_enable_reg/L3_2 (in risc_controller_8_component/a_enable_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net risc_controller_8_component//i_/i__n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component//i_/i_/O, cell risc_controller_8_component//i_/i_. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net risc_controller_8_component/carry_in_reg/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/carry_in_reg/L3_2/O, cell risc_controller_8_component/carry_in_reg/L3_2 (in risc_controller_8_component/carry_in_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net risc_controller_8_component/a_enable_reg/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/a_enable_reg/L3_2/O, cell risc_controller_8_component/a_enable_reg/L3_2 (in risc_controller_8_component/a_enable_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net risc_controller_8_component/carry_in_reg_i_1_n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component/carry_in_reg_i_1/O, cell risc_controller_8_component/carry_in_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net risc_controller_8_component/carry_in_reg/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/carry_in_reg/L3_2/O, cell risc_controller_8_component/carry_in_reg/L3_2 (in risc_controller_8_component/carry_in_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net risc_controller_8_component/data_a_sel_reg[0]_i_2_n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component/data_a_sel_reg[0]_i_2/O, cell risc_controller_8_component/data_a_sel_reg[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net risc_controller_8_component/data_a_sel_reg[0]_i_2_n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component/data_a_sel_reg[0]_i_2/O, cell risc_controller_8_component/data_a_sel_reg[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net risc_controller_8_component/data_a_sel_reg[1]_i_2_n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component/data_a_sel_reg[1]_i_2/O, cell risc_controller_8_component/data_a_sel_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net risc_controller_8_component/data_a_sel_reg[1]_i_2_n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component/data_a_sel_reg[1]_i_2/O, cell risc_controller_8_component/data_a_sel_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net risc_controller_8_component/data_b_sel_reg[1]_i_2_n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component/data_b_sel_reg[1]_i_2/O, cell risc_controller_8_component/data_b_sel_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
@@ -83,32 +83,32 @@ Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net risc_controller_8_component/i___0_i_1_n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component/i___0_i_1/O, cell risc_controller_8_component/i___0_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net risc_controller_8_component/operation_debug_reg[0]/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/operation_debug_reg[0]/L3_2/O, cell risc_controller_8_component/operation_debug_reg[0]/L3_2 (in risc_controller_8_component/operation_debug_reg[0] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net risc_controller_8_component/operation_debug_reg[0]/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/operation_debug_reg[0]/L3_2/O, cell risc_controller_8_component/operation_debug_reg[0]/L3_2 (in risc_controller_8_component/operation_debug_reg[0] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net risc_controller_8_component/operation_debug_reg[1]/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/operation_debug_reg[1]/L3_2/O, cell risc_controller_8_component/operation_debug_reg[1]/L3_2 (in risc_controller_8_component/operation_debug_reg[1] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net risc_controller_8_component/operation_debug_reg[1]/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/operation_debug_reg[1]/L3_2/O, cell risc_controller_8_component/operation_debug_reg[1]/L3_2 (in risc_controller_8_component/operation_debug_reg[1] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net risc_controller_8_component/operation_debug_reg[2]/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/operation_debug_reg[2]/L3_2/O, cell risc_controller_8_component/operation_debug_reg[2]/L3_2 (in risc_controller_8_component/operation_debug_reg[2] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net risc_controller_8_component/operation_debug_reg[2]/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/operation_debug_reg[2]/L3_2/O, cell risc_controller_8_component/operation_debug_reg[2]/L3_2 (in risc_controller_8_component/operation_debug_reg[2] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net risc_controller_8_component/operation_debug_reg[3]/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/operation_debug_reg[3]/L3_2/O, cell risc_controller_8_component/operation_debug_reg[3]/L3_2 (in risc_controller_8_component/operation_debug_reg[3] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#12 Warning
 Gated clock check  
-Net risc_controller_8_component/operation_debug_reg[3]/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/operation_debug_reg[3]/L3_2/O, cell risc_controller_8_component/operation_debug_reg[3]/L3_2 (in risc_controller_8_component/operation_debug_reg[3] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net risc_controller_8_component/pc_increment_reg/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/pc_increment_reg/L3_2/O, cell risc_controller_8_component/pc_increment_reg/L3_2 (in risc_controller_8_component/pc_increment_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#13 Warning
 Gated clock check  
-Net risc_controller_8_component/pc_increment_reg/G0 is a gated clock net sourced by a combinational pin risc_controller_8_component/pc_increment_reg/L3_2/O, cell risc_controller_8_component/pc_increment_reg/L3_2 (in risc_controller_8_component/pc_increment_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net risc_controller_8_component/state_debug_reg[2]_i_1_n_0 is a gated clock net sourced by a combinational pin risc_controller_8_component/state_debug_reg[2]_i_1/O, cell risc_controller_8_component/state_debug_reg[2]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 ZPS7-1#1 Warning

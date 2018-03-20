@@ -71,7 +71,7 @@ BEGIN
       alu_sel <= "00";
       carry_in <= '0';
       pc_increment <= '0';
-      pc_reset <= '1';
+      pc_reset <= '0';
       state_debug <= "000";
     END IF;
     -- decode the instruction
@@ -248,7 +248,7 @@ BEGIN
           operation_debug <= "1011";
         -- NOT D
         WHEN "1100" =>
-          data_in_sel <= '0';
+          data_in_sel <= '1';
           a_enable <= '0';
           b_enable <= '0';
           c_enable <= '0';
@@ -413,14 +413,14 @@ BEGIN
   BEGIN
     IF (RISING_EDGE(clk))
     THEN
-      IF (state_current = st_reset OR pc_reset = '1')
+      IF (state_current = st_reset)
       THEN
         pc <= "0000";
+      ELSE
         IF (pc_reset = '1')
         THEN
-          opcode <= rom(0);
+          pc <= "0000";
         END IF;
-      ELSE
         opcode <= rom(CONV_INTEGER(pc));
         IF (pc_increment = '1')
         THEN
