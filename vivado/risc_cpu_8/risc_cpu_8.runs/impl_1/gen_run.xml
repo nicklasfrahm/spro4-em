@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1521534102">
+  <File Type="PWROPT-DCP" Name="risc_cpu_8_pwropt.dcp"/>
+  <File Type="ROUTE-PWR" Name="risc_cpu_8_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="risc_cpu_8.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="risc_cpu_8_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="risc_cpu_8_reports.tcl"/>
+  <File Type="BG-DRC" Name="risc_cpu_8.drc"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="risc_cpu_8_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="risc_cpu_8_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="risc_cpu_8.hwdef"/>
+  <File Type="OPT-DCP" Name="risc_cpu_8_opt.dcp"/>
+  <File Type="OPT-DRC" Name="risc_cpu_8_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="risc_cpu_8_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="risc_cpu_8_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="risc_cpu_8_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="risc_cpu_8_placed.dcp"/>
+  <File Type="PLACE-IO" Name="risc_cpu_8_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="risc_cpu_8_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="risc_cpu_8_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="risc_cpu_8_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="risc_cpu_8_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="risc_cpu_8_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="risc_cpu_8_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="risc_cpu_8_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="risc_cpu_8_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="risc_cpu_8_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="risc_cpu_8_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="risc_cpu_8_drc_physopted.rpt"/>
+  <File Type="BG-BIT" Name="risc_cpu_8.bit"/>
+  <File Type="PHYSOPT-TIMING" Name="risc_cpu_8_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="risc_cpu_8_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="risc_cpu_8_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="risc_cpu_8_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="risc_cpu_8_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="risc_cpu_8_drc_routed.pb"/>
+  <File Type="BITSTR-MSK" Name="risc_cpu_8.msk"/>
+  <File Type="ROUTE-DRC-RPX" Name="risc_cpu_8_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="risc_cpu_8.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="risc_cpu_8_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="risc_cpu_8.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="risc_cpu_8_methodology_drc_routed.rpx"/>
+  <File Type="BG-BIN" Name="risc_cpu_8.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="risc_cpu_8_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="risc_cpu_8_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="risc_cpu_8_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="risc_cpu_8_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="risc_cpu_8_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="risc_cpu_8_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="risc_cpu_8_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="risc_cpu_8_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="risc_cpu_8.vdi"/>
+  <File Type="ROUTE-CLK" Name="risc_cpu_8_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="risc_cpu_8_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="risc_cpu_8_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="risc_cpu_8_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="risc_cpu_8_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="risc_cpu_8_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="risc_cpu_8.nky"/>
+  <File Type="BITSTR-BMM" Name="risc_cpu_8_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="risc_cpu_8.mmi"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="risc_cpu_8.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="risc_cpu_8.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/adder_8.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../risc-cpu/risc-cpu.srcs/sources_1/new/adder_8.vhd"/>
+        <Attr Name="ImportTime" Val="1520414288"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/alu_8.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../risc-cpu/risc-cpu.srcs/sources_1/new/alu_8.vhd"/>
+        <Attr Name="ImportTime" Val="1520414465"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/datapath_8.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../risc-cpu/risc-cpu.srcs/sources_1/new/datapath_8.vhd"/>
+        <Attr Name="ImportTime" Val="1520419523"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/logic_8.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../risc-cpu/risc-cpu.srcs/sources_1/new/logic_8.vhd"/>
+        <Attr Name="ImportTime" Val="1520414175"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/memory_8_4.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../risc-cpu/risc-cpu.srcs/sources_1/new/memory_8_4.vhd"/>
+        <Attr Name="ImportTime" Val="1520410604"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux_2_1.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../risc-cpu/risc-cpu.srcs/sources_1/new/mux_2_1.vhd"/>
+        <Attr Name="ImportTime" Val="1520413461"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux_4_1.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../risc-cpu/risc-cpu.srcs/sources_1/new/mux_4_1.vhd"/>
+        <Attr Name="ImportTime" Val="1520328876"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/register_8.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../risc-cpu/risc-cpu.srcs/sources_1/new/register_8.vhd"/>
+        <Attr Name="ImportTime" Val="1520326189"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/risc_controller_8.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../risc-cpu/risc-cpu.srcs/sources_1/new/risc_controller_8.vhd"/>
+        <Attr Name="ImportTime" Val="1521024273"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/risc_cpu_8.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="risc_cpu_8"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

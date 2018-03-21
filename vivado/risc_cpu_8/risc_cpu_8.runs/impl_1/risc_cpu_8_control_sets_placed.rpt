@@ -1,0 +1,85 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Tue Mar 20 09:22:52 2018
+| Host         : laptop-nicklas running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file risc_cpu_8_control_sets_placed.rpt
+| Design       : risc_cpu_8
+| Device       : xc7z020
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    20 |
+| Unused register locations in slices containing registers |    92 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              16 |           11 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               8 |            5 |
+| Yes          | No                    | No                     |               4 |            1 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              40 |           16 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------------------------+-------------------------------------------------+----------------------------------------------------+------------------+----------------+
+|                       Clock Signal                      |                  Enable Signal                  |                  Set/Reset Signal                  | Slice Load Count | Bel Load Count |
++---------------------------------------------------------+-------------------------------------------------+----------------------------------------------------+------------------+----------------+
+|  risc_controller_8_component/operation_debug_reg[0]/G0  |                                                 |                                                    |                1 |              1 |
+|  risc_controller_8_component/carry_in_reg/G0            |                                                 |                                                    |                1 |              1 |
+|  risc_controller_8_component/data_in_sel_reg/G0         |                                                 |                                                    |                1 |              1 |
+|  risc_controller_8_component/a_enable_reg/G0            |                                                 |                                                    |                1 |              1 |
+|  risc_controller_8_component/operation_debug_reg[1]/G0  |                                                 |                                                    |                1 |              1 |
+|  risc_controller_8_component/operation_debug_reg[2]/G0  |                                                 |                                                    |                1 |              1 |
+|  risc_controller_8_component/pc_increment_reg/G0        |                                                 |                                                    |                1 |              1 |
+|  risc_controller_8_component/operation_debug_reg[3]/G0  |                                                 |                                                    |                1 |              1 |
+|  risc_controller_8_component/data_a_sel_reg[1]_i_2_n_0  |                                                 | risc_controller_8_component/alu_sel_reg[1]_i_2_n_0 |                1 |              1 |
+|  risc_controller_8_component/data_a_sel_reg[0]_i_2_n_0  |                                                 | risc_controller_8_component/carry_in_reg_i_2_n_0   |                1 |              1 |
+|  risc_controller_8_component/data_b_sel_reg[1]_i_2_n_0  |                                                 |                                                    |                1 |              2 |
+|  risc_controller_8_component/state_debug_reg[2]_i_1_n_0 |                                                 |                                                    |                1 |              3 |
+| ~clk_IBUF_BUFG                                          |                                                 |                                                    |                1 |              3 |
+|  clk_IBUF_BUFG                                          | risc_controller_8_component/opcode[3]_i_1_n_0   |                                                    |                1 |              4 |
+|  risc_controller_8_component/carry_in_reg_i_1_n_0       |                                                 | risc_controller_8_component/alu_sel_reg[1]_i_2_n_0 |                3 |              6 |
+|  clk_IBUF_BUFG                                          | risc_controller_8_component/a_enable_reg/Q      | reset_IBUF                                         |                3 |              8 |
+|  clk_IBUF_BUFG                                          | risc_controller_8_component/pc_increment_reg/Q  | risc_controller_8_component/pc_rep[3]_i_1_n_0      |                2 |              8 |
+|  clk_IBUF_BUFG                                          | risc_controller_8_component/reg_out_reg[7]_1[0] | reset_IBUF                                         |                5 |              8 |
+|  clk_IBUF_BUFG                                          | risc_controller_8_component/reg_out_reg[7]_0[0] | reset_IBUF                                         |                3 |              8 |
+|  clk_IBUF_BUFG                                          | risc_controller_8_component/E[0]                | reset_IBUF                                         |                3 |              8 |
++---------------------------------------------------------+-------------------------------------------------+----------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                    10 |
+| 2      |                     1 |
+| 3      |                     2 |
+| 4      |                     1 |
+| 6      |                     1 |
+| 8      |                     5 |
++--------+-----------------------+
+
+

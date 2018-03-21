@@ -1,0 +1,376 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Tue Mar 20 09:23:22 2018
+| Host         : laptop-nicklas running 64-bit major release  (build 9200)
+| Command      : report_methodology -file risc_cpu_8_methodology_drc_routed.rpt -pb risc_cpu_8_methodology_drc_routed.pb -rpx risc_cpu_8_methodology_drc_routed.rpx
+| Design       : risc_cpu_8
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 68
++-----------+----------+-----------------------------+------------+
+| Rule      | Severity | Description                 | Violations |
++-----------+----------+-----------------------------+------------+
+| TIMING-17 | Warning  | Non-clocked sequential cell | 47         |
+| TIMING-20 | Warning  | Non-clocked latch           | 21         |
++-----------+----------+-----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-17#1 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_a/reg_out_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_a/reg_out_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_a/reg_out_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_a/reg_out_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_a/reg_out_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_a/reg_out_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_a/reg_out_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_a/reg_out_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_b/reg_out_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_b/reg_out_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_b/reg_out_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_b/reg_out_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_b/reg_out_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_b/reg_out_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_b/reg_out_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_b/reg_out_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_c/reg_out_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_c/reg_out_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_c/reg_out_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_c/reg_out_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#21 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_c/reg_out_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_c/reg_out_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_c/reg_out_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_c/reg_out_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_d/reg_out_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_d/reg_out_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_d/reg_out_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_d/reg_out_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_d/reg_out_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#30 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_d/reg_out_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_d/reg_out_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#32 Warning
+Non-clocked sequential cell  
+The clock pin datapath_8_component/memory_8_4_component/register_8_d/reg_out_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#33 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/opcode_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#34 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/opcode_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#35 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/opcode_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#36 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/opcode_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#37 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/pc_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#38 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/pc_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#39 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/pc_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#40 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/pc_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#41 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/pc_reg_rep[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#42 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/pc_reg_rep[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#43 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/pc_reg_rep[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#44 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/pc_reg_rep[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#45 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/state_current_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#46 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/state_current_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#47 Warning
+Non-clocked sequential cell  
+The clock pin risc_controller_8_component/state_current_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/a_enable_reg/L7 (in risc_controller_8_component/a_enable_reg macro) cannot be properly analyzed as its control pin risc_controller_8_component/a_enable_reg/L7/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/alu_sel_reg[0] cannot be properly analyzed as its control pin risc_controller_8_component/alu_sel_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/alu_sel_reg[1] cannot be properly analyzed as its control pin risc_controller_8_component/alu_sel_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/b_enable_reg cannot be properly analyzed as its control pin risc_controller_8_component/b_enable_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/c_enable_reg cannot be properly analyzed as its control pin risc_controller_8_component/c_enable_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/carry_in_reg/L7 (in risc_controller_8_component/carry_in_reg macro) cannot be properly analyzed as its control pin risc_controller_8_component/carry_in_reg/L7/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/d_enable_reg cannot be properly analyzed as its control pin risc_controller_8_component/d_enable_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/data_a_sel_reg[0] cannot be properly analyzed as its control pin risc_controller_8_component/data_a_sel_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/data_a_sel_reg[1] cannot be properly analyzed as its control pin risc_controller_8_component/data_a_sel_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/data_b_sel_reg[0] cannot be properly analyzed as its control pin risc_controller_8_component/data_b_sel_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/data_b_sel_reg[1] cannot be properly analyzed as its control pin risc_controller_8_component/data_b_sel_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/data_in_sel_reg/L7 (in risc_controller_8_component/data_in_sel_reg macro) cannot be properly analyzed as its control pin risc_controller_8_component/data_in_sel_reg/L7/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/operation_debug_reg[0]/L7 (in risc_controller_8_component/operation_debug_reg[0] macro) cannot be properly analyzed as its control pin risc_controller_8_component/operation_debug_reg[0]/L7/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/operation_debug_reg[1]/L7 (in risc_controller_8_component/operation_debug_reg[1] macro) cannot be properly analyzed as its control pin risc_controller_8_component/operation_debug_reg[1]/L7/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/operation_debug_reg[2]/L7 (in risc_controller_8_component/operation_debug_reg[2] macro) cannot be properly analyzed as its control pin risc_controller_8_component/operation_debug_reg[2]/L7/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/operation_debug_reg[3]/L7 (in risc_controller_8_component/operation_debug_reg[3] macro) cannot be properly analyzed as its control pin risc_controller_8_component/operation_debug_reg[3]/L7/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/pc_increment_reg/L7 (in risc_controller_8_component/pc_increment_reg macro) cannot be properly analyzed as its control pin risc_controller_8_component/pc_increment_reg/L7/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/pc_reset_reg cannot be properly analyzed as its control pin risc_controller_8_component/pc_reset_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/state_debug_reg[0] cannot be properly analyzed as its control pin risc_controller_8_component/state_debug_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/state_debug_reg[1] cannot be properly analyzed as its control pin risc_controller_8_component/state_debug_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch risc_controller_8_component/state_debug_reg[2] cannot be properly analyzed as its control pin risc_controller_8_component/state_debug_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+
