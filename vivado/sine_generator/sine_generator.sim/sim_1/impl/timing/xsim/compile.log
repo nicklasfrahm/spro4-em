@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/Assignment_3/Assignment_3.sim/sim_1/impl/timing/xsim/comparator_8_1_test_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator_8_1
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/Assignment_3/Assignment_3.srcs/sim_1/new/comparator_8_1_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity comparator_8_1_test
