@@ -21,21 +21,21 @@ create_project -in_memory -part xc7z020clg484-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.cache/wt} [current_project]
-set_property parent.project_path {D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.xpr} [current_project]
+set_property webtalk.parent_dir {C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
-set_property ip_output_repo {d:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.cache/ip} [current_project]
+set_property ip_output_repo {c:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  {D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.srcs/sources_1/new/comparator_8_1.vhd}
-  {D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.srcs/sources_1/new/counter_8.vhd}
-  {D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.srcs/sources_1/new/dip_sw_8.vhd}
-  {D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.srcs/sources_1/new/frequency_select.vhd}
-  {D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.srcs/sources_1/new/pwm_8_1.vhd}
-  {D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.srcs/sources_1/new/rom_8_32.vhd}
-  {D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.srcs/sources_1/new/sine_wave_gen.vhd}
+  {C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.srcs/sources_1/new/comparator_8_1.vhd}
+  {C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.srcs/sources_1/new/counter_8.vhd}
+  {C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.srcs/sources_1/new/dip_sw_8.vhd}
+  {C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.srcs/sources_1/new/frequency_select.vhd}
+  {C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.srcs/sources_1/new/pwm_8_1.vhd}
+  {C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.srcs/sources_1/new/rom_8_32.vhd}
+  {C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.srcs/sources_1/new/sine_wave_gen.vhd}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -45,6 +45,9 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc {{C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.srcs/constrs_1/new/sg_constraints.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.srcs/constrs_1/new/sg_constraints.xdc}}]
+
 
 synth_design -top sine_wave_gen -part xc7z020clg484-1
 

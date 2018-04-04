@@ -42,7 +42,8 @@ COMPONENT frequency_select
   PORT (
     clk : IN STD_LOGIC;
     dip_sw_in : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-    addr_out : OUT STD_LOGIC_VECTOR (4 DOWNTO 0)
+    addr_out : OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+    reset : IN STD_LOGIC
   );
 END COMPONENT;
 
@@ -84,7 +85,8 @@ BEGIN
   frequency_select_component : frequency_select PORT MAP (
     clk => clk,
     dip_sw_in => sw_conn,
-    addr_out => addr_conn
+    addr_out => addr_conn,
+    reset => reset
   );
 
   rom_8_32_component : rom_8_32 PORT MAP (
@@ -99,6 +101,6 @@ BEGIN
     pwm_out => pwm_out
   );
 
-sine_debug <= rom_out_conn;
+  sine_debug <= rom_out_conn;
 
 END Structural;

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.runs/synth_1'
+HD_PWD='C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -6,7 +6,8 @@ ENTITY frequency_select IS
   PORT (
     clk : IN STD_LOGIC;
     dip_sw_in : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-    addr_out : OUT STD_LOGIC_VECTOR (4 DOWNTO 0)
+    addr_out : OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+    reset : IN STD_LOGIC
   );
 END frequency_select;
 
@@ -22,13 +23,19 @@ BEGIN
     timer_comp (11 DOWNTO 4) := dip_sw_in;
     timer_comp (3 DOWNTO 0) := "0000";
     IF (RISING_EDGE(clk))
-    THEN      
-      IF (timer_count = timer_comp)
+    THEN 
+      IF (reset = '1') 
       THEN
-        addr := addr +1;
+        addr := (OTHERS => '0');
         timer_count := (OTHERS => '0');
       ELSE
-        timer_count := timer_count +1;
+        IF (timer_count = timer_comp)
+        THEN
+          addr := addr + 1;
+          timer_count := (OTHERS => '0');
+        ELSE
+          timer_count := timer_count + 1;
+        END IF;
       END IF;
     addr_out <= addr;
     END IF;

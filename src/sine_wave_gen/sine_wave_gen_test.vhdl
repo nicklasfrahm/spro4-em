@@ -108,7 +108,11 @@ BEGIN
     dip_sw2_in <= '0';
     dip_sw3_in <= '1';
     WAIT FOR 1 ms;
-  
+
+    reset <= '1';
+    WAIT FOR 1 us;
+
+    reset <= '0';
     dip_sw3_in <= '0';    
     dip_sw4_in <= '1';
     WAIT FOR 1 ms;

@@ -1,4 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.sim/sim_1/impl/timing/xsim/sine_wave_gen_test_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.sim/sim_1/impl/timing/xsim/sine_wave_gen_test_time_impl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module comparator_8_1
 INFO: [VRFC 10-311] analyzing module counter_8
 INFO: [VRFC 10-311] analyzing module dip_sw_8
@@ -6,5 +6,5 @@ INFO: [VRFC 10-311] analyzing module frequency_select
 INFO: [VRFC 10-311] analyzing module pwm_8_1
 INFO: [VRFC 10-311] analyzing module sine_wave_gen
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.srcs/sim_1/new/sine_wave_gen_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.srcs/sim_1/new/sine_wave_gen_test.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity sine_wave_gen_test

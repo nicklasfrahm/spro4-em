@@ -1,8 +1,6 @@
 0.6
 2017.4
-Jan 30 2018
-15:48:17
-D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.sim/sim_1/impl/timing/xsim/sine_wave_gen_test_time_impl.v,1522749437,verilog,,,,comparator_8_1;counter_8;dip_sw_8;frequency_select;glbl;pwm_8_1;sine_wave_gen,,,,,,,,
-D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.srcs/sim_1/new/frequency_select_test.vhd,1522744682,vhdl,,,,frequency_select_test,,,,,,,,
-D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.srcs/sim_1/new/pwm_8_1_test.vhd,1522740556,vhdl,,,,dip_sw_8_test,,,,,,,,
-D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.srcs/sim_1/new/sine_wave_gen_test.vhd,1522749258,vhdl,,,,sine_wave_gen_test,,,,,,,,
+Dec 15 2017
+21:07:18
+C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.sim/sim_1/impl/timing/xsim/sine_wave_gen_test_time_impl.v,1522826957,verilog,,,,comparator_8_1;counter_8;dip_sw_8;frequency_select;glbl;pwm_8_1;sine_wave_gen,,,,,,,,
+C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.srcs/sim_1/new/sine_wave_gen_test.vhd,1522826576,vhdl,,,,sine_wave_gen_test,,,,,,,,

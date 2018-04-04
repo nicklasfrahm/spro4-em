@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1522749291">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1522828832">
   <File Type="PA-TCL" Name="sine_wave_gen.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="sine_wave_gen_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="sine_wave_gen_reports.tcl"/>
@@ -68,6 +68,12 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/sg_constraints.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>

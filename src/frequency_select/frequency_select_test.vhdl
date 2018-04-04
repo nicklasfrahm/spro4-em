@@ -15,7 +15,8 @@ COMPONENT frequency_select
   PORT (
       clk : IN STD_LOGIC;
     dip_sw_in : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-    addr_out : OUT STD_LOGIC_VECTOR (4 DOWNTO 0)
+    addr_out : OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+    reset : IN STD_LOGIC
   );
 END COMPONENT;
 
@@ -27,9 +28,10 @@ END COMPONENT;
 -- initiated to zero - but this will not be the case in a real world application
 SIGNAL clk : STD_LOGIC := '0';
 SIGNAL dip_sw_in : STD_LOGIC_VECTOR (7 DOWNTO 0) := (OTHERS => '0');
+SIGNAL reset : STD_LOGIC := '0';
 
 -- outputs
-SIGNAL addr_out : OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+SIGNAL addr_out : STD_LOGIC_VECTOR (4 DOWNTO 0);
 
 -- if you need a clock input signal, the clock period can be declared this way
 -- (delete the -- and use the right name for clock)
@@ -40,7 +42,8 @@ BEGIN
   uut : frequency_select PORT MAP(
     clk => clk,
     dip_sw_in => dip_sw_in,
-    addr_out => addr_out
+    addr_out => addr_out,
+    reset => reset
   );
 
   -- clock process definitions
@@ -73,6 +76,8 @@ BEGIN
 
     dip_sw_in <= "00000010";
     WAIT FOR clk_period * 1000;
+
+    reset <= '1';
 
     -- wait forever
     WAIT;

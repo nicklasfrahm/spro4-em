@@ -69,11 +69,12 @@ set rc [catch {
   set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.cache/wt} [current_project]
-  set_property parent.project_path {D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.xpr} [current_project]
-  set_property ip_output_repo {{D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.cache/ip}} [current_project]
+  set_property webtalk.parent_dir {C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.xpr} [current_project]
+  set_property ip_output_repo {{C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet {{D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.runs/synth_1/sine_wave_gen.dcp}}
+  add_files -quiet {{C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.runs/synth_1/sine_wave_gen.dcp}}
+  read_xdc {{C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.srcs/constrs_1/new/sg_constraints.xdc}}
   link_design -top sine_wave_gen -part xc7z020clg484-1
   close_msg_db -file init_design.pb
 } RESULT]
