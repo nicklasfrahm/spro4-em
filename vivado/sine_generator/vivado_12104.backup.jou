@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2017.4.1 (64-bit)
+# SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
+# IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
+# Start of session at: Tue Apr  3 08:31:53 2018
+# Process ID: 12104
+# Current directory: D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11392 D:\Tamara\Dokumente\study\4th Semester\spro4-em\vivado\sine_generator\sine_generator.xpr
+# Log file: D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/vivado.log
+# Journal file: D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.xpr}
+update_compile_order -fileset sources_1
+close_project

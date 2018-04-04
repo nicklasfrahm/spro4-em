@@ -14,7 +14,7 @@ ARCHITECTURE Behavioral OF rom_8_32_test IS
 
 COMPONENT rom_8_32
   PORT (
-    adr_in : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+    adr_in : IN STD_LOGIC_VECTOR (4 DOWNTO 0);
     rom_out : OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
   );
 END COMPONENT;
@@ -25,7 +25,7 @@ END COMPONENT;
 
 -- inputs
 -- initiated to zero - but this will not be the case in a real world application
-SIGNAL adr_in : STD_LOGIC_VECTOR (5 DOWNTO 0) := (OTHERS => '0');
+SIGNAL adr_in : STD_LOGIC_VECTOR (4 DOWNTO 0) := (OTHERS => '0');
 
 -- outputs
 SIGNAL rom_out : STD_LOGIC_VECTOR (7 DOWNTO 0);

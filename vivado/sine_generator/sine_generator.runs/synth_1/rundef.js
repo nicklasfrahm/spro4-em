@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log pwm_8_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pwm_8_1.tcl" );
+         "-log sine_wave_gen.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sine_wave_gen.tcl" );
 
 
 

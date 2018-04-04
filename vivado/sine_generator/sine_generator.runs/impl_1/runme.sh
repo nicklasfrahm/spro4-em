@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/Assignment_3/Assignment_3.runs/impl_1'
+HD_PWD='D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log pwm_8_1.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source pwm_8_1.tcl -notrace
+EAStep vivado -log sine_wave_gen.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source sine_wave_gen.tcl -notrace
 
 
