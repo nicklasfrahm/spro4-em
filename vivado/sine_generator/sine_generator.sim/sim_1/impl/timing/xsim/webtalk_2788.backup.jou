@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4.1 (64-bit)
+# SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
+# IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
+# Start of session at: Tue Apr  3 09:29:31 2018
+# Process ID: 2788
+# Current directory: D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.sim/sim_1/impl/timing/xsim
+# Command line: wbtcv.exe -mode batch -source D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.sim/sim_1/impl/timing/xsim/xsim.dir/dip_sw_8_test_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.sim/sim_1/impl/timing/xsim/webtalk.log
+# Journal file: D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/sine_generator/sine_generator.sim/sim_1/impl/timing/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/Tamara/Dokumente/study/4th -notrace

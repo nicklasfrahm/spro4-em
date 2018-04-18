@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4.1 (64-bit)
+# SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
+# IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
+# Start of session at: Mon Mar 26 15:50:56 2018
+# Process ID: 8064
+# Current directory: D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/Assignment_3/Assignment_3.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/Assignment_3/Assignment_3.sim/sim_1/behav/xsim/xsim.dir/pwm_8_1_test_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/Assignment_3/Assignment_3.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/Tamara/Dokumente/study/4th Semester/spro4-em/vivado/Assignment_3/Assignment_3.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/Tamara/Dokumente/study/4th -notrace

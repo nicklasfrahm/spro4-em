@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4.1 (64-bit)
+# SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
+# IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
+# Start of session at: Tue Apr 17 11:16:50 2018
+# Process ID: 14448
+# Current directory: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/sine_generator_with_filter/sine_generator_with_filter.runs/impl_1
+# Command line: vivado.exe -log sine_wave_gen.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source sine_wave_gen.tcl -notrace
+# Log file: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/sine_generator_with_filter/sine_generator_with_filter.runs/impl_1/sine_wave_gen.vdi
+# Journal file: C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/sine_generator_with_filter/sine_generator_with_filter.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source sine_wave_gen.tcl -notrace
