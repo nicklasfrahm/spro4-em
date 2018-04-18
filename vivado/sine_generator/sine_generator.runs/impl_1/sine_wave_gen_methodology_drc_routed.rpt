@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Wed Apr  4 10:03:51 2018
-| Host         : Cloud-Nine running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date         : Mon Apr  9 14:02:34 2018
+| Host         : laptop-nicklas running 64-bit major release  (build 9200)
 | Command      : report_methodology -file sine_wave_gen_methodology_drc_routed.rpt -pb sine_wave_gen_methodology_drc_routed.pb -rpx sine_wave_gen_methodology_drc_routed.rpx
 | Design       : sine_wave_gen
 | Device       : xc7z020clg484-1

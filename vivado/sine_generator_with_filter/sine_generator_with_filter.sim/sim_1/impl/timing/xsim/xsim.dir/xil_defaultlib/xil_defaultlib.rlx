@@ -1,0 +1,6 @@
+0.6
+2017.4
+Jan 30 2018
+15:48:17
+C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/sine_generator_with_filter/sine_generator_with_filter.sim/sim_1/impl/timing/xsim/sine_wave_gen_test_time_impl.v,1523955927,verilog,,,,comparator_8_1;comparator_8_1_1;counter_8;dip_sw_8;frequency_select;glbl;moving_average;pwm_8_1;pwm_8_1_0;sine_wave_gen,,,,,,,,
+C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/sine_generator_with_filter/sine_generator_with_filter.srcs/sim_1/new/sine_wave_gen_test.vhd,1523955591,vhdl,,,,sine_wave_gen_test,,,,,,,,

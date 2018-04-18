@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2017.4 (64-bit)              -->
+<!-- Product Version: Vivado v2017.4.1 (64-bit)              -->
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/sine_generator/sine_generator.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="2323e59728ad4756b01329fb10e00e57"/>

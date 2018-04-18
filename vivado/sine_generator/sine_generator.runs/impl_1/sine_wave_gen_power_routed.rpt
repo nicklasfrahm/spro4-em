@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Wed Apr  4 10:03:53 2018
-| Host             : Cloud-Nine running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date             : Mon Apr  9 14:02:35 2018
+| Host             : laptop-nicklas running 64-bit major release  (build 9200)
 | Command          : report_power -file sine_wave_gen_power_routed.rpt -pb sine_wave_gen_power_summary_routed.pb -rpx sine_wave_gen_power_routed.rpx
 | Design           : sine_wave_gen
 | Device           : xc7z020clg484-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.632        |
+| Total On-Chip Power (W)  | 0.620        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.516        |
-| Device Static (W)        | 0.116        |
+| Dynamic (W)              | 0.506        |
+| Device Static (W)        | 0.114        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 77.7         |
-| Junction Temperature (C) | 32.3         |
+| Max Ambient (C)          | 77.9         |
+| Junction Temperature (C) | 32.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.143 |       83 |       --- |             --- |
-|   LUT as Logic |     0.118 |       22 |     53200 |            0.04 |
-|   Register     |     0.012 |       34 |    106400 |            0.03 |
-|   CARRY4       |     0.008 |        5 |     13300 |            0.04 |
+| Slice Logic    |     0.153 |       75 |       --- |             --- |
+|   LUT as Logic |     0.125 |       19 |     53200 |            0.04 |
+|   Register     |     0.013 |       34 |    106400 |            0.03 |
+|   CARRY4       |     0.009 |        5 |     13300 |            0.04 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        7 |       --- |             --- |
-| Signals        |     0.128 |       61 |       --- |             --- |
-| I/O            |     0.245 |       19 |       200 |            9.50 |
-| Static Power   |     0.116 |          |           |                 |
-| Total          |     0.632 |          |           |                 |
+| Signals        |     0.135 |       50 |       --- |             --- |
+| I/O            |     0.218 |       11 |       200 |            5.50 |
+| Static Power   |     0.114 |          |           |                 |
+| Total          |     0.620 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,11 +71,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.317 |       0.308 |      0.009 |
-| Vccaux    |       1.800 |     0.019 |       0.008 |      0.012 |
-| Vcco33    |       3.300 |     0.059 |       0.058 |      0.001 |
+| Vccint    |       1.000 |     0.333 |       0.323 |      0.009 |
+| Vccaux    |       1.800 |     0.018 |       0.007 |      0.012 |
+| Vcco33    |       3.300 |     0.053 |       0.052 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     0.002 |       0.001 |      0.001 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
@@ -145,12 +145,12 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| sine_wave_gen                |     0.516 |
-|   dip_sw_8_component         |     0.025 |
-|   frequency_select_component |     0.088 |
-|   pwm_8_1_component          |     0.119 |
+| sine_wave_gen                |     0.506 |
+|   dip_sw_8_component         |     0.013 |
+|   frequency_select_component |     0.075 |
+|   pwm_8_1_component          |     0.157 |
 |     comparator_8_1_component |     0.005 |
-|     counter_8_component      |     0.114 |
+|     counter_8_component      |     0.152 |
 +------------------------------+-----------+
 
 

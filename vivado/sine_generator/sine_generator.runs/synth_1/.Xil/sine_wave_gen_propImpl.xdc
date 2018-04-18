@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{C:/Users/MoJo/Desktop/vivado projects/spro4-em/vivado/sine_generator/sine_generator.srcs/constrs_1/new/sg_constraints.xdc} rfile:../../../sine_generator.srcs/constrs_1/new/sg_constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/Nicklas Frahm/Desktop/GitLab/Uni/spro4-em/vivado/sine_generator/sine_generator.srcs/constrs_1/new/sg_constraints.xdc} rfile:../../../sine_generator.srcs/constrs_1/new/sg_constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y9 [get_ports clk]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]

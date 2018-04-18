@@ -15,7 +15,7 @@ ENTITY sine_wave_gen IS
     dip_sw6_in : IN STD_LOGIC;
     dip_sw7_in : IN STD_LOGIC;
     -- debug sine wave
-    sine_debug : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);    
+    --sine_debug : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);    
     pwm_out : OUT STD_LOGIC
   );
 END sine_wave_gen;
@@ -101,6 +101,6 @@ BEGIN
     pwm_out => pwm_out
   );
 
-  sine_debug <= rom_out_conn;
+  --sine_debug <= rom_out_conn;
 
 END Structural;
